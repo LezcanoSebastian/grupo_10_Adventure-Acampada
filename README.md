@@ -31,26 +31,26 @@ Nuestro equipo está conformado por 4 integrantes: Sebastián Lezcano, Eliana Na
 * Presenta una gran variedad de productos.
 * Presenta diversos medios de pagos a los clientes.
 * Está dirigida tanto a un público local como vacacional. 
-[Tu-aventura](https://tu-aventura.com.ar/) y
-[Campz](https://www.campz.es/material-de-montana/camping.html)
+- [Tu-aventura](https://tu-aventura.com.ar/) y
+- [Campz](https://www.campz.es/material-de-montana/camping.html)
 ## Sitio de referencia los clientes a los que apunta:
 **Se eligió la página web porque:**
 * Presenta gran variedad de productos para todo tipo de clientes, ya sean novatos o expertos.
 * Tiene un blog propio para orientar a los clientes novatos y para dar ideas a los expertos.
 * Buena experiencia de usuario.
-[Camping-sport](https://campingsport.es/the-blog) y
-[Camping-sport](https://campingsport.es/content/23-nosotros)
+- [Camping-sport](https://campingsport.es/the-blog) y
+- [Camping-sport](https://campingsport.es/content/23-nosotros)
 ## Sitio de referencia por la estética que presenta:
 **Se selecciono  la página web Mucho Camping por:**
 * User Experience.
 * User Interface.
 * Paletas de Colores.
 * Presenta un formato Web Responsive.
-[Mucho-camping](https://www.muchocamping.com/)
+- [Mucho-camping](https://www.muchocamping.com/)
 ## Sitio de referencia por las funcionalidades implementadas:
 **Se eligió la página web de Universo Aventura porque:**
 * Facilidad de uso para los usuarios por su diseño y apariencia. 
 * Paleta de Colores e Iconos.
 * Servicios ofrecidos.
 * Es una página web responsive.
-[Universo-aventura](https://www.universoaventura.com.ar)
+- [Universo-aventura](https://www.universoaventura.com.ar)
