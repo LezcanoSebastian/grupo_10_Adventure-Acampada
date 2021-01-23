@@ -4,7 +4,7 @@
 A continuación describiremos la oferta de productos del rubro Camping que tendrá este sitio. Luego finalizaremos con una lista de los servicios ofrecerá el sitio.  
 
 **Tipos de Productos:**   
-Aislantes, Anafes, Calentadores, Banquitos, Bastones, Binoculares, Bolsa de Hidratación, Bolsos, Botellas, Cantimploras, Brújulas, Carpas, Colchones, Conservadoras, Corta Plumas, Herramientas, Infladores,   Jarros, Linternas de Mano, Linternas Frontales, Marmitas, Mesas, Mochila Hidratación, Pinzas Multifunción, Repuestos para Carpas, Sacos y Mantas, Termos de Aceros, Termos de Plásticos, Vasos, Toallas, Vianderas, Navajas , Cuchillos, Bolsos y Mochilas Tácticas, Cañas, Reeles.
+* Aislantes, Anafes, Calentadores, Banquitos, Bastones, Binoculares, Bolsa de Hidratación, Bolsos, Botellas, Cantimploras, Brújulas, Carpas, Colchones, Conservadoras, Corta Plumas, Herramientas, Infladores,   Jarros, Linternas de Mano, Linternas Frontales, Marmitas, Mesas, Mochila Hidratación, Pinzas Multifunción, Repuestos para Carpas, Sacos y Mantas, Termos de Aceros, Termos de Plásticos, Vasos, Toallas, Vianderas, Navajas , Cuchillos, Bolsos y Mochilas Tácticas, Cañas, Reeles.
 
 **Servicios:**
 * Servicio al Cliente. 
@@ -30,27 +30,31 @@ Nuestro equipo está conformado por 4 integrantes: Sebastián Lezcano, Eliana Na
 **Se selecciono  la página web Tu Aventura porque:**	
 * Presenta una gran variedad de productos.
 * Presenta diversos medios de pagos a los clientes.
-* Está dirigida tanto a un público local como vacacional. 
-  [Tu-aventura](https://tu-aventura.com.ar/)
-  [Campz](https://www.campz.es/material-de-montana/camping.html)
+* Está dirigida tanto a un público local como vacacional.  
+  
+  [Tu-aventura](https://tu-aventura.com.ar/)  
+[Campz](https://www.campz.es/material-de-montana/camping.html)
 ## Sitio de referencia los clientes a los que apunta:
-**Se eligió la página web https://campingsport.es/ porque:**
+**Se eligió la página web porque:**
 * Presenta gran variedad de productos para todo tipo de clientes, ya sean novatos o expertos.
 * Tiene un blog propio para orientar a los clientes novatos y para dar ideas a los expertos.
-* Buena experiencia de usuario.
-  [Camping-sport](https://campingsport.es/the-blog)
-  [Camping-sport](https://campingsport.es/content/23-nosotros)
+* Buena experiencia de usuario.  
+  
+  [Camping-sport](https://campingsport.es/the-blog)  
+[Camping-sport](https://campingsport.es/content/23-nosotros)
 ## Sitio de referencia por la estética que presenta:
 **Se selecciono  la página web Mucho Camping por:**
 * User Experience.
 * User Interface.
 * Paletas de Colores.
-* Presenta un formato Web Responsive.
+* Presenta un formato Web Responsive.  
+  
   [Mucho-camping](https://www.muchocamping.com/)
 ## Sitio de referencia por las funcionalidades implementadas:
 **Se eligió la página web de Universo Aventura porque:**
 * Facilidad de uso para los usuarios por su diseño y apariencia. 
 * Paleta de Colores e Iconos.
 * Servicios ofrecidos.
-* Es una página web responsive.
+* Es una página web responsive.  
+  
   [Universo-aventura](https://www.universoaventura.com.ar)
