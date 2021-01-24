@@ -58,3 +58,11 @@ Nuestro equipo está conformado por 4 integrantes: Sebastián Lezcano, Eliana Na
 * Es una página web responsive.  
   
   [Universo-aventura](https://www.universoaventura.com.ar)
+
+##Logo:
+
+##Paleta de colores:
+
+##Tipografias:
+*[Poppins](https://fonts.google.com/specimen/Poppins?query=Poppins#standard-styles)
+*[Montserrat](https://fonts.google.com/specimen/Montserrat?query=Montserrat)
