@@ -59,7 +59,7 @@ Nuestro equipo está conformado por 4 integrantes: Sebastián Lezcano, Eliana Na
   
   [Universo-aventura](https://www.universoaventura.com.ar)
 
-## Link de Trello  
+## Trello  
 [Grupo 10 Trello](https://trello.com/b/fpsFaiCK/grupo10)
 
 ## Logo:
