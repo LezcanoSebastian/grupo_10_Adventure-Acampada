@@ -60,9 +60,11 @@ Nuestro equipo está conformado por 4 integrantes: Sebastián Lezcano, Eliana Na
   [Universo-aventura](https://www.universoaventura.com.ar)
 
 ## Logo:
-<img src = "design/logo.png" height="400Px" width="600px">
+<img src = "design/logo.png" height="400Px" width="600px">  
+
 ## Paleta de colores:
-<img src = "design/paletadecolores.jpeg" height="400Px" width="600px">
+<img src = "design/paletadecolores.jpeg" height="400Px" width="600px">  
+
 ## Tipografias: 
 [Poppins](https://fonts.google.com/specimen/Poppins?query=Poppins#standard-styles)
 [Montserrat](https://fonts.google.com/specimen/Montserrat?query=Montserrat)
