@@ -60,7 +60,7 @@ Nuestro equipo está conformado por 4 integrantes: Sebastián Lezcano, Eliana Na
   [Universo-aventura](https://www.universoaventura.com.ar)
 
 ## Logo:
-
+!(logo)[/Design/logo.png]
 ## Paleta de colores:
 
 ## Tipografias: 
