@@ -60,7 +60,7 @@ Nuestro equipo está conformado por 4 integrantes: Sebastián Lezcano, Eliana Na
   [Universo-aventura](https://www.universoaventura.com.ar)
 
 ## Logo:
-![logo](https://github.com/LezcanoSebastian/grupo_10_Adventure-Acampada/blob/master/design/logo.png)
+<img src = "design/logo.png" height="400Px" width="500px">
 ## Paleta de colores:
 <img src = "design/paletadecolores.jpeg" height="400Px" width="500px">
 ## Tipografias: 
