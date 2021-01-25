@@ -59,6 +59,9 @@ Nuestro equipo está conformado por 4 integrantes: Sebastián Lezcano, Eliana Na
   
   [Universo-aventura](https://www.universoaventura.com.ar)
 
+## Link de Trello  
+[Grupo 10 Trello](https://trello.com/b/fpsFaiCK/grupo10)
+
 ## Logo:
 <img src = "design/logo.png" height="400Px" width="600px">  
 
@@ -68,3 +71,5 @@ Nuestro equipo está conformado por 4 integrantes: Sebastián Lezcano, Eliana Na
 ## Tipografias: 
 * [Poppins](https://fonts.google.com/specimen/Poppins?query=Poppins#standard-styles)
 * [Montserrat](https://fonts.google.com/specimen/Montserrat?query=Montserrat)
+
+
