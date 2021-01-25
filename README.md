@@ -62,7 +62,7 @@ Nuestro equipo está conformado por 4 integrantes: Sebastián Lezcano, Eliana Na
 ## Logo:
 ![logo](https://github.com/LezcanoSebastian/grupo_10_Adventure-Acampada/blob/master/design/logo.png)
 ## Paleta de colores:
-
+![paleta de colores]https://github.com/LezcanoSebastian/grupo_10_Adventure-Acampada/blob/master/design/paletadecolores.jpeg)
 ## Tipografias: 
 * [Poppins](https://fonts.google.com/specimen/Poppins?query=Poppins#standard-styles)
 * [Montserrat](https://fonts.google.com/specimen/Montserrat?query=Montserrat)
