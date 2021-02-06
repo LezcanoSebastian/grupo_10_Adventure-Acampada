@@ -1,3 +1,3 @@
 * RETROSPECTIVA SPRINT 1    
 
-<img src = "sprint1.jpg">
+<img src = "sprint1.jpeg">
