@@ -76,8 +76,7 @@
     }
   header form.input-search:focus{
     border-color: 0px;
-    background-color: 0px;
-    
+    background-color: 0px;    
   }
   header button.btn.btn-outline-light{
     padding: 0;
