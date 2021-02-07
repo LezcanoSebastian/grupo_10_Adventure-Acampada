@@ -1,0 +1,191 @@
+/*General*/
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+a{
+    text-decoration: none;
+    color: black;
+  }
+a:hover{
+    color: white;
+    text-decoration: none;
+  }
+.fa-user-circle:before {
+  margin-right: 5px;
+}
+.fa-address-card:before {
+  margin-right: 5px;
+}
+/*Header*/
+header img.logo{    
+    height: 40px;
+    border-radius: 100%;
+}
+header div.logo{
+    padding-right: 0;
+    margin-right: 0;
+    height: 40px;
+    width: 40px;
+}
+header section.menu{
+    background-image: url('../img/hf.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+header .menuCarrito{    
+    margin-left: 0px;
+    margin-right: 0px;    
+}
+header a.nav-link.carrito{
+    display: none;
+}
+
+header div.container-fluid{
+    padding-left: 0;
+    padding-right: 0;
+}
+header .input-search{
+    background-color: white;
+    border-radius: 2px;
+    padding: 5px;  
+    width: 100%;
+    height: 40px;
+    position: relative;
+  }
+  /*header .input-search input[type="text"]{
+    border: none;
+  }Para sacar los bordes de los input del tipo texto*/
+header .search-container{
+    padding: 0;
+  }
+header .input-search input{
+    border: none;
+    width: 80%;    
+  }
+header .input-search input::placeholder{
+    color: var(--ColorGrisOscuro);
+  }
+header .input-search button{
+    border: none;
+    background-color: white;
+    color: var(--ColorGrisOscuro);
+    border-left: 1px solid var(--ColorGrisClaro);
+    position: absolute;
+    right: 2px;
+    font-size: 0.8em;
+    height: 60%;
+    width: 12%;
+  }
+header nav button.burger:focus{
+    outline: 1px solid white;
+  }
+header .navbar-toggler:focus{
+      box-shadow: 0 0 0 0;      
+  }
+header .navbar-toggler:hover{
+    border: 1px solid rgba(0, 0, 0, 0.5);    
+}
+
+header .navbar-collapse{
+    position: fixed;    
+    height: 100%;
+    background-color: transparent;
+    top: 71px;    
+    transition: all .4s;
+    flex-direction: column;
+  }
+.dropdown-menu{
+    border: none;   
+}
+.dropdown-menu.show {
+  background-color: transparent;
+}
+.dropdown-menu.show:hover{
+    background-color:  rgba(0,0,0,.15);
+}
+header div.carrito{
+  width: 24px;
+}
+/*Login*/
+.modal{
+  background-image: url('../img/hf.png');
+}
+.modal-dialog{
+  background-color: rgba(252, 249, 249, 0.4);
+}
+.modal-content{
+  background-color: rgba(255, 255, 255, 0.4);
+
+}
+.modal-footer{
+  justify-content: center;
+}
+.btn{
+  background-color:#f4791f;
+  border-color: #f4791f;
+}
+.btn:hover{
+  background-color: #659999;
+  border-color:  #659999;
+}
+p.registrate{
+  justify-content: center;
+  padding-top: 5px;
+  font-size: small;
+}
+
+/*Escritorio*/
+
+@media(min-width: 769px){
+    header .input-search input{
+        border: none;
+        width: 85%;    
+        box-shadow: none;
+    }    
+    header .menuCarrito{    
+        display: none;
+     }
+    header a.nav-link.carrito{
+        display: block;
+        padding-left: 10px;
+    }  
+    header .navbar-collapse{
+        position: relative;
+        width: 0;
+        height: 0%;
+        background-color: transparent;
+        top: 0px;
+        transition: none;     
+    }
+    .navbar>.container, .navbar>.container-fluid, .navbar>.container-lg, .navbar>.container-md, .navbar>.container-sm, .navbar>.container-xl, .navbar>.container-xxl {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-end;
+        justify-content: space-between;
+        background-color: transparent;
+    }/*Aqui esta propiedad ubica el logo y la barra de busqueda a la derecha*/ 
+    header img.logo{    
+        height: 60px;
+        width: 60px;
+        border-radius: 100%;
+    }
+    header div.logo{
+        padding-right: 0;
+        margin-right: 0;        
+    }
+    .navbar{
+        margin-top: 10px;        
+    }
+    .navbar>.container, .navbar>.container-fluid, .navbar>.container-lg, .navbar>.container-md, .navbar>.container-sm, .navbar>.container-xl, .navbar>.container-xxl{
+        justify-content: space-evenly;
+    }   /*Aqui esta propiedad ubica la barra del home a la izquierda*/ 
+    .dropdown-menu.show {
+        
+        background-color: transparent;
+        top:54px;
+    }
+
+}
+
