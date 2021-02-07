@@ -1,34 +1,39 @@
 /*General*/
-/* Colores */
-:root{
-    --colorNaranja:#f4791f;
-    --colorAzul: #659999;
-    --fondoHeader:rgba(0, 0, 0, 0.5);
-    --colorGrisOscuro: rgb(85, 84, 84);
-    --colorGrisClaro: grey;
-  }
-  
-  
-  *{
-    margin: 0 auto;
-    padding: 0;
-    box-sizing: border-box;
-    }
-  a{
-      text-decoration: none;
-      color: black;
-    }
-  a:hover{
-      color: white;
-      text-decoration: none;
-    }
-  .fa-user-circle:before {
-    margin-right: 5px;
-  }
-  .fa-address-card:before {
-    margin-right: 5px;
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+/* Colores */   
+  :root{
+     --colorNaranja:#f4791f;
+     --colorAzul: #659999;
+     --colorNegro: black;
+     --colorBlanco: white;
+     --fondoHeader:rgba(0, 0, 0, 0.5);
+     --fondoHeader2: rgba(0,0,0,0.15);
+     --fondoHeader3:rgba(0, 0, 0, 0.5);
+     --colorGrisOscuro: rgb(85, 84, 84);
+     --colorGrisClaro: grey;
+     --colorTraparente: transparent;
+     --colorHeaderModal1:rgba(252, 249, 249, 0.4);
+     --colorHeaderModal2:rgba(255, 255, 255, 0.4);
   }
   /*Header*/
+  header a{
+      text-decoration: none;
+      color: var(--colorNegro);
+    }
+  header a:hover{
+      color: var(--colorBlanco);
+      text-decoration: none;
+    }
+  header .fa-user-circle:before {
+    margin-right: 5px;
+  }
+  header .fa-address-card:before {
+    margin-right: 5px;
+  }
   header img.logo{    
       height: 40px;
       border-radius: 100%;
@@ -57,7 +62,7 @@
       padding-right: 0;
   }
   header .input-search{
-      background-color: white;
+      background-color: var(--colorBlanco);
       border-radius: 2px;
       padding: 5px;  
       width: 100%;
@@ -75,13 +80,13 @@
       width: 80%;    
     }
   header .input-search input::placeholder{
-      color: var(--ColorGrisOscuro);
+      color: var(--colorGrisOscuro);
     }
   header .input-search button{
       border: none;
-      background-color: white;
-      color: var(--ColorGrisOscuro);
-      border-left: 1px solid var(--ColorGrisClaro);
+      background-color: var(--colorBlanco);
+      color: var(--colorGrisOscuro);
+      border-left: 1px solid var(--colorGrisClaro);
       position: absolute;
       right: 2px;
       font-size: 0.8em;
@@ -89,65 +94,113 @@
       width: 12%;
     }
   header nav button.burger:focus{
-      outline: 1px solid white;
+      outline: 1px solid var(--colorBlanco);
     }
   header .navbar-toggler:focus{
         box-shadow: 0 0 0 0;      
     }
   header .navbar-toggler:hover{
-      border: 1px solid rgba(0, 0, 0, 0.5);    
+      border: 1px solid var(--fondoHeader);    
   }
   
   header .navbar-collapse{
       position: fixed;    
       height: 100%;
-      background-color: transparent;
+      background-color: var(--colorTraparente);
       top: 71px;    
       transition: all .4s;
       flex-direction: column;
     }
-  .dropdown-menu{
+  header .dropdown-menu{
       border: none;   
   }
-  .dropdown-menu.show {
-    background-color: transparent;
+  header .dropdown-menu.show {
+    background-color: var(--colorTraparente);
   }
-  .dropdown-menu.show:hover{
-      background-color:  rgba(0,0,0,.15);
+  header .dropdown-menu.show:hover{
+      background-color: var(--fondoHeader2);
   }
   header div.carrito{
     width: 24px;
   }
   /*Login*/
-  .modal{
+  header .modal{
     background-image: url('../img/hf.png');
   }
-  .modal-dialog{
-    background-color: rgba(252, 249, 249, 0.4);
+  header .modal-dialog{
+    background-color: var(--colorHeaderModal1);
   }
-  .modal-content{
-    background-color: rgba(255, 255, 255, 0.4);
+  header .modal-content{
+    background-color: var(--colorHeaderModal2);
   
   }
-  .modal-footer{
+  header .modal-footer{
     justify-content: center;
   }
-  .btn{
-    background-color:var(--colorNaranja); 
-    border-color:var(--colorNaranja); 
+  header .btn{
+    background-color: var(--colorNaranja);
+    border-color: var(--colorNaranja);
   }
-  .btn:hover{
+  header .btn:hover{
     background-color: var(--colorAzul);
     border-color:  var(--colorAzul);
   }
-  p.registrate{
+  header p.registrate{
     justify-content: center;
     padding-top: 5px;
     font-size: small;
   }
+  /*Escritorio Header*/
+@media(min-width: 769px){
+  header .input-search input{
+      border: none;
+      width: 85%;    
+      box-shadow: none;
+  }    
+  header .menuCarrito{    
+      display: none;
+   }
+  header a.nav-link.carrito{
+      display: block;
+      padding-left: 10px;
+  }  
+  header .navbar-collapse{
+      position: relative;
+      width: 0;
+      height: 0%;
+      background-color: var(--colorTraparente);
+      top: 0px;
+      transition: none;     
+  }
+  header .navbar>.container, .navbar>.container-fluid, .navbar>.container-lg, .navbar>.container-md, .navbar>.container-sm, .navbar>.container-xl, .navbar>.container-xxl {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-end;
+      justify-content: space-between;
+      background-color: var(--colorTraparente);
+  }/*Aqui esta propiedad ubica el logo y la barra de busqueda a la derecha*/ 
+  header img.logo{    
+      height: 60px;
+      width: 60px;
+      border-radius: 100%;
+  }
+  header div.logo{
+      padding-right: 0;
+      margin-right: 0;        
+  }
+  header .navbar{
+      margin-top: 10px;        
+  }
+  header .navbar>.container, .navbar>.container-fluid, .navbar>.container-lg, .navbar>.container-md, .navbar>.container-sm, .navbar>.container-xl, .navbar>.container-xxl{
+      justify-content: space-evenly;
+  }   /*Aqui esta propiedad ubica la barra del home al centro*/ 
+  header .dropdown-menu.show {
+      background-color: var(--colorTraparente);
+      top:54px;
+  }
+}
 
-
-                             /* CUERPO */
+/* CUERPO */
   body{
     background-color: var(--colorAzul);
     font-family: 'Lato', sans-serif;
@@ -234,7 +287,7 @@ ul.dropdown-menu.show:active{
 }
 
 
-                       /* FOOTER */
+/* FOOTER */
 .main-footer{
     background-image: url('../img/hf.png');
     margin-top: 25px;
