@@ -20,6 +20,12 @@
      --colorHeaderModal2:rgba(255, 255, 255, 0.4);
   }
   /*Header*/
+  header .row{
+      margin-bottom: 0;
+      background-color: none;
+      border-radius: 0;
+      padding:0;
+  }
   header a{
       text-decoration: none;
       color: var(--colorNegro);
@@ -63,12 +69,25 @@
   }
   header .input-search{
       background-color: var(--colorBlanco);
-      border-radius: 2px;
       padding: 5px;  
       width: 100%;
       height: 40px;
       position: relative;
     }
+  header form.input-search:focus{
+    border-color: 0px;
+    background-color: 0px;
+    
+  }
+  header button.btn.btn-outline-light{
+    padding: 0;
+    margin: 0;
+    width: 24px;
+  }
+  header button.btn.btn-outline-light:focus{
+    border-color: 0px;
+    background-color: 0px;
+  }
     /*header .input-search input[type="text"]{
       border: none;
     }Para sacar los bordes de los input del tipo texto*/
