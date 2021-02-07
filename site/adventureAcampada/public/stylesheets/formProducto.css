@@ -41,7 +41,7 @@ header .fa-user-circle:before {
 header .fa-address-card:before {
   margin-right: 5px;
 }
-header img.logo{    
+header img.logoHeard{    
     height: 40px;
     border-radius: 100%;
 }
@@ -63,10 +63,13 @@ header .menuCarrito{
 header a.nav-link.carrito{
     display: none;
 }
-
 header div.container-fluid{
     padding-left: 0;
     padding-right: 0;
+}
+header div#navbarSupportedContent.navbar-collapse.navbar-light.collapse.show{
+  position: absolute;
+  order: 1;
 }
 header .input-search{
     background-color: var(--colorBlanco);
@@ -130,6 +133,7 @@ header .navbar-collapse{
     top: 71px;    
     transition: all .4s;
     flex-direction: column;
+    order: 0;
   }
 header .dropdown-menu{
     border: none;   
