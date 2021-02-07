@@ -278,14 +278,20 @@ ul.dropdown-menu:hover{
   background-color: rebeccapurple!important;
 }
 /* Descripcion del producto */
-.descripcion{
+.descripcion div p{
     padding:7%;
     background-color:#659999;
     margin-bottom: 25px;
     border-radius: 15px;
    text-align: center;
 }
+.descripcion{
+  padding: 5%;
+}
 /* Comentarios */
+.comentarios{
+  padding: 5%;
+}
 .comentarios div h4{
     margin-top: 10px;
     margin-left: 10px;
@@ -316,12 +322,11 @@ header{
     background-color: rgb(100, 132, 101);
 }
 /* intento de carrusel de ofertas/publicidad */
-section.banner{
-    background: #659999;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #f4791f, #659999);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #f4791f, #659999); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-}
+/* section.banner{
+    background: #659999;  
+    background: -webkit-linear-gradient(to right, #f4791f, #659999); 
+    background: linear-gradient(to right, #f4791f, #659999); 
+} */
 
 img.logo{
     width: 25%;
@@ -347,10 +352,15 @@ section.menu{
 a.nav-link.carrito{
     display: none;
 }
-section.row{
-    padding-top: 15px;
+section.detalle.row{
+    padding: 15px;
+    background-color:white;
+    align-items: center;
+    border-radius: 10px;
 }
-
+.container{
+  background-color: var(--colorAzul);
+}
 /*Escritorio*/
 
 @media(min-width: 769px){
