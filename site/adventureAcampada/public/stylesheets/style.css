@@ -18,8 +18,19 @@
  --colorTraparente: transparent;
  --colorHeaderModal1:rgba(252, 249, 249, 0.4);
  --colorHeaderModal2:rgba(255, 255, 255, 0.4);
+ --colorPrimario1: #F28123;
+ --colorPrimario2: #38726C;
+ --colorSecundarioVariante1: #F7F052;
+ --colorSecundarioVariante2: #D34E24;
+ --colorSecundarioVariante3: #563F1B;
 }
 /*Header*/
+header .row{
+  margin-bottom: 0;
+  background-color: none;
+  border-radius: 0;
+  padding:0;
+}
 header a{
   text-decoration: none;
   color: var(--colorNegro);
@@ -34,7 +45,7 @@ margin-right: 5px;
 header .fa-address-card:before {
 margin-right: 5px;
 }
-header img.logo{    
+header img.logoHeard{    
   height: 40px;
   border-radius: 100%;
 }
@@ -63,11 +74,23 @@ header div.container-fluid{
 }
 header .input-search{
   background-color: var(--colorBlanco);
-  border-radius: 2px;
   padding: 5px;  
   width: 100%;
   height: 40px;
   position: relative;
+}
+header form.input-search:focus{
+border-color: 0px;
+background-color: 0px;    
+}
+header button.btn.btn-outline-light{
+padding: 0;
+margin: 0;
+width: 24px;
+}
+header button.btn.btn-outline-light:focus{
+border-color: 0px;
+background-color: 0px;
 }
 /*header .input-search input[type="text"]{
   border: none;
@@ -100,7 +123,7 @@ header .navbar-toggler:focus{
     box-shadow: 0 0 0 0;      
 }
 header .navbar-toggler:hover{
-  border: 1px solid var(--fondoHeader1);    
+  border: 1px solid var(--fondoHeader);    
 }
 
 header .navbar-collapse{
@@ -149,6 +172,110 @@ header p.registrate{
 justify-content: center;
 padding-top: 5px;
 font-size: small;
+}
+
+/*Home*/
+
+section .carousel .carousel-inner {
+  height: 100px;
+  width: 100%;
+}
+
+section .carousel .carousel-inner img {
+  height: 100px;
+}
+
+h2 {
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 20px;
+  background-color: var(--colorPrimario1);
+  color: var(--colorPrimario2);
+  font-weight: bold;
+  border-radius: 30px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.container a {
+  text-decoration: none;
+  color: #666;
+}
+
+section .product {
+  padding-top: 15px;
+  margin-bottom: 15px;
+  border: 1px solid var(--colorSecundarioVariante2);
+  border-radius: 15px;
+  height: 300px;
+  width: 220px;
+}
+
+section .product img {
+  height: 150px;
+  width: 100%;
+  object-fit: contain;
+}
+
+section .product h5 {
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+  border-bottom: 1px solid var(--colorSecundarioVariante2);
+  width: 90%;
+  margin-top: 10px;
+  text-align: center;
+  color: black;
+}
+
+section .product p {
+  font-family: 'Montserrat', sans-serif;
+  text-transform: capitalize;
+  text-align: center;
+  width: 100%;
+}
+
+.container .product:hover {
+  /* transform: translateY(-10px); */
+  box-shadow: 0px 12px 16px rgba(0, 0, 0, 0.30);
+}
+
+/* MEDIA QUERIES */
+/* VERSION TABLET */
+@media(min-width:426px) {
+  .container {
+      flex-direction: row;
+  }
+
+  section .carousel .carousel-inner {
+      height: 150px;
+      width: 100%;
+  }
+  
+  section .carousel .carousel-inner img {
+      height: 150px;
+  }
+}
+
+/* VERSION ESCRITORIO */
+@media(min-width:769px) {
+  .container {
+      flex-direction: row;
+  }
+  
+  section .carousel .carousel-inner {
+      height: 300px;
+      width: 100%;
+  }
+  
+  section .carousel .carousel-inner img {
+      height: 300px;
+  }
 }
 
 /* Cuerpo */
@@ -282,55 +409,55 @@ section.row{
     padding-top: 15px;
 }
 
-/*Escritorio Header*/
-@media(min-width: 769px){
-  header .input-search input{
-      border: none;
-      width: 85%;    
-      box-shadow: none;
-  }    
-  header .menuCarrito{    
-      display: none;
-   }
-  header a.nav-link.carrito{
-      display: block;
-      padding-left: 10px;
-  }  
-  header .navbar-collapse{
-      position: relative;
-      width: 0;
-      height: 0%;
-      background-color: var(--colorTraparente);
-      top: 0px;
-      transition: none;     
+  /*Escritorio Header*/
+  @media(min-width: 769px){
+    header .input-search input{
+        border: none;
+        width: 85%;    
+        box-shadow: none;
+    }    
+    header .menuCarrito{    
+        display: none;
+     }
+    header a.nav-link.carrito{
+        display: block;
+        padding-left: 10px;
+    }  
+    header .navbar-collapse{
+        position: relative;
+        width: 0;
+        height: 0%;
+        background-color: var(--colorTraparente);
+        top: 0px;
+        transition: none;     
+    }
+    header .navbar>.container, .navbar>.container-fluid, .navbar>.container-lg, .navbar>.container-md, .navbar>.container-sm, .navbar>.container-xl, .navbar>.container-xxl {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-end;
+        justify-content: space-between;
+        background-color: var(--colorTraparente);
+    }/*Aqui esta propiedad ubica el logo y la barra de busqueda a la derecha*/ 
+    header img.logoHeard{    
+        height: 60px;
+        width: 60px;
+        border-radius: 100%;
+    }
+    header div.logo{
+        padding-right: 0;
+        margin-right: 0;        
+    }
+    header .navbar{
+        margin-top: 10px;        
+    }
+    header .navbar>.container, .navbar>.container-fluid, .navbar>.container-lg, .navbar>.container-md, .navbar>.container-sm, .navbar>.container-xl, .navbar>.container-xxl{
+        justify-content: space-evenly;
+    }   /*Aqui esta propiedad ubica la barra del home al centro*/ 
+    header .dropdown-menu.show {
+        background-color: var(--colorTraparente);
+        top:54px;
+    }
   }
-  header .navbar>.container, .navbar>.container-fluid, .navbar>.container-lg, .navbar>.container-md, .navbar>.container-sm, .navbar>.container-xl, .navbar>.container-xxl {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: flex-end;
-      justify-content: space-between;
-      background-color: var(--colorTraparente);
-  }/*Aqui esta propiedad ubica el logo y la barra de busqueda a la derecha*/ 
-  header img.logo{    
-      height: 60px;
-      width: 60px;
-      border-radius: 100%;
-  }
-  header div.logo{
-      padding-right: 0;
-      margin-right: 0;        
-  }
-  header .navbar{
-      margin-top: 10px;        
-  }
-  header .navbar>.container, .navbar>.container-fluid, .navbar>.container-lg, .navbar>.container-md, .navbar>.container-sm, .navbar>.container-xl, .navbar>.container-xxl{
-      justify-content: space-evenly;
-  }   /*Aqui esta propiedad ubica la barra del home al centro*/ 
-  header .dropdown-menu.show {
-      background-color: var(--colorTraparente);
-      top:54px;
-  }
-}
 
 /* Cuerpo qery */
 @media(min-width: 769px){
