@@ -1,18 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detalle del producto</title>
-    <script src="https://kit.fontawesome.com/3f21023fe6.js" crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <link rel="stylesheet" href="/stylesheets/detalleProducto.css">
-</head>
-
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tu carrito</title>
+        <script src="https://kit.fontawesome.com/3f21023fe6.js" crossorigin="anonymous"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+        <link rel="stylesheet" href="/stylesheets/carrito.css">
+    </head>
 <body>
-
     <header class="container-fluid">
 
         <section class="row">
@@ -210,103 +207,97 @@
         </section>
         <!--FIN del section class="row"-->
     </header>
-
     <!-- Cuerpo -->
     <main class="container cuerpo">
-        <section class="row">
-            <!-- Nombre del producto -->
-            <article class="title text-center col-sm-12 col-md-12 col-lg-12">
-                <h1 class="">Carpa Familiar</h1>
-            </article>
-            <!-- Imagen del producto -->
-             <article class="img-product col-sm-12 col-md-12 col-lg-7">
-                    <div class="carousel slide form-floating d-flex flex-column mb-5"  data-bs-ride="carousel" id="carouselExampleControls">
-                        <ol class="carousel-indicators">
-                            <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></li>
-                            <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></li>
-                            <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></li>
-                          </ol>
-                    <div class="carousel-inner">
-                          <div class="carousel-item active">
-                            <img src="/img/productos/carpa1.webp" class="d-block w-100" alt="...">
-                          </div>
-                          <div class="carousel-item">
-                            <img src="/img/productos/carpa2.webp" class="d-block w-100" alt="...">
-                          </div>
-                          <div class="carousel-item">
-                            <img src="/img/productos/carpa3.webp" class="d-block w-100" alt="...">
-                          </div>
-                          <div class="carousel-item">
-                            <img src="/img/productos/ejemplo.jpg" class="d-block w-100" alt="...">
-                          </div>
-                    </div>
-                          <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Anterior</span>
-                         </a>
-                         <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Siguiente</span>
-                         </a>
-                    </div>
-            </article>
-            <!-- Vista desktop -->
-        <div class="vista-desktop col-sm-12 col-md-12 col-lg-4">
-            <!-- Nombre del producto -->
-             <article>
-                 <h1 class="">Carpa Familiar</h1>
-            </article>
-            <!--Precio  -->
-            <article>
-                <h3 class="form-floating d-flex flex-column"> $15.000</h3>
-            </article>
-            <!-- Boton desplegable de formas de envio -->
-            <article>
-                <div class="dropdown form-floating d-flex flex-column">
-                    <button class="btn btn-success dropdown-toggle " type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                    Metodos de envios <i class="fas fa-truck"></i>
-                    </button>
-                   <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                       <li><a class="dropdown-item" href="#">Retiro en sucursal</a></li>
-                       <li><a class="dropdown-item" href="#">Envio a domicilio</a></li>
-                       <li><a class="dropdown-item" href="#">Retirar en sucursal de correo</a></li>
-                   </ul>
-                </div>
-            </article>
-           <!-- Boton desplegable, medios de pago -->
-            <article>
-                <div class="dropdown ">
-                    <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Medios de pago <i class="far fa-credit-card"></i> <i class="fas fa-credit-card"></i> 
-                    </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <li><a class="dropdown-item" href="#">Efectivo, pagando en pagofacil o rapipago</a></li>
-                            <li><a class="dropdown-item" href="#">Debito automatico</a></li>
-                            <li><a class="dropdown-item" href="#">targeta de credito</a></li>
-                        </ul>
-                 </div>
-            </article>
-              <!-- Boton de compra -->
-            <article>
-                <div class="form-floating d-flex flex-column">
-                    <button type="button" class="btn btn-success ">Comprar ahora <i class="fas fa-hand-holding-usd"></i></button>
-                </div>
-            </article>
-            <!-- Boton agregar a carrito -->
-            <article>
-                <div class="form-floating d-flex flex-column">
-                    <button class="carrito btn btn-success ">Agregar a carrito  <i class="fas fa-shopping-cart"></i></button>
-                </div>
-            </article>
+        <div class="col-sm-12 col-mg-12 col-lg-12">
+             <h1>
+                 Mi Carrito
+            </h1>
         </div>
+        <section class="row">
+        
 
-         <!--Precio  -->
-         <article class="price col-sm-12 col-md-12 col-lg-4">
-            <h3 class="form-floating d-flex flex-column"> $15.000</h3>
-        </article>
-        <!-- Boton desplegable de formas de envio -->
-        <article class="shipping col-sm-6 col-md-6 col-lg-4">
+            <div class="producto-carrito col-sm-12 col-md-12 col-lg-3"><div class="card">
+                <img src="/img/productos/lampara-de-camping.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">titulo del producto</h5>
+                  <p class="card-text">Descripcion del producto</p>
+                </div>
+              </div></div>
+            <div class="precio col-sm-12 col-md-6 col-lg-3"><p class="price">$150 precio unitario</p> </div>
+            <div class="cantidad col-sm-12 col-md-6 col-lg-3">
+                <div class="dropdown form-floating d-flex flex-column">
+                    <button type="button" class="cantidad btn btn-success dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                      Seleccione cantidad
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">1</a></li>
+                      <li><a class="dropdown-item" href="#">2</a></li>
+                      <li><a class="dropdown-item" href="#">3</a></li>
+                      <li><a class="dropdown-item" href="#">4</a></li>
+                      <li><a class="dropdown-item" href="#">5</a></li>
+                      <li><a class="dropdown-item" href="#">6</a></li>
+                      <li><a class="dropdown-item" href="#">7</a></li>
+                      <li><a class="dropdown-item" href="#">8</a></li>
+                      <li><a class="dropdown-item" href="#">9</a></li>
+                      <li><a class="dropdown-item" href="#">10</a></li>
+                      <li><a class="dropdown-item" href="#">11</a></li>
+                      <li><a class="dropdown-item" href="#">12</a></li>
+                      
+                    </ul>
+                  </div>
+            </div>
+            <div class="total col-sm-6 col-md-3 col-lg-3"><p class="price">precio total del producto</p>
+            </div>
+    </section>
+    
+    <section class="row">
+            <div class="producto-carrito col-sm-12 col-md-12 col-lg-3"><div class="card">
+                <img src="/img/productos/51O0KTuvjpL._AC_SY355_.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">titulo del producto</h5>
+                  <p class="card-text">Descripcion del producto</p>
+                </div>
+              </div></div>
+            <div class="precio col-sm-12 col-md-6 col-lg-3"><p class="price">$150 precio unitario</p></div>
+            <div class="cantidad col-sm-12 col-md-6 col-lg-3">
+                <div class="dropdown form-floating d-flex flex-column">
+                    <button type="button" class="cantidad btn btn-success dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                      Seleccione cantidad
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">1</a></li>
+                      <li><a class="dropdown-item" href="#">2</a></li>
+                      <li><a class="dropdown-item" href="#">3</a></li>
+                      <li><a class="dropdown-item" href="#">4</a></li>
+                      <li><a class="dropdown-item" href="#">5</a></li>
+                      <li><a class="dropdown-item" href="#">6</a></li>
+                      <li><a class="dropdown-item" href="#">7</a></li>
+                      <li><a class="dropdown-item" href="#">8</a></li>
+                      <li><a class="dropdown-item" href="#">9</a></li>
+                      <li><a class="dropdown-item" href="#">10</a></li>
+                      <li><a class="dropdown-item" href="#">11</a></li>
+                      <li><a class="dropdown-item" href="#">12</a></li>
+                      
+                    </ul>
+                  </div>
+            </div>
+        </div>
+        <div class="total col-sm-6 col-md-3 col-lg-3"><p class="price">precio total del producto</p>
+        </div>
+    </section>
+        <section class="row">
+          <div class="total col-sm-6 col-md-6 col-lg-6"><p class="total-price-title">Precio Final</p>
+          </div>
+        <div class="total col-sm-6 col-md-6 col-lg-6"><p class="total-price-number">$15.820</p>
+        </div>
+        
+    </section>
+    <!-- Botones -->
+    <section class="row">
+
+      <!-- Medios de envios -->
+        <article class="medios-de-pago col-sm-12 col-md-4 col-lg-4">
             <div class="dropdown form-floating d-flex flex-column">
                 <button class="btn btn-success dropdown-toggle " type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
                 Metodos de envios <i class="fas fa-truck"></i>
@@ -318,9 +309,10 @@
                </ul>
             </div>
         </article>
-       <!-- Boton desplegable, medios de pago -->
-        <article class="pay col-sm-6 col-md-6 col-lg-4">
-            <div class="dropdown">
+
+        <!-- medios de pagos -->
+        <article class="medios-de-envio col-sm-12 col-md-4 col-lg-4">
+            <div class="dropdown ">
                 <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton"
                         data-bs-toggle="dropdown" aria-expanded="false">
                         Medios de pago <i class="far fa-credit-card"></i> <i class="fas fa-credit-card"></i> 
@@ -331,73 +323,32 @@
                         <li><a class="dropdown-item" href="#">targeta de credito</a></li>
                     </ul>
              </div>
-        </article>
-        <!-- Boton de compra -->
-        <article class="shopping col-sm-6 col-md-6 col-lg-4">
+        </article>  
+        
+      <!-- Comprar -->
+        <article class="button-comprar col-sm-12 col-md-4 col-lg-4">
+          
             <div class="form-floating d-flex flex-column">
                 <button type="button" class="btn btn-success ">Comprar ahora <i class="fas fa-hand-holding-usd"></i></button>
             </div>
-        </article>
-        <!-- Boton agregar a carrito -->
-        <article class="shopping-cart col-sm-6 col-md-6 col-lg-4">
-            <div class="form-floating d-flex flex-column">
-                <button class="carrito btn btn-success ">Agregar a carrito <i class="fas fa-shopping-cart"></i></button>
-            </div>
-        </article>
 
-             <!-- Descripcion del producto -->
-             <article class="descripcion col-sm-10 col-md-10 col-lg-10 ">
-                <div class="form-floating d-flex flex-column">
-                    <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam id asperiores ducimus recusandae.
-                Eos incidunt ea a accusamus accusantium dolorum facere autem at, qui voluptatibus eveniet
-                perferendis debitis nulla quasi.
-                Quae reiciendis accusamus autem nemo ducimus praesentium dolorum suscipit dolorem eligendi, ipsam
-                sequi minima optio adipisci dolor corporis dicta sed eveniet aliquam expedita necessitatibus
-                doloribus non at ipsum quo? Natus.
-                Incidunt deserunt harum accusamus consequatur eaque neque velit praesentium. Aliquam aspernatur
-                corporis nulla. Temporibus totam molestiae maiores praesentium necessitatibus, dolores, laudantium
-                blanditiis voluptas corrupti tenetur fugiat eum dolorum enim obcaecati!
-                    </p>
-               </div>
-            </article>  
-                <!-- Carrusel con imagenes de productos -->
-            <article class="img-ofertas col-sm-12 col-md-12 col-lg-12">
-                <div class="carrusel form-floating d-flex flex-column">
-                    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="/img/productos/HTB1xi6hgDZmx1VjSZFGq6yx2XXa5.jpg" class="d-block w-100" alt="...">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="/img/productos/lampara-de-camping.jpg" class="d-block w-100" alt="...">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="/img/productos/51O0KTuvjpL._AC_SY355_.jpg" class="d-block w-100" alt="...">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
-            <!-- Seccion de comentarios -->
-            <article class="comentarios col-sm-10 col-md-10 col-lg-10">
-                <div class="form-floating d-flex flex-column">
-                    <h4>Comentarios</h4>
-                    <textarea name="comentario" id="comentario"></textarea>
-                    <button class="comentario btn btn-success col-4">enviar</button>
-                </div>
-            </article>
-        </section>
+        </article>
+        
+    </section>
+
     </main>
 
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
-        </script>
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+    crossorigin="anonymous"></script>
 </body>
+<!-- Footer -->
 <footer>
     <main class="container-fluid">
-        <section class="main-footer">
-            <div class="row">
+        <section class="">
+            <div class="main-footer row">
         <div class="logo col-sm-12 col-md-12 col-lg-12"><img src="/img/1612675856438.png" alt="" width="50%" class="logo-footer"></div>
      
         <div class="contactar col-sm-3 col-md-3 col-lg-3">
@@ -463,11 +414,11 @@
                 </li>             
             </ul>
         </div>
-        <div class="col-sm-12 col-md-12 col-lg-12">
+<!--         <div class="col-sm-12 col-md-12 col-lg-12">
             <div class="banner-footer d-flex flex-column">
                 <h2>.</h2>
             </div>
-        </div>
+        </div> -->
     </div>
     </section>
     </main>

@@ -10,9 +10,9 @@
 
 
 *{
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
   }
 a{
     text-decoration: none;
@@ -145,8 +145,11 @@ p.registrate{
   padding-top: 5px;
   font-size: small;
 }
-/* Cuerpo */
 
+
+
+
+/* Cuerpo */
 .cuerpo{
     background-color: rgb(255, 255, 255);
     border-radius: 5px;
@@ -173,6 +176,9 @@ div.vista-desktop{
 
     margin-top: 13.5px;
     height: 365px;
+}
+.carousel-control-next-icon, .carousel-control-prev-icon{
+  background-color: #659999;
 }
 
 /* Configuracion de los botones */
@@ -201,6 +207,9 @@ ul.dropdown-menu{
 }
 ul.dropdown-menu:hover{
     border-color: #ff5715;
+}
+.targeta .dropdown-menu.show{
+  background-color: rebeccapurple!important;
 }
 /* Descripcion del producto */
 .descripcion{
