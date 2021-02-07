@@ -1,0 +1,117 @@
+:root {
+    --colorPrimario1: #F28123;
+    --colorPrimario2: #38726C;
+    --colorSecundarioVariante1: #F7F052;
+    --colorSecundarioVariante2: #D34E24;
+    --colorSecundarioVariante3: #563F1B;
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+section .carousel .carousel-inner {
+    height: 100px;
+    width: 100%;
+}
+
+section .carousel .carousel-inner img {
+    height: 100px;
+}
+
+h2 {
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 20px;
+    background-color: var(--colorPrimario1);
+    color: var(--colorPrimario2);
+    font-weight: bold;
+    border-radius: 30px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.container a {
+    text-decoration: none;
+    color: #666;
+}
+
+section .product {
+    padding-top: 15px;
+    margin-bottom: 15px;
+    border: 1px solid var(--colorSecundarioVariante2);
+    border-radius: 15px;
+    height: 300px;
+    width: 220px;
+}
+
+section .product img {
+    height: 150px;
+    width: 100%;
+    object-fit: contain;
+}
+
+section .product h5 {
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    border-bottom: 1px solid var(--colorSecundarioVariante2);
+    width: 90%;
+    margin-top: 10px;
+    text-align: center;
+    color: black;
+}
+
+section .product p {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: capitalize;
+    text-align: center;
+    width: 100%;
+}
+
+.container .product:hover {
+    /* transform: translateY(-10px); */
+    box-shadow: 0px 12px 16px rgba(0, 0, 0, 0.30);
+}
+
+/* MEDIA QUERIES */
+/* VERSION TABLET */
+@media(min-width:426px) {
+    .container {
+        flex-direction: row;
+    }
+
+    section .carousel .carousel-inner {
+        height: 150px;
+        width: 100%;
+    }
+    
+    section .carousel .carousel-inner img {
+        height: 150px;
+    }
+}
+
+/* VERSION ESCRITORIO */
+@media(min-width:769px) {
+    .container {
+        flex-direction: row;
+
+
+    }
+    
+    section .carousel .carousel-inner {
+        height: 300px;
+        width: 100%;
+    }
+    
+    section .carousel .carousel-inner img {
+        height: 300px;
+    }
+}
