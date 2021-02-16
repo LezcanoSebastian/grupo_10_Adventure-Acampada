@@ -136,13 +136,25 @@ section .product p {
 }
 
 /*Header*/
+header#header.container-fluid.fixed-top.header-transparent{
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0 ;
+}
 .frase{
 position: absolute;
 z-index: 1;
 margin-top: 300px;
-margin-left: 28%;
 font-size: 49px;
 color: white;
+right: 0px;
+margin-left: 0;
+
+}
+.frase h1,h2{
+  width: 300px;
+  margin-left: 0;
+  margin-right: 0;
 }
 img.Header{
 width: 100%;
@@ -170,15 +182,16 @@ margin-right: 5px;
 }
 header img.logoHeader{    
   height: 40px;
+  width: 128px;
 }
 header div.logoHeader{
   padding-right: 0;
   margin-right: 0;
   height: 40px;
-  width: 40px;
 }
 header div.logoHeader.col-sm-3.col-md-6.col-lg-4{
 width: 128px;
+margin-left: 0;
 }
 header button.navbar-toggler.navbar-light{
 padding-left: 6px;
@@ -186,6 +199,8 @@ padding-right: 6px;
 }
 header div.col-sm-4.col-md-6.col-lg-8.search-container{
 padding-left: 6px;
+margin-left: 0;
+margin-right: 0;
 }
 header .menuCarrito{    
   margin-left: 0px;
@@ -253,8 +268,10 @@ background-color: var(--colorTraparente);
 header .dropdown-menu.show:hover{
   background-color: var(--fondoHeader2);
 }
-header div.carrito{
+header div.carrito.col-sm-2.col-md-2.col-lg-6.d-flex{
 width: 24px;
+margin-left: 0;
+margin-right: 0;
 }
 
 header div#navbarSupportedContent.navbar-collapse.navbar-light.collapse.show{
@@ -273,6 +290,8 @@ header nav.navbar.navbar-expand-lg.col-lg-12{
 margin-top: 0;
 padding-top: 0;
 padding-bottom: 0;
+margin-left: 5px;
+margin-right: 0;
 }
 /*Login*/
 .modal-backdrop {
@@ -394,11 +413,11 @@ margin-left: 0;
 }
 @media(min-width: 1025px){
 header ul.navbar-nav.mb-2.mb-2.mb-lg-0.Sesion{
-  left: 1140px;
+  left: 1240px;
   display: flex;
 }
 header ul.navbar-nav.mb-2.mb-2.mb-lg-0{
-  left: 350px;
+  left: 450px;
 }
 header li.nav-item.menuLR{
   display: none;
