@@ -1,5 +1,9 @@
-module.exports = {
-    index : (req,res) => {
-        res.render('home')
-    }
+const controllers = {
+    home : (req, res) => {
+        res.render('index', {
+            title: 'Home'
+        })
+    },
 }
+
+module.exports = controllers;
