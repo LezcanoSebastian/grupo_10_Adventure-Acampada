@@ -13,25 +13,16 @@
 
 <body>
 
-    <header class="container-fluid">
+    <header id="header" class="container-fluid fixed-top header-transparent">
 
-        <section class="row">
-            <!--<section class="banner">
-                <section class="banners row">
-                    <article class="col-sm-12 col-md-12 col-lg-12">
-                        <div class="banner d-flex flex-column">
-                            <h2>% 20 off</h2>
-                        </div>
-                    </article>
-                </section>
-            </section>-->
-
-            <section class="menu">
+        <section class="row header">
+            
+            <section class="menu container">
 
                 <nav class="navbar navbar-expand-lg">
                     <div class="container-fluid">
                         <div class="logo col-sm-3 col-md-6 col-lg-4">
-                            <a href="./index.ejs"><img class="logoHeard" src="../img/rusticoLogo.png" alt="logo"></a>
+                            <a href="index.html"><img class="logoHeader" src="img/logobis7.png" alt="logo"></a>
                         </div>
                         <div class="col-sm-4 col-md-6 col-lg-8 search-container">
                             <form action="" class="input-search">
@@ -41,7 +32,7 @@
                         </div>
 
                         <nav class="navbar navbar-expand-lg col-lg-12">
-                            <div class="container-fluid ">
+                            <div class="container-fluid">
                                 <button class="navbar-toggler navbar-light " type="button" data-bs-toggle="collapse"
                                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                                     aria-expanded="false" aria-label="Toggle navigation">
@@ -50,30 +41,20 @@
 
                                 <div class="collapse navbar-collapse navbar-light " id="navbarSupportedContent">
                                     <ul class="navbar-nav mb-2 mb-lg-0">
-                                        <!--me-auto elimine de ul-->
-                                        <li class="nav-item">
-                                            <a class="nav-link" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                                                data-bs-whatever="@getbootstrap" href=""><i
-                                                    class="fas fa-user-circle">Ingresà</i>
-                                            </a>
+                                        
+                                        <li class="nav-item menuLR">
+                                                <a class="nav-link" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                                                    data-bs-whatever="@getbootstrap" href=""><i
+                                                        class="fas fa-user-circle">Iniciar Sesion</i>
+                                                </a>
+                                        </li>
+                                        <li class="nav-item menuLR">
+                                                <a class="nav-link" data-bs-toggle="modal"
+                                                    data-bs-target="#exampleModalRegistro" data-bs-whatever="@getbootstrap"
+                                                    href=""><i class="fas fa-address-card">Registrate</i> </a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" data-bs-toggle="modal"
-                                                data-bs-target="#exampleModalRegistro" data-bs-whatever="@getbootstrap"
-                                                href=""><i class="fas fa-address-card">Registrate</i> </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link carrito" href="#" tabindex="-1" aria-disabled="true"><i
-                                                    class="fas fa-shopping-cart"></i></a>
-                                        </li>
-                                        <!--<li class="nav-item">
-                                            <a class="nav-link active" aria-current="page" href="#">Home</a>
-                                        </li>-->
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="#">Ofertas</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="#">Ayuda</a>
+                                            <a class="nav-link" href="#">Home</a>
                                         </li>
                                         <li class="nav-item dropdown">
                                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
@@ -93,24 +74,46 @@
                                             </ul>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link active" aria-current="page" href="#">Nombre_Usuario</a>
+                                            <a class="nav-link" href="#">Ofertas</a>
                                         </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">Vender</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">Ayuda</a>
+                                        </li>
+                                    </ul>
+                                    
+                                </div>
+                                <div class="collapse navbar-collapse navbar-light " id="navbarSupportedContent">
+                                    <ul class="navbar-nav mb-2 mb-lg-0 Sesion">
                                         <li class="nav-item dropdown">
                                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
                                                 role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                                Mi Cuenta
+                                                <i class="fas fa-user-circle"></i>
                                             </a>
                                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                                <li><a class="dropdown-item" href="#">Editar Perfil</a></li>
-                                                <li><a class="dropdown-item" href="#">Editar Producto</a></li>                                               
+                                                <li class="nav-item">
+                                                    <a class="nav-link" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                                                        data-bs-whatever="@getbootstrap" href=""><i
+                                                            class="fas fa-user-circle">Iniciar Sesion</i>
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" data-bs-toggle="modal"
+                                                        data-bs-target="#exampleModalRegistro" data-bs-whatever="@getbootstrap"
+                                                        href=""><i class="fas fa-address-card">Registrate</i> </a>
+                                                </li>                                                
+                                                <li><a class="dropdown-item" href="#">Ayuda</a></li>
                                             </ul>
                                         </li>
-
-                                    </ul>
-
+                                        <li class="nav-item">
+                                            <a class="Carrito" href="#"><i class="fas fa-shopping-cart"></i></a>
+                                        </li>
+                                    </ul>      
                                 </div>
                             </div>
-                        </nav>
+                        </nav>             
                         <div class="carrito col-sm-2 col-md-2 col-lg-6 d-flex">
                             <a class="menuCarrito" href="#"><i class="fas fa-shopping-cart"></i></a>
                         </div>
@@ -142,10 +145,8 @@
                                                     <label class="form-check-label" for="gridCheck">
                                                         Recordarme
                                                     </label>
-                                                    <p class="registrate">¿No estas registrado? <a
-                                                            data-bs-toggle="modal"
-                                                            data-bs-target="#exampleModalRegistro"
-                                                            data-bs-whatever="@getbootstrap" href="">Registrate</a></p>
+                                                    <p class="registrate">¿No estas registrado? <a data-bs-toggle="modal" data-bs-target="#exampleModalRegistro" data-bs-whatever="@getbootstrap"
+                                                            href="">Registrate</a></p>
                                                 </div>
 
                                                 <div class="modal-footer">
@@ -163,8 +164,8 @@
                         </div>
                         <!--Fin del Login div class="modal fade"-->
                         <!--Inicio del modal Registro-->
-                        <div class="modal fade" id="exampleModalRegistro" tabindex="-1"
-                            aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal fade" id="exampleModalRegistro" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                     <div class="modal-header">
@@ -201,6 +202,7 @@
                                 </div>
                             </div>
                         </div>
+                        
                     </div>
                     <!--FIN del div class="container-fluid"-->
                 </nav>
@@ -210,6 +212,15 @@
         </section>
         <!--FIN del section class="row"-->
     </header>
+    <div class="container-fluid headerFondo">
+        <div class="row headerFondo">
+         <section class="frase">
+             <h1>Listo para su aventura?</h1>
+             <h4>Aqui disponemos de todo lo que necesita</h4>
+         </section>
+         <img class="Header" src="img/hero-bg.jpg" alt="">
+        </div>
+    </div>
 
     <!-- Cuerpo -->
     <main class="cuerpo container">
