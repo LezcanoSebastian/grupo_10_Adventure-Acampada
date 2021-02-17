@@ -44,128 +44,34 @@
   <h2>recomendados</h2>
 
   <section class="container">
+    <% recomendados.forEach(product => { %>
     <div class="product">
-      <a href="#">
-        <img src="../img/index/bolsadedormir.naranja.jpg" alt="">
-        <h5>$5.035</h5>
-        <p>bolsa de dormir coleman oak</p>
+      <a href="/products/detail/<%- product.id %> ">
+        <img src="/img/products/<%- product.image%>" alt="imagen de producto">
+        <h5>$ <%- product.price %></h5>  
+        <p><%- product.name %></p>
       </a>
     </div>
+   
+    <% }) %>
 
-    <div class="product">
-      <a href="#">
-        <img src="../img/index/carpa.verde.jpg" alt="">
-        <h5>$50.532</h5>
-        <p>carpa playera 2 waterdog camping carpas iglu playa</p>
-      </a>
-    </div>
-
-    <div class="product">
-      <a href="#">
-        <img src="../img/index/mochila.gris.jpg" alt="">
-        <h5>$5.326</h5>
-        <p>mochila national geogrphic toscana 32 litros</p>
-      </a>
-    </div>
-
-    <div class="product">
-      <a href="#">
-        <img src="../img/index/mate.stanley.jpg" alt="">
-        <h5>$3.651</h5>
-        <p>mate stanley acero inoxidable 236 ml original</p>
-      </a>
-    </div>
-
-    <div class="product">
-      <a href="#">
-        <img src="../img/index/anafe.jpg" alt="">
-        <h5>$15.123</h5>
-        <p>anafe cocina portatil frontier ntk</p>
-      </a>
-    </div>
   </section>
+
+
+
 
   <h2>más vendidos</h2>
   <section class="container">
-    <div class="product">
-      <a href="#">
-        <img src="../img/index/bolsadedormir.verde.jpg" alt="">
-        <h5>$9.235</h5>
-        <p>bolsa de dormir coleman autumn glenn</p>
-      </a>
-    </div>
-
-    <div class="product">
-      <a href="#">
-        <img src="../img/index/termo.stanley.jpg" alt="">
-        <h5>$13.600</h5>
-        <p>termo stabley clasico 1 l cebador acero inoxidable</p>
-      </a>
-    </div>
-
-    <div class="product">
-      <a href="#">
-        <img src="../img/index/carpa.amarilla.jpg" alt="">
-        <h5>$58.326</h5>
-        <p>carpa alta montaña himalaya doite alta montaña</p>
-      </a>
-    </div>
-
-    <div class="product">
-      <a href="#">
-        <img src="../img/index/mochila.colores.jpg" alt="">
-        <h5>$13.651</h5>
-        <p>mochila ntk gyzmo 60 lts</p>
-      </a>
-    </div>
-
-    <div class="product">
-      <a href="#">
-        <img src="../img/index/carpa.8personas.jpg" alt="">
-        <h5>$89.443</h5>
-        <p>carpa coleman instant gold 8 personas</p>
-      </a>
-    </div>
-
-    <div class="product">
-      <a href="#">
-        <img src="../img/index/carpa.iglu.jpg" alt="">
-        <h5>$20.435</h5>
-        <p>carpa iglu spinit camper 6 personas</p>
-      </a>
-    </div>
-
-    <div class="product">
-      <a href="#">
-        <img src="../img/index/bolsadedormir.northland.jpg" alt="">
-        <h5>$25.000</h5>
-        <p>bolsa de dormir northland icebear duvet</p>
-      </a>
-    </div>
-
-    <div class="product">
-      <a href="#">
-        <img src="../img/index/colchon.inflable.jpg" alt="">
-        <h5>$6.826</h5>
-        <p>colchón inflable doite tuscany doble</p>
-      </a>
-    </div>
-
-    <div class="product">
-      <a href="#">
-        <img src="../img/index/juego.estacas.jpg" alt="">
-        <h5>$1.651</h5>
-        <p>juego de estacas coleman de aluminio 4 unidades</p>
-      </a>
-    </div>
-
-    <div class="product">
-      <a href="#">
-        <img src="../img/index/linterna.jpg" alt="">
-        <h5>$813</h5>
-        <p>linterna de mano spinit unique led luz llavero</p>
-      </a>
-    </div>
+    <% masVendidos.forEach(product => { %>
+      <div class="product">
+        <a href="/products/detail/<%- product.id %> ">
+          <img src="/img/products/<%- product.image%>" alt="imagen de producto">
+          <h5>$ <%- product.price %></h5>  
+          <p><%- product.name %></p>
+        </a>
+      </div>
+     
+      <% }) %>
   </section>
 
 </main>
