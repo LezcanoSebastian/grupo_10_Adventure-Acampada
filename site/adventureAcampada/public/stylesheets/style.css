@@ -428,8 +428,9 @@ header li.nav-item.menuLR{
 /*FOOTER*/
 
 .main-footer{
-  background-image: url('../img/hf.png');
-
+  /* background-image: url('../img/hf.png'); */
+  background: rgb(0,0,0);
+background: linear-gradient(3deg, rgba(0,0,0,0.742734593837535) 32%, rgba(0,0,0,0.08727240896358546) 100%);
   margin-top: 25px;
   padding-top: 35px;
   background-repeat: no-repeat;
@@ -441,6 +442,7 @@ div.logo{
 img.logo-footer{
   width: 25%;
   object-fit: cover;
+  margin-bottom: 15px;
 }
 
 /* lista */
@@ -483,3 +485,18 @@ footer .container-fluid div ul li p{
 h2.accordion-header{
   background-color: var(--colorTraparente);
 }
+.accordion-button{
+  width: fit-content;
+  padding: 0%;
+  margin: 0%;
+}
+.accordion-button:not(.collapsed){
+  background-color: var(--colorTraparente);
+  border: none;
+}
+
+h2.accordion-header{
+  text-align: center;
+  width: fit-content;
+}
+
