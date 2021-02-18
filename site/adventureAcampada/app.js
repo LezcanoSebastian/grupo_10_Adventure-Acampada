@@ -11,7 +11,7 @@ const indexRouter = require('./routes/indexRouter');
 const productRouter = require('./routes/productsRouter');
 const adminRouter = require('./routes/adminRouter');
 var usersRouter = require('./routes/users');
-var productRouter = require('./routes/products');
+
 
 
 var app = express();
