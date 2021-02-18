@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!-- HEAD -->
+<%- include('partials/head') %> 
+<!-- /HEAD -->
+
+<!-- CSS -->
+    <link rel="stylesheet" href="/stylesheets/formProducto.css">
+<!-- /CSS -->
+<body>
+
+    <!-- HEADER -->
+    <%- include('partials/header')  %> 
+    <!-- /HEADER -->
+
+    <main class="container" style="margin-top: 150px;">
+        <h1 class="text-center my-5">registro de producto</h1>
+        <form action="/admin/products/update/<%= product.id %>?_method=PUT" method="POST">
+            <h3>Editar</h3>
+            <section class="datos row">
+                <article class="dato col-sm-12 col-md-6 col-lg-4">
+                    <div class="form-floating d-flex flex-column mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="Titulo del Anuncio" name="name" value="<%= product.name %>">
+                        <label for="floatingInput">Titulo del Anuncio *</label>
+                    </div>
+                </article>
+                <article class="dato col-sm-12 col-md-6 col-lg-4">
+                    <div class="form-floating d-flex flex-column mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="Codigo de Producto" name="id" value="<%= product.id %>">
+                        <label for="floatingInput">Codigo de Producto (ID) *</label>
+                    </div>
+                </article>
+                <article class="dato col-sm-12 col-md-6 col-lg-4">
+                    <div class="form-floating d-flex flex-column mb-3">
+                        <input type="number" class="form-control" id="floatingInput" placeholder="Precio" name="price" value="<%= product.price %>">
+                        <label for="floatingInput">Precio *</label>
+                    </div>
+                </article>
+                <article class="dato col-sm-12 col-md-6 col-lg-4">
+                    <div class="form-floating d-flex flex-column mb-3">
+                        <input type="number" class="form-control" id="floatingInput" placeholder="Descuento" name="discount" value="<%= product.discount %>">
+                        <label for="floatingInput">Descuento %</label>
+                    </div>
+                </article>
+                <article class="dato col-sm-12 col-md-6 col-lg-4">
+                    <div class="form-floating d-flex flex-column mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="Marca" name="mark" value="<%= product.mark %>">
+                        <label for="floatingInput">Marca *</label>
+                    </div>
+                </article>
+                <article class="dato col-sm-12 col-md-6 col-lg-4">
+                    <div class="form-floating d-flex flex-column mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="Origen" name="origin" value="<%= product.origin %>">
+                        <label for="floatingInput">Origen *</label>
+                    </div>
+                </article>
+                <article class="dato col-sm-12 col-md-6 col-lg-4">
+                    <div class="form-floating d-flex flex-column mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="Color" name="colors" value="<%= product.colors %>">
+                        <label for="floatingInput">Color *</label>
+                    </div>
+                </article>
+                <article class="dato col-sm-12 col-md-6 col-lg-4">
+                    <div class="form-floating d-flex flex-column mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="Talle" name="size" value="<%= product.size %>">
+                        <label for="floatingInput">Talle</label>
+                    </div>
+                </article>
+                <article class="dato col-sm-12 col-md-6 col-lg-4">
+                    <div class="form-floating d-flex flex-column mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="Material" name="material" value="<%= product.material %>">
+                        <label for="floatingInput">Material</label>
+                    </div>
+                </article>
+                <article class="dato col-sm-12 col-md-6 col-lg-4">
+                    <div class="form-floating d-flex flex-column mb-3">
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>Categorias</option>
+                            <option name="category" value="<%= product.category %>">Mochilas</option>
+                            <option name="category" value="<%= product.category %>">Bolsas de Dormir</option>
+                            <option name="category" value="<%= product.category %>">Herramientas</option>
+                            <option name="category" value="<%= product.category %>">Recomendados</option>
+                            <option name="category" value="<%= product.category %>">Mas Vendidos</option>
+                        </select>
+                    </div>
+                </article>
+                <article class="dato col-sm-12 col-md-6 col-lg-4">
+                    <div class="form-floating d-flex flex-column mb-3">
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>Stock</option>
+                            <option name="stock" value="<%= product.stock %>">1</option>
+                            <option name="stock" value="<%= product.stock %>">2</option>
+                            <option name="stock" value="<%= product.stock %>">3</option>
+                        </select>
+                    </div>
+                </article>
+                <article class="dato col-sm-12 col-md-6 col-lg-4">
+                    <div class="form-floating d-flex flex-column mb-3">
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>Envio</option>
+                            <option name="delivery" value="<%= product.delivery %>">Si</option>
+                            <option name="delivery" value="<%= product.delivery %>">No</option>
+                            <option name="delivery" value="<%= product.delivery %>">Consultar al vendedor</option>
+                        </select>
+                    </div>
+                </article>
+                <article class="dato col-sm-12 col-md-12 col-lg-12">
+                    <div class="form-floating d-flex flex-column mb-3">
+                        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
+                            style="height: 100px" name="description" value="<%= product.description %>"></textarea>
+                        <label for="floatingTextarea2">Descripciòn</label>
+                    </div>
+                </article>
+                <article class="dato col-sm-12 col-md-12 col-lg-12">
+                    <div class="input-group mb-3">
+                        <input type="file" class="form-control" id="inputGroupFile02" name="image" value="<%= product.image %>">
+                        <label class="input-group-text" for="inputGroupFile02">Subir Imagen</label>
+                      </div>                    
+                </article>
+                <article class="dato col-sm-12 col-md-12 col-lg-12">
+                    <div class="boton">
+                        <button class="btn btn-primary" type="submit">Guardar los Cambios</button>
+                    </div>
+                </article> 
+                               
+            </section>
+        </form>
+    </main>
+
+    <!-- SCRIPT -->
+    <%- include('partials/scripts')  %> 
+    <!-- /SCRIPTS -->
+
+</body>
+
+</html>

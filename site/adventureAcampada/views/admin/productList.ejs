@@ -2,7 +2,8 @@
 <html lang="es">
 
 <!-- HEAD -->
-<%- include('partials/head')  %>   
+<%- include('partials/head')  %>  
+<link rel="stylesheet" href="../stylesheets/style2.css"> 
 <!-- /HEAD -->
 
 <!-- CSS -->
@@ -16,18 +17,18 @@
 
 
 <!--Inicio Home-->
-<main class="productos">
-  <section class="container-fluid carousel">
+<main class="productos" style="margin-top: 140px;">
+  <section class="container-fluid carousel ">
     <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="../img/index/slider1-min.jpg" class="d-block w-100" alt="...">
+          <img src="/img/index/slider1-min.jpg" class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item">
-          <img src="../img/index/slider2-min.jpg" class="d-block w-100" alt="...">
+          <img src="/img/index/slider2-min.jpg" class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item">
-          <img src="../img/index/slider3-min.jpg" class="d-block w-100" alt="...">
+          <img src="/img/index/slider3-min.jpg" class="d-block w-100" alt="...">
         </div>
       </div>
       <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-bs-slide="prev">
@@ -41,38 +42,41 @@
     </div>
   </section>
 
-  <h2>recomendados</h2>
+  <h2>mis productos</h2>
 
   <section class="container">
-    <% recomendados.forEach(product => { %>
-    <div class="product">
-      <a href="/products/detail/<%- product.id %> ">
-        <img src="/img/products/<%- product.image%>" alt="imagen de producto">
-        <h5>$ <%- product.price %></h5>  
-        <p><%- product.name %></p>
-      </a>
-    </div>
-   
+    <div class="row">
+    <% products.forEach(product => { %>
+      <article class="col-12 col-md-4 col-lg-3 ">
+        <ul class="list-group list-group-flush my-3 ">
+          <div class="product m-2 d-flex justify-content-around">
+            <a href="/products/detail/<%- product.id %> ">
+              <img src="/img/products/<%- product.image%>" alt="imagen de producto">
+              <h5>$ <%- product.price %></h5>  
+              <p><%- product.name %></p>
+            </a>
+          </div>
+          <li class="list-group-item">
+            <div class="m-2 d-flex">
+                <a href="/admin/products/edit/<%= product.id %> " class="btn btn-sm btn-success">Editar</a>
+                <form action="/admin/products/delete/<%= product.id %>?_method=DELETE " method="POST">
+                  <button class="btn btn-sm btn-danger" type="submit">Eliminar</button>
+                </form>
+            </div>
+          </li>
+
+        </ul>
+        
+
+      </article>
+    
     <% }) %>
-
+  </div>
   </section>
 
-  <h2>más vendidos</h2>
-  <section class="container">
-    <% productos.forEach(product => { %>
-      <div class="product">
-        <a href="/products/detail/<%- product.id %> ">
-          <img src="/img/products/<%- product.image%>" alt="imagen de producto">
-          <h5>$ <%- product.price %></h5>  
-          <p><%- product.name %></p>
-        </a>
-      </div>
-      <a href="/admin/product/edit/<%= product.id %> " class="btn btn-sm btn-success">Editar</a>
-      <form action="/admin/autos/delete/<%= product.id %>?_method=DELETE" method="POST">
-        <button class="btn btn-sm btn-danger" type="submit">Eliminar</button>
-      </form>
-      <% }) %>
-  </section>
+
+  
+  
 
 </main>
   
