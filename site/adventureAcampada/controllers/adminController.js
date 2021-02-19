@@ -60,7 +60,7 @@ module.exports = {
         });
 
     },
-    productsUpdate : (req,res) => {
+    productsUpdate : (req,res,next) => {
         //res.send(req.body);
         const {name,descripcion,price,image,category,colors,discount,mark,size,origin,material,stock,delivery}=req.body;
 
