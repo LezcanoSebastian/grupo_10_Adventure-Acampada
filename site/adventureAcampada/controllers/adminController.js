@@ -1,5 +1,6 @@
 const fs = require('fs');
 const products = require('../data/product.json');
+const path = require('path');
 
 
 
@@ -21,7 +22,7 @@ module.exports = {
     productsCreate : (req,res) => {
         res.render('admin/productCreate');
     },
-    productsStore : (req,res) => {
+    productsStore : (req,res,next) => {
         //res.send(req.body);
         let lastID = 1;
         products.forEach( product => {
@@ -35,7 +36,7 @@ module.exports = {
             name,
             descripcion,
             price,
-            image,
+            image: req.files[0].filename,
             category,
             colors,
             discount,
