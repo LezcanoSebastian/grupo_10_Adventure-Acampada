@@ -1,13 +1,10 @@
-const fs = require('fs');
-const products = require('../data/product.json');
 const path = require('path');
+const fs = require('fs');
 
+const {getProductos,setProductos} = require(path.join('..','data','product'));
 
+const products = getProductos();
 
-/*const path = require('path');
-const productsFile = path.join(__dirname, '../data/products.json');
-const products = JSON.parse(fs.readFileSync(productsFile, 'utf-8'));
-const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");*/
 
 module.exports = {
     title: "Administracion",
@@ -22,7 +19,7 @@ module.exports = {
     productsCreate : (req,res) => {
         res.render('admin/productCreate');
     },
-    productsStore : (req,res,next) => {
+    productsStore : (req,res) => {
         //res.send(req.body);
         let lastID = 1;
         products.forEach( product => {
@@ -48,7 +45,8 @@ module.exports = {
             delivery
         }
         products.push(producto);
-        fs.writeFileSync('./data/product.json',JSON.stringify(products),'utf-8');
+        setProductos(products);
+        //fs.writeFileSync('./data/product.json',JSON.stringify(products),'utf-8');
         res.redirect('/admin/products/list');
 
     },
@@ -60,7 +58,7 @@ module.exports = {
         });
 
     },
-    productsUpdate : (req,res,next) => {
+    productsUpdate : (req,res) => {
         //res.send(req.body);
         const {name,descripcion,price,image,category,colors,discount,mark,size,origin,material,stock,delivery}=req.body;
 
@@ -82,18 +80,23 @@ module.exports = {
                 product.delivery = delivery
             }   
         });
-        fs.writeFileSync('./data/product.json',JSON.stringify(products),'utf-8');
+        //fs.writeFileSync('./data/product.json',JSON.stringify(products),'utf-8');
+        setProductos(products);
         res.redirect('/admin/products/list');
     },
     productsDelete : (req,res) => {
         //res.send(req.params);
         products.forEach(product => {
             if(product.id === +req.params.id){
+                if(fs.existsSync(path.join('public','img','product',product.image))){
+                    fs.unlinkSync(path.join('public','img','product',product.image))
+                }
                 var aEliminar = products.indexOf(product);
                 products.splice(aEliminar,1)
             }   
         });
-        fs.writeFileSync('./data/product.json',JSON.stringify(products),'utf-8');
+        //fs.writeFileSync('./data/product.json',JSON.stringify(products),'utf-8');
+        setProductos(products);
         res.redirect('/admin/products/list');
     }
 }
