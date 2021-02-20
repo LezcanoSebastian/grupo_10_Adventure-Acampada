@@ -27,11 +27,11 @@ module.exports = {
                 lastID =  product.id
             }
         });
-        const {name,descripcion,price,image,category,colors,discount,mark,size,origin,material,stock,delivery}=req.body;
+        const {name,description,price,image,category,colors,discount,mark,size,origin,material,stock,delivery}=req.body;
         const producto = {
             id: Number(lastID +1),
             name,
-            descripcion,
+            description,
             price,
             image: req.files[0].filename,
             category,
@@ -46,7 +46,6 @@ module.exports = {
         }
         products.push(producto);
         setProductos(products);
-        //fs.writeFileSync('./data/product.json',JSON.stringify(products),'utf-8');
         res.redirect('/admin/products/list');
 
     },
@@ -58,15 +57,15 @@ module.exports = {
         });
 
     },
-    productsUpdate : (req,res) => {
+    productsUpdate : (req,res,next) => {
         //res.send(req.body);
-        const {name,descripcion,price,image,category,colors,discount,mark,size,origin,material,stock,delivery}=req.body;
+        const {name,description,price,image,category,colors,discount,mark,size,origin,material,stock,delivery}=req.body;
 
         products.forEach(product => {
             if(product.id === +req.params.id){
                 product.id = Number(req.params.id);
                 product.name = name;
-                product.descripcion = descripcion;
+                product.description = description;
                 product.price = price;
                 product.image = image;
                 product.category = category;
@@ -80,7 +79,7 @@ module.exports = {
                 product.delivery = delivery
             }   
         });
-        //fs.writeFileSync('./data/product.json',JSON.stringify(products),'utf-8');
+
         setProductos(products);
         res.redirect('/admin/products/list');
     },

@@ -225,14 +225,40 @@
   },
   {
     "id": 16,
-    "name": "asd",
-    "price": "56541",
-    "image": "img-product-1613789572861.png",
+    "name": "",
+    "price": "",
     "colors": "",
     "discount": "",
     "mark": "",
     "size": "",
     "origin": "",
+    "material": "",
+    "image": "",
+    "description": "hola esto es un ejemplo 200221"
+  },
+  {
+    "id": 17,
+    "name": "",
+    "price": "",
+    "image": "img-product-1613791926395.png",
+    "colors": "",
+    "discount": "",
+    "mark": "",
+    "size": "",
+    "origin": "",
+    "material": ""
+  },
+  {
+    "id": 18,
+    "name": "qweqweqwe",
+    "description": "",
+    "price": "12123",
+    "image": "𝙅𝙞𝙜𝙤𝙛 (@39Jigof).jpg",
+    "colors": "czccd",
+    "discount": "12",
+    "mark": "ASDDASD",
+    "size": "sccscd",
+    "origin": "aSAS",
     "material": ""
   }
 ]

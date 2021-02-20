@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const productsFile = path.join(__dirname, '../data/products.json');
+const productsFile = path.join(__dirname, '../data/product.json');
 const products = JSON.parse(fs.readFileSync(productsFile, 'utf-8'));
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
