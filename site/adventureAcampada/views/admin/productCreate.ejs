@@ -74,19 +74,20 @@
                 </article>
                 <article class="dato col-sm-12 col-md-6 col-lg-4">
                     <div class="form-floating d-flex flex-column mb-3">
-                        <select class="form-select" aria-label="Default select example" id="category">
-                            <option name="category">Mochilas</option>
-                            <option name="category">Bolsas de Dormir</option>
-                            <option name="category">Herramientas</option>
-                            <option name="category">Recomendados</option>
-                            <option name="category">Mas Vendidos</option>
+                        <select class="form-select" aria-label="Default select example" name="category">
+                            <option selected disabled>Categoria</option>
+                            <option name="category" value="mochilas">Mochilas</option>
+                            <option name="category" value="bolsas de dormir">Bolsas de Dormir</option>
+                            <option name="category" value="herramientas">Herramientas</option>
+                            <option name="category" value="recomendados">Recomendados</option>
+                            <option name="category" value="mas vendidos">Mas Vendidos</option>
                         </select>
                     </div>
                 </article>
                 <article class="dato col-sm-12 col-md-6 col-lg-4">
                     <div class="form-floating d-flex flex-column mb-3">
                         <select class="form-select" name="stock" aria-label="Default select example" id="stock">
-                            <option selected>Stock</option>
+                            <option selected disabled>Stock</option>
                             <option name="stock" value="1">1</option>
                             <option name="stock" value="2">2</option>
                             <option name="stock" value="3">3</option>
@@ -96,7 +97,7 @@
                 <article class="dato col-sm-12 col-md-6 col-lg-4">
                     <div class="form-floating d-flex flex-column mb-3">
                         <select class="form-select delivery" name="delivery" aria-label="Default select example" id="delivery">
-                            <option selected>Envio</option>
+                            <option selected disabled>Envio</option>
                             <option name="delivery" value="1">Si</option>
                             <option name="delivery" value="2">No</option>
                             <option name="delivery" value="3">Consultar al vendedor</option>

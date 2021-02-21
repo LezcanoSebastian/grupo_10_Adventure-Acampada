@@ -224,19 +224,6 @@
     "delivery": "si"
   },
   {
-    "id": 16,
-    "name": "",
-    "price": "",
-    "colors": "",
-    "discount": "",
-    "mark": "",
-    "size": "",
-    "origin": "",
-    "material": "",
-    "image": "",
-    "description": "hola esto es un ejemplo 200221"
-  },
-  {
     "id": 17,
     "name": "",
     "price": "",
@@ -260,5 +247,21 @@
     "size": "sccscd",
     "origin": "aSAS",
     "material": ""
+  },
+  {
+    "id": 22,
+    "name": "mochila",
+    "description": "la mejor",
+    "price": "9000",
+    "image": "img-product-1613924597953.jpg",
+    "category": "mochilas",
+    "colors": "negro",
+    "discount": "34",
+    "mark": "MARCA",
+    "size": "M",
+    "origin": "Argentina",
+    "material": "cuero",
+    "stock": "2",
+    "delivery": "1"
   }
 ]
