@@ -3,6 +3,7 @@
 .cuerpo{
     background-color: rgb(255, 255, 255);
     border-radius: 5px;
+    margin-top: 150px;
 }
 body{
     background-color: #659999;
@@ -163,4 +164,7 @@ main .cuerpo.container{
   }
 }
 
-/* Footer */
+/* Elimino baner */
+.headerFondo{
+    display: none;
+}

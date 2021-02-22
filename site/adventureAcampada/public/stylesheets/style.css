@@ -499,4 +499,6 @@ h2.accordion-header{
   text-align: center;
   width: fit-content;
 }
-
+ul{
+  text-align:-webkit-center;
+}
