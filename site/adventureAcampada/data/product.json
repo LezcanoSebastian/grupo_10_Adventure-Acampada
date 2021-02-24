@@ -251,17 +251,14 @@
   {
     "id": 22,
     "name": "mochila",
-    "description": "la mejor",
+    "description": "",
     "price": "9000",
-    "image": "img-product-1613924597953.jpg",
-    "category": "mochilas",
+    "image": "image-products-1614171351143.jpg",
     "colors": "negro",
     "discount": "34",
     "mark": "MARCA",
     "size": "M",
     "origin": "Argentina",
-    "material": "cuero",
-    "stock": "2",
-    "delivery": "1"
+    "material": "cuero"
   }
 ]

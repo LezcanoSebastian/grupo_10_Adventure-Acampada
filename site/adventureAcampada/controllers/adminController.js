@@ -63,11 +63,15 @@ module.exports = {
 
         products.forEach(product => {
             if(product.id === +req.params.id){
+                if(product.image){
+                    if(fs.existsSync(path.join('public','img','product',product.image))){
+                        fs.unlinkSync(path.join('public','img','product',product.image))
+                    }
+                }
                 product.id = Number(req.params.id);
                 product.name = name;
                 product.description = description;
                 product.price = price;
-                product.image = image;
                 product.category = category;
                 product.colors = colors;
                 product.discount = discount;
@@ -76,7 +80,8 @@ module.exports = {
                 product.origin = origin;
                 product.material = material;
                 product.stock = stock;
-                product.delivery = delivery
+                product.delivery = delivery;
+                product.image = req.files[0].filename;
             }   
         });
 
