@@ -12,7 +12,7 @@ router.get('/detail/:productId', productsController.detail);
 /* Carrito */
 router.get('/carrito', productsController.carrito)
 /* Formulario de carga de producto */
-router.get('/form', productsController.form);
+router.get('/list', productsController.list);
 
 
 module.exports = router;
