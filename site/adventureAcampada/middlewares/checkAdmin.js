@@ -1,5 +1,7 @@
+
 module.exports = (req,res,next) => {
-    if(req.session.user && req.body.category == 'admin'){
+    if(req.query.category === 'admin' && req.query.email === "sebastian.e.lezcano@gmail.com"
+    ){
         next()
     }else{
         res.redirect('/')
