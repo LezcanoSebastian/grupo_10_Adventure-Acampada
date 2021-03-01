@@ -1,24 +1,26 @@
-var express = require('express');
-var router = express.Router();
-var path = require('path')
-var multer = require('multer');
-/* Configuracion de multer */
-var storage = multer.diskStorage({
-    destination: (req, file, cb) =>{
-        cb(null, '../adventureAcampada/public/img/products')
-    },
-    filename:(req, file, cb) =>{
-        cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname))
-    }
-})
-var upload = multer({storage : storage});
+const express = require('express');
+const router = express.Router();
 
-/* requirero controladores */
-const adminController = require('../controllers/adminController');
-/* Ruta create product */
-router.get('/product/create',  adminController.productCreate);
-router.post('/product/create', upload.any(), adminController.store);
-/* Listar productos */
-router.get('/productList', adminController.list)
+
+
+const {index,productsList,productsCreate,productsStore,productsEdit,productsUpdate,productsDelete}= require('../controllers/adminController');
+
+//Middlewares
+
+const upload = require('../middlewares/subidaImagenes');
+const checkUser = require('../middlewares/checkUser');
+
+router.get('/', checkUser, index);
+
+router.get('/products/list', checkUser, productsList);
+
+router.get('/products/create', checkUser, productsCreate);//trae el formulario nada mas
+router.post('/products/store',upload.any(), checkUser, productsStore);//crea el registro
+
+router.get('/products/edit/:id', checkUser, productsEdit);//trae el formulario nada mas
+router.put('/products/update/:id',upload.any(), checkUser, productsUpdate);//envia los datos para actualizarlos
+
+router.delete('/products/delete/:id', checkUser, productsDelete);//busca y registro y lo borra
+//Los buscadores van por get
 
 module.exports = router;
