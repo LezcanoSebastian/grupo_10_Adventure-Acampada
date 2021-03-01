@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- HEAD -->
+<%- include('./partials/head')  %>   
+<!-- /HEAD -->
+<!-- CSS -->
+<link rel="stylesheet" href="../stylesheets/style2.css">
+<!-- /CSS -->
+<body>
+<!-- HEADER -->
+<%- include('./partials/header')  %> 
+<!-- /HEADER -->
+<!--Inicio Home-->
+<main class="productos" style="margin-top: 140px;">
+    <h1>Profile</h1>
+    <p>Nombre de usuario: <span><%= user.username %> </span></p>
+    <img src="/images/<%= user.avatar %> " alt="">
+    <form action="/users/delete/<%= user.id %>?_method=DELETE" method="POST">
+    <button type="submit">Eliminar cuenta</button>
+    </form>
+</main>  
+<!--Fin Home-->
+ <!-- SCRIPTS -->
+ <%- include('./partials/scripts')  %> 
+ <!-- /SCRIPTS -->
+</body>
+  <!--FOOTER-->
+  <%-include('./partials/footer') %>  
+  <!--/FOOTER-->
+</html>
