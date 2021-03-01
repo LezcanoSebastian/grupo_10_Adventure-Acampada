@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- HEAD -->
+<%- include('./partials/head')  %>   
+<!-- /HEAD -->
+<!-- CSS -->
+<link rel="stylesheet" href="../stylesheets/style2.css">
+<!-- /CSS -->
+<body>
+<!-- HEADER -->
+
+<!-- /HEADER -->
+<!--Inicio Home-->
+  <main class="container" style="margin-top: 150px;">
+    <h1 class="text-center my-5">Login</h1>
+    <form action="/users/login" method="POST">
+        
+        <section class="datos row">
+            <article class="dato col-sm-12 col-md-6 col-lg-8">
+                <div class="form-floating d-flex flex-column mb-3">
+                    <input type="email" class="form-control" id="floatingInputValue" placeholder="name@example.com" name="email">
+                    <label for="floatingInputValue">Email</label>
+                </div>
+            </article>
+            <article class="dato col-sm-12 col-md-6 col-lg-8">
+                <div class="form-floating d-flex flex-column mb-3">
+                    <input type="password" class="form-control" id="floatingPassword"
+                          placeholder="Password" name="password">
+                      <label for="floatingPassword">Password</label>
+                </div>
+            </article>
+            <article class="dato col-sm-12 col-md-6 col-lg-6">
+                <div class="form-floating d-flex flex-column mb-3">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="gridCheck">
+                        <label class="form-check-label" for="gridCheck" name="recordarme">
+                            Recordarme
+                        </label>
+                        <p class="registrate">¿No estas registrado? <a href="/users/register">Registrate</a></p>
+                    </div>
+                    <div class="modal-footer text-center">
+                        <button type="submit" class="btn btn-primary">Iniciar Sesiòn</button>
+                    </div>
+                </div>
+            </article>            
+        </section>
+    </form>
+
+</main>  
+<!--Fin Home-->
+ <!-- SCRIPTS -->
+ <%- include('./partials/scripts')  %> 
+ <!-- /SCRIPTS -->
+</body>
+  <!--FOOTER-->
+  <%-include('./partials/footer') %>  
+  <!--/FOOTER-->
+</html>
