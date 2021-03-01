@@ -5,6 +5,5 @@ var router = express.Router();
 const homeController = require('../controllers/homeController');
 /* ruta a home */
 router.get('/', homeController.home);
-router.get('/search', homeController.search); 
 
 module.exports = router;

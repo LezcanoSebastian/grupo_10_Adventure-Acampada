@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- Include Head -->
+<%- include('partials/head', {title: 'Resultados de tu búsqueda'}) %>
+<body>
+	<!-- Header -->
+	<%- include('partials/header') %>
+	<!-- /Header -->
+	
+
+	<!-- todos los productos -->
+	<div class="container products-wrapper">
+		<div class="row">
+			<div class="col-12">
+				<h2 class="products-title">Resultados de la búsqueda: <%= search %> </h2>
+			</div>
+			<% if (result[0] != undefined) { %>
+				<% result.forEach(product => { %>
+                    <section class="container">
+                        <div class="row">
+                        <% products.forEach(product => { %>
+                          <article class="col-12 col-md-4 col-lg-3 ">
+                            <ul class="list-group list-group-flush my-3 ">
+                              <div class="product m-2 d-flex justify-content-around">
+                                <a href="/products/detail/<%- product.id %> ">
+                                  <img src="/img/products/<%- product.image%>" alt="imagen de producto">
+                                  <h5>$ <%- product.price %></h5>  
+                                  <p><%- product.name %></p>
+                                </a>
+                              </div>
+                              <li class="list-group-item">
+                                <div class="m-2 d-flex">
+                                    <a href="/admin/products/edit/<%= product.id %> " class="btn btn-sm btn-success">Editar</a>
+                                    <form action="/admin/products/delete/<%= product.id %>?_method=DELETE " method="POST">
+                                      <button class="btn btn-sm btn-danger" type="submit">Eliminar</button>
+                                    </form>
+                                </div>
+                              </li>
+                    
+                            </ul>
+                            
+                    
+                          </article>
+                        
+                        <% }) %>
+                      </div>
+                      </section>
+				<% }) %>
+			<% } else { %>
+				<div class="col-12">
+					<h2 class="products-title" style="color: tomato;">No hay productos que coincidan con esa búsqueda</h2>
+				</div>
+			<% } %>
+		</div>
+	</div>
+	<!-- /todos los productos -->
+
+	<!-- footer -->
+	<%- include('partials/footer') %>
+	<!-- /footer -->
+</body>	
+</html>

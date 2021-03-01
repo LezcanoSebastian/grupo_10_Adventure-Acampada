@@ -2,14 +2,15 @@ const express = require('express');
 const router = express.Router();
 
 
-const {productsindex,productsList,productsCreate,productsStore,productsEdit,productsUpdate,productsDelete}= require('../controllers/adminController');
+
+const {index,productsList,productsCreate,productsStore,productsEdit,productsUpdate,productsDelete}= require('../controllers/adminController');
 
 //Middlewares
 
 const upload = require('../middlewares/subidaImagenes');
 
+router.get('/',index);
 
-router.get('/',productsindex);
 router.get('/products/list',productsList);
 
 router.get('/products/create',productsCreate);//trae el formulario nada mas

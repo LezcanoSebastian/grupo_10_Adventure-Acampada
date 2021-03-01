@@ -1,10 +1,116 @@
-[{"id":1,"first_name":"Margaretta","last_name":"Mulvihill","email":"mmulvihill0@google.com","password":"fRsF6ylnJ","category":"user,","image":"user_1.jpg"},
-{"id":2,"first_name":"Lyn","last_name":"Jeroch","email":"ljeroch1@printfriendly.com","password":"eZr9rPwpE","category":"user,","image":"user_2.jpg"},
-{"id":3,"first_name":"Rosita","last_name":"Laurentin","email":"rlaurentin2@nymag.com","password":"iXVhbNhda","category":"user,","image":"user_3.jpg"},
-{"id":4,"first_name":"Carrol","last_name":"Beirne","email":"cbeirne3@berkeley.edu","password":"ajldMuKF","category":"user,","image":"user_4.jpg"},
-{"id":5,"first_name":"Barris","last_name":"Hesey","email":"bhesey4@ameblo.jp","password":"y3rYcJBj7MP","category":"user,","image":"user_5.jpg"},
-{"id":6,"first_name":"Georgetta","last_name":"Rubanenko","email":"grubanenko5@friendfeed.com","password":"1SI0VewU0OT","category":"user,","image":"user_6.jpg"},
-{"id":7,"first_name":"Melvyn","last_name":"Rodmell","email":"mrodmell6@posterous.com","password":"ThkS2CiY","category":"user,","image":"user_7.jpg"},
-{"id":8,"first_name":"Erhard","last_name":"Winley","email":"ewinley7@facebook.com","password":"Y7eDTxp","category":"user,","image":"user_8.jpg"},
-{"id":9,"first_name":"Faulkner","last_name":"MacDwyer","email":"fmacdwyer8@walmart.com","password":"KkVjY4ihlLp","category":"user,","image":"user_9.jpg"},
-{"id":10,"first_name":"Dory","last_name":"Gladtbach","email":"dgladtbach9@rambler.ru","password":"j4KNEIf1b1","category":"user,","image":"user_10.jpg"}]
+[
+  {
+    "id": 1,
+    "firstName": "Margaretta",
+    "lastName": "Mulvihill",
+    "email": "mmulvihill0@google.com",
+    "password": "fRsF6ylnJ",
+    "category": "user,",
+    "image": "user_1.jpg"
+  },
+  {
+    "id": 2,
+    "firstName": "Lyn",
+    "lastName": "Jeroch",
+    "email": "ljeroch1@printfriendly.com",
+    "password": "eZr9rPwpE",
+    "category": "user,",
+    "image": "user_2.jpg"
+  },
+  {
+    "id": 3,
+    "firstName": "Rosita",
+    "lastName": "Laurentin",
+    "email": "rlaurentin2@nymag.com",
+    "password": "iXVhbNhda",
+    "category": "user,",
+    "image": "user_3.jpg"
+  },
+  {
+    "id": 4,
+    "firstName": "Carrol",
+    "lastName": "Beirne",
+    "email": "cbeirne3@berkeley.edu",
+    "password": "ajldMuKF",
+    "category": "user,",
+    "image": "user_4.jpg"
+  },
+  {
+    "id": 5,
+    "firstName": "Barris",
+    "lastName": "Hesey",
+    "email": "bhesey4@ameblo.jp",
+    "password": "y3rYcJBj7MP",
+    "category": "user,",
+    "image": "user_5.jpg"
+  },
+  {
+    "id": 6,
+    "firstName": "Georgetta",
+    "lastName": "Rubanenko",
+    "email": "grubanenko5@friendfeed.com",
+    "password": "1SI0VewU0OT",
+    "category": "user,",
+    "image": "user_6.jpg"
+  },
+  {
+    "id": 7,
+    "firstName": "Melvyn",
+    "lastName": "Rodmell",
+    "email": "mrodmell6@posterous.com",
+    "password": "ThkS2CiY",
+    "category": "user,",
+    "image": "user_7.jpg"
+  },
+  {
+    "id": 8,
+    "firstName": "Erhard",
+    "lastName": "Winley",
+    "email": "ewinley7@facebook.com",
+    "password": "Y7eDTxp",
+    "category": "user,",
+    "image": "user_8.jpg"
+  },
+  {
+    "id": 9,
+    "firstName": "Faulkner",
+    "lastName": "MacDwyer",
+    "email": "fmacdwyer8@walmart.com",
+    "password": "KkVjY4ihlLp",
+    "category": "user,",
+    "image": "user_9.jpg"
+  },
+  {
+    "id": 10,
+    "firstName": "Dory",
+    "lastName": "Gladtbach",
+    "email": "dgladtbach9@rambler.ru",
+    "password": "j4KNEIf1b1",
+    "category": "user,",
+    "image": "user_10.jpg"
+  },
+  {
+    "id": 11,
+    "firstname": "Matias",
+    "lastname": "Gonzalez",
+    "email": "Nuevo2@gmail.com",
+    "pass": "$2b$12$8k8B1.AYCL0oekGl.1HmiOYaPRXqHW5U7VP9ur0eXd8pZKRmfeU4C",
+    "image": "image-avatar-1614568279465.png"
+  },
+  {
+    "id": 12,
+    "firstname": "Matias",
+    "lastname": "Gonzalez",
+    "email": "Nuevo4@gmail.com",
+    "pass": "$2b$12$p.WlGqqsge7KE0ldpy4ryusbmD1W4wUPcCf61BtFbrGQtSlj4rj7i",
+    "image": "image-avatar-1614569788381.png"
+  },
+  {
+    "id": 13,
+    "firstname": "Matias",
+    "lastname": "apellido",
+    "email": "Nuevo1@gmail.com",
+    "pass": "$2b$12$QCXF6dnZ/Rar2mdmd6PTZ.TaNCJmg2R/6k1lI3JNDnwq15RrAK2OK",
+    "image": "image-1614572538356.png"
+  }
+]

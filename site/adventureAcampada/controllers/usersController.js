@@ -15,10 +15,11 @@ module.exports = {
 
         if(!errores.isEmpty()){
             return res.render('users/register',{
-                errores : errores.errors
+                errores : errores.mapped(),
+                old: req.body
             })
         }else{
-            const {firstName, lastName, email, password, category, image} = req.body;
+            const {firstname, lastname, email, pass,category, image} = req.body;
         
             let lastID = 0;
             users_db.forEach(user => {
@@ -27,16 +28,16 @@ module.exports = {
                 }
             });
     
-            let hashPass = bcrypt.hashSync(password, 12);
+            let hashPass = bcrypt.hashSync(pass, 12);
     
             let newUser = {
                 id : +lastID + 1,
-                firstName,
-                lastName,
+                firstname,
+                lastname,
                 email,
-                password : hashPass,
+                pass: hashPass,
                 category,
-                image : req.files[0].filename || 'sin imagen'
+                image: req.files[0].filename // 'sin imagen'
             };
     
             users_db.push(newUser);
@@ -59,17 +60,17 @@ module.exports = {
                 errores : errores.errors
             })
         }else{
-            const {email, password, recordar} = req.body;
+            const {email,pass, recordar} = req.body;
 
             let result = users_db.find(user => user.email === email);
 
             if(result){
-                if(bcrypt.compareSync(password.trim(),result.password)){
+                if(bcrypt.compareSync(pass.trim(),result.pass)){
 
                     req.session.user = {
                         id : result.id,
-                        firstName : result.firstName,
-                        image : result.image
+                        firstname : result.firstname,
+                        image: result.image
                     }
 
                     if(recordar){
@@ -102,17 +103,5 @@ module.exports = {
         }
         res.redirect('/')
     },
-    eliminar : (req,res) => {
-        users_db.forEach(user => {
-            if(user.id === Number(req.params.id)){
-                if(fs.existsSync(path.join('public','images',user.image))){
-                    fs.unlinkSync(path.join('public','images',user.image))
-                }
-                aEliminar = users_db.indexOf(user);
-                users_db.splice(aEliminar,1)
-            }
-        });
-        fs.writeFileSync('./data/users.json',JSON.stringify(users_db,null,2));
-        res.redirect('/');
-    },
+ 
 }

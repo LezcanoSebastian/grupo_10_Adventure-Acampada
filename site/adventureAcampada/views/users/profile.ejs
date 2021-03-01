@@ -11,13 +11,21 @@
 <%- include('./partials/header')  %> 
 <!-- /HEADER -->
 <!--Inicio Home-->
-<main class="productos" style="margin-top: 140px;">
-    <h1>Profile</h1>
-    <p>Nombre de usuario: <span><%= user.username %> </span></p>
-    <img src="/images/<%= user.avatar %> " alt="">
-    <form action="/users/delete/<%= user.id %>?_method=DELETE" method="POST">
-    <button type="submit">Eliminar cuenta</button>
-    </form>
+
+
+<main class="container profile">
+  <h1 class="row justify-content-center col-12 mt-5">Profile</h1>
+  <div class="row justify-content-center col-12 mt-2">
+  <div class="card" style="width: 18rem;">
+      <img src="/img/avatar/<%= user.image %> " class="card-img-top" alt="...">
+      <div class="card-body">
+        <h3 class="card-title text-center"><span><%= user.firstname %> </span></h3>
+        <h4 class="card-text text-center">¡Bienvenido!</h4>
+      </div>
+      
+    </div>
+    <a class="profile-text" href="/">ir a inicio</a>
+  </div>
 </main>  
 <!--Fin Home-->
  <!-- SCRIPTS -->

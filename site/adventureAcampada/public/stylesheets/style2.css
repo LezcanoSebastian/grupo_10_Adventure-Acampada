@@ -8,7 +8,7 @@ section .carousel .carousel-inner img {
   height: 100px;
 }
 
-#category-section {
+h2 {
   font-family: 'Poppins', sans-serif;
   text-transform: uppercase;
   text-align: center;
@@ -115,7 +115,7 @@ section .carousel .carousel-inner img {
   height: 100px;
 }
 
-#category-section {
+h2 {
   font-family: 'Poppins', sans-serif;
   text-transform: uppercase;
   text-align: center;
@@ -210,4 +210,13 @@ main .container .product:hover {
   }
 }
 
+.profile {
+  margin-top: 150px;
+}
+
+.profile-text {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 26px;
+}
 

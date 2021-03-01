@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const productsFile = path.join(__dirname, '../data/product.json');
 const products = JSON.parse(fs.readFileSync(productsFile, 'utf-8'));
+const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 const controllers = {
     home : (req, res) => {
@@ -15,21 +16,9 @@ const controllers = {
             title: 'Home',
             recomendados,
 			masVendidos,
-	
+			toThousand
         })
     },
-    search: (req, res) => {
-		// Busqueda
-		const result = products.filter(product =>{
-			return product.name.toLowerCase().includes(req.query.keywords.toLowerCase().trim())
-			/* El trim es para evitar errores de busqueda debido a espacios de mas */
-		})
-		res.render('results',{
-			result,
-			search: req.query.keywords,
-			
-		})
-	}
 }
 
 module.exports = controllers;

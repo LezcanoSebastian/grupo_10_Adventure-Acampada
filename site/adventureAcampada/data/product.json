@@ -251,14 +251,14 @@
   {
     "id": 22,
     "name": "mochila",
-    "description": "",
+    "description": "Solo color gray",
     "price": "9000",
-    "image": "image-products-1614171351143.jpg",
-    "colors": "negro",
+    "image": "image-products-1614206199745.jpg",
+    "colors": "gray",
     "discount": "34",
     "mark": "MARCA",
     "size": "M",
     "origin": "Argentina",
-    "material": "cuero"
+    "material": "lona"
   }
 ]
