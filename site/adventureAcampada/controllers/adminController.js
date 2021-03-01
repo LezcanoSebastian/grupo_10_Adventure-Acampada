@@ -8,7 +8,7 @@ const products = getProductos();
 
 module.exports = {
     title: "Administracion",
-    productsindex: (req,res) => {
+    index: (req,res) => {
         res.render('admin/indexAdmin');
     },
     productsList : (req,res) => {

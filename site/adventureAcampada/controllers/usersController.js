@@ -7,7 +7,9 @@ const {validationResult} = require('express-validator');
 
 module.exports = {
     register : (req,res) => {
-        res.render('users/register')
+        res.render('users/register',{
+            title: 'Registrate'
+        })
     },
     processRegister : (req,res) => {
 
@@ -48,7 +50,9 @@ module.exports = {
        
     },
     login : (req, res) => {
-        res.render('users/login')
+        res.render('users/login', {
+            title: 'Iniciar sesión'
+        })
     },
     processLogin : (req, res) => {
       
@@ -91,9 +95,11 @@ module.exports = {
         }
     },
     profile : (req,res) => {
-        res.render('users/profile')
+        res.render('users/profile',{
+            title: "Mi perfil"
+        })
     },
-    fatality : (req,res) => {
+    logout : (req,res) => {
         req.session.destroy();
         if(req.cookies.userAcampada){
             res.cookie('userAcampada','',{

@@ -267,6 +267,8 @@ background-color: var(--colorTraparente);
 }
 header .dropdown-menu.show:hover{
   background-color: var(--fondoHeader2);
+  box-shadow: 0px 12px 16px rgb(0 0 0 / 30%);
+  /* Agrego sombra  */
 }
 header div.carrito.col-sm-2.col-md-2.col-lg-6.d-flex{
 width: 24px;
@@ -358,7 +360,7 @@ margin-left: 0;
       position: relative;
       width: 0;
       height: 0%;
-      background-color: var(--colorTraparente);
+      background-color: rgba(164, 165, 175, 0.555);
       top: 0px;
       transition: none;     
   }
@@ -387,8 +389,10 @@ margin-left: 0;
       justify-content: space-evenly;
   }   /*Aqui esta propiedad ubica la barra del home al centro*/ 
   header .dropdown-menu.show {
-      background-color: var(--colorTraparente);
+      background-color: rgba(199, 199, 199, 0.555);
+      /* Mensaje, cambie el color del menú desplegable, color sujeto a modificaciones */
       top:54px;
+      box-shadow: 0px 12px 16px rgb(0 0 0 / 30%);
   }
   header section.row.header{
     height: 122px;
