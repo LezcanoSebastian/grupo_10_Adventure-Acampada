@@ -8,7 +8,8 @@ const { register, processRegister, login, processLogin, profile, logout, elimina
 /* middlewares */
 const uploadImages = require('../middlewares/uploadImages');
 const checkUser = require('../middlewares/checkUser');
-
+const registerValidator = require('../validations/registerValidator');
+const loginValidator = require('../validations/loginValidator');
 
 router.get('/register',register);
 router.post('/register',uploadImages.any(),processRegister);

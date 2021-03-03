@@ -97,5 +97,22 @@
     "password": "$2b$12$t4AYaqHtCgTToQ/iH2Mfte6ZVvZe7sR9vV6Ur9Gbuu0XMSB7u2uzO",
     "category": "admin",
     "image": "image-1614613254649.png"
+  },
+  {
+    "id": 12,
+    "firstName": "sebastian",
+    "lastName": "lezcano",
+    "email": "ejemplo@gmail.com",
+    "password": "$2b$12$cIvFlVeE.6l8KN/wfLIsdeOjptlgftGfKzJJ7xtJL82nmsrvUmLOS",
+    "image": "image-1614787547089.png"
+  },
+  {
+    "id": 13,
+    "firstName": "cosme",
+    "lastName": "fulanito",
+    "email": "cosme@fulanito.com",
+    "password": "$2b$12$cbTTx6//bgelEZjnMbjt7.6Y55OfmWJbNXWltuoikfMZxLGsT4Bzq",
+    "category": "admin",
+    "image": "image-1614788980269.png"
   }
 ]
