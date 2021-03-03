@@ -63,7 +63,7 @@ module.exports = {
                 errores : errores.errors
             })
         }else{
-            const {email, password, recordar} = req.body;
+            const {email, password, recordar, category} = req.body;
 
             let result = users_db.find(user => user.email === email);
 
@@ -73,7 +73,8 @@ module.exports = {
                     req.session.user = {
                         id : result.id,
                         firstName : result.firstName,
-                        image : result.image
+                        image : result.image,
+                        category : result.category
                     }
 
                     if(recordar){
