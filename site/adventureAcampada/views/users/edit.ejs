@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- HEAD -->
+<%- include('./partials/head')  %>   
+<!-- /HEAD -->
+<!-- CSS -->
+<link rel="stylesheet" href="../stylesheets/style2.css">
+<!-- /CSS -->
+<body>
+<!-- HEADER -->
+
+<!-- /HEADER -->
+<!--Inicio Home-->
+  <main class="container" style="margin-top: 150px;">
+    <h1 class="text-center my-5">Registrarme</h1>
+    <form action="/users/update?_method=PUT" method="POST" enctype="multipart/form-data">        
+        <section class="datos row">
+            <article class="dato col-sm-12 col-md-6 col-lg-6">
+                <div class="form-floating d-flex flex-column mb-3">
+                    <input type="text" class="form-control" id="floatingInput" placeholder="Nombre" name="firstName" value="<%= user.firstName %>">
+                    <label for="floatingInput">Nombre *</label>
+                </div>
+            </article>
+            <article class="dato col-sm-12 col-md-6 col-lg-6">
+                <div class="form-floating d-flex flex-column mb-3">
+                    <input type="text" class="form-control" id="floatingInput" placeholder="Apellido" name="lastName" value="<%= user.lastName %>" >
+                    <label for="floatingInput">Apellido *</label>
+                </div>
+            </article>
+            
+            <article class="dato col-sm-12 col-md-12 col-lg-12">
+                <div class="input-group mb-3">
+                    <input type="file" class="form-control" id="inputGroupFile02" name="image">
+                    <label class="input-group-text" for="inputGroupFile02">Subir Imagen</label>
+                  </div>                    
+            </article>
+            <div class="boton">
+                <button class="btn btn-primary" type="submit">Guardar los Cambios</button>
+            </div>           
+        </section>
+    </form>
+    <% if (typeof errores != 'undefined') { %>
+        <ul>
+            <% errores.forEach(error => { %>
+             <li><%= error.msg %> </li>
+            <% }) %>
+        </ul>
+       <% } %>
+</main>  
+<!--Fin Home-->
+ <!-- SCRIPTS -->
+ <%- include('./partials/scripts')  %> 
+ <!-- /SCRIPTS -->
+</body>
+  <!--FOOTER-->
+   
+  <!--/FOOTER-->
+</html>

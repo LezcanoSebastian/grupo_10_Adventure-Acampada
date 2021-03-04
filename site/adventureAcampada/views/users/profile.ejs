@@ -4,21 +4,46 @@
 <%- include('./partials/head')  %>   
 <!-- /HEAD -->
 <!-- CSS -->
-<link rel="stylesheet" href="../stylesheets/style2.css">
+<link rel="stylesheet" href="../stylesheets/profile.css">
 <!-- /CSS -->
 <body>
 <!-- HEADER -->
-<%- include('./partials/header')  %> 
+<%- include('../partials/header')  %> 
 <!-- /HEADER -->
 <!--Inicio Home-->
-<main class="productos" style="margin-top: 140px;">
-    <h1>Profile</h1>
-    <p>Nombre de usuario: <span><%= user.firstName%></span></p>
-    <img src="/img/avatar/<%= user.image %> " alt="">
+
+<h1> Bienvenido <%= user.firstName%></h1>
+  <main class="container">
+    <section class="row">
+      <div class="col-sm-12 col-md-5 col-lg-5 img-profile"><img src="/img/avatar/<%= user.image %> " alt="" class="selfie"></div>
+    
+      <div class="col-sm-12 col-md-5 col-lg-5 datos">
+        <ul>
+          <h1>Mis Datos</h1>
+          <li>Nombre: <%= user.firstName%></li>
+          <li>Apellido: <%= user.lastName%></li>
+          <li>Direccion:</li>
+          <li>Email: <%= user.email %> </li>
+          <li>Tel:</li>
+          </ul>
+       </div>
+      </section>
+      <main class="container">
+        
+        <button type="button" class="btn btn-warning editar"> <a href="/user/update "></a> Editar</button>
     <form action="/users/delete/<%= user.id %>?_method=DELETE" method="POST">
-    <button type="submit">Eliminar cuenta</button>
-    </form>
-</main>  
+    <button type="submit" class="btn btn-danger eliminar">Eliminar cuenta</button>
+    </form> 
+        
+      </main>
+   
+
+   </section>
+
+
+   </main> 
+  
+
 <!--Fin Home-->
  <!-- SCRIPTS -->
  <%- include('./partials/scripts')  %> 

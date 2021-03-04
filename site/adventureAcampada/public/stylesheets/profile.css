@@ -1,0 +1,62 @@
+*{
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    background-image: url('../img/hero-bg.jpg');
+    background-position-y: -59px;
+    background-repeat: no-repeat;
+    background-size: 100% 290%;
+}
+h1{
+    background-color: rgba(56, 56, 56, 0.282);
+    color: white;
+    border: 0;
+    text-align: left;
+    width: 100%;
+    padding-left: 15%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.headerFondo{
+    display: none;
+  }
+  body{
+      margin-top: 200px;
+  }
+ /* Seccion de datos */
+ .datos{
+     background-color: white;
+     border-radius: 5px;
+     padding: 10px;
+     box-shadow: 0px 12px 16px rgba(0, 0, 0, 0.30);
+     height: 250px;
+  
+ }
+ .selfie{
+    
+     width: 100%;
+  
+ }
+ .row{
+    margin: 30px;
+    
+ }
+ .img-profile{
+    background-color: white;
+    margin-bottom: 10px;
+    box-shadow: 0px 12px 16px rgba(0, 0, 0, 0.30);
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+    height: 250px;
+    object-fit: contain;
+ }
+
+ /* Botones */
+.editar, .eliminar{
+    margin: 20px;
+}

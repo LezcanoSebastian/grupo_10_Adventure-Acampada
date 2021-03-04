@@ -74,7 +74,9 @@ module.exports = {
                         id : result.id,
                         firstName : result.firstName,
                         image : result.image,
-                        category : result.category
+                        category : result.category,
+                        email : result.email,
+                        lastName : result.lastName
                     }
 
                     if(recordar){

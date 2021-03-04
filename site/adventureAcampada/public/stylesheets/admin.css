@@ -1,0 +1,12 @@
+body{
+    background-image: url('../img/hero-bg.jpg');
+    background-position-y: -59px;
+    background-repeat: no-repeat;
+    background-size: 100% 350%;
+}
+h2{
+    background-color: rgba(56, 56, 56, 0.282);
+    color: white;
+    border: 0;
+    
+}

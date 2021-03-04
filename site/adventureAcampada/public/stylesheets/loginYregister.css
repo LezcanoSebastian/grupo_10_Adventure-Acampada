@@ -1,0 +1,41 @@
+.container{
+    background-color: rgba(220, 220, 220, 0.7);
+    border-radius: 5px;
+    box-shadow: 0px 12px 16px rgba(0, 0, 0, 0.30);
+    padding: 10px;
+    margin-bottom: 100px;
+}
+body{
+    background-image: url('../img/hero-bg.jpg');
+    background-position-y: -115px;
+    background-repeat: no-repeat;
+    background-size: 100% 180%;
+}
+
+
+.btn-primary{
+    width: 100%;
+    margin: 15px 0 15px 0;
+    background-color: var(--colorNaranja); 
+    border-color: var(--colorNaranja); 
+}
+.btn-primary:hover{
+    background-color: var(--colorAzul);
+    border-color: var(--colorAzul);
+    box-shadow: 0 0 0 0.25rem var(--colorAzul);
+}
+
+.btn-check:focus+.btn-primary, .btn-primary:focus {
+    color: #fff;
+    background-color: var(--colorAzul);
+    border-color: var(--colorAzul);
+    box-shadow: 0 0 0 0.25rem var(--colorAzul);
+}
+/* boton con opciones desplegables */
+ul.dropdown-menu.show{
+    background-color: #f9efda;
+    border-radius: 5px;
+}
+ul.dropdown-menu.show:active{
+    border-color: var(--colorNaranja); 
+}
