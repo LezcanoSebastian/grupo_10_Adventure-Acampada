@@ -5,7 +5,8 @@
   margin: 0;
 }
 body{
-  background-image: url('../img/hf.png');
+  background-image: url('../img/hero-bg.jpg');
+  background-position-y: -115px;
   background-repeat: no-repeat ;
   background-size: cover;   
   text-transform: capitalize; 
