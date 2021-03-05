@@ -202,9 +202,10 @@ padding-left: 6px;
 margin-left: 0;
 margin-right: 0;
 }
-header .menuCarrito{    
+header a.menuCarrito{    
   margin-left: 0px;
   margin-right: 0px;    
+  color: var(--colorBlanco);
 }
 header a.nav-link.carrito{
   display: none;
@@ -294,6 +295,9 @@ padding-top: 0;
 padding-bottom: 0;
 margin-left: 5px;
 margin-right: 0;
+}
+header .navbar-light .navbar-nav .nav-link{
+  color: var(--colorBlanco);
 }
 /*Login*/
 .modal-backdrop {
@@ -403,6 +407,7 @@ margin-left: 0;
   }
   header i.fas.fa-shopping-cart{
     padding-top: 12px;
+    color: var(--colorBlanco);
   }
   header ul.navbar-nav.mb-2.mb-2.mb-lg-0.Sesion{
     left: 900px;
@@ -463,12 +468,12 @@ footer .container-fluid div ul li{
   
 }
 footer .container-fluid div ul li a{
-  color: black;
+  color: var(--colorBlanco);
   text-align: center;
   word-spacing: 10px;
 }
 footer .container-fluid div ul li p{
-  color: black;
+  color: var(--colorBlanco);
   text-align: center;
   margin-bottom: 0;
 }
@@ -481,7 +486,7 @@ footer .container-fluid div ul li p{
 
 /* Seccion de footer-enlaces */
 .fa-instagram, .fa-facebook, .fa-twitter, .fa-whatsapp, .fa-phone, .fa-map-marker-alt, .fa-home, .fa-tags, .fa-question-circle, .fa-user-friends, .fa-campground, .fa-envelope, .fa-life-ring{
-  color: #f4791f;
+  color: var(--colorBlanco);
   font-weight: bold;
 }
 .nav-link:hover{

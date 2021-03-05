@@ -36,7 +36,7 @@ main .container {
 section .product {
   padding-top: 15px;
   margin-bottom: 15px;
-  border: 1px solid var(--colorSecundarioVariante2);
+  border: 1px solid var(--colorGrisOscuro);
   border-radius: 15px;
   height: 300px;
   width: 220px;
@@ -51,7 +51,7 @@ section .product img {
 section .product h5 {
   font-weight: bold;
   font-family: 'Poppins', sans-serif;
-  border-bottom: 1px solid var(--colorSecundarioVariante2);
+  border-bottom: 1px solid var(--colorGrisOscuro);
   width: 90%;
   margin-top: 10px;
   text-align: center;
@@ -142,7 +142,7 @@ main .container a {
 section .product {
   padding-top: 15px;
   margin-bottom: 15px;
-  border: 1px solid var(--colorSecundarioVariante2);
+  border: 1px solid var(--colorGrisOscuro);
   border-radius: 15px;
   height: 300px;
   width: 220px;
