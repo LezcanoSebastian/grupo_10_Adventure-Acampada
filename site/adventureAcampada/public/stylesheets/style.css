@@ -433,8 +433,10 @@ header li.nav-item.menuLR{
 
 .main-footer{
   /* background-image: url('../img/hf.png'); */
-  background: rgb(0,0,0);
+ /*  background: rgb(0,0,0);
 background: linear-gradient(3deg, rgba(0,0,0,0.742734593837535) 32%, rgba(0,0,0,0.08727240896358546) 100%);
+   */
+  background-color: rgba(0, 0, 0, 0.5); 
   margin-top: 25px;
   padding-top: 35px;
   background-repeat: no-repeat;

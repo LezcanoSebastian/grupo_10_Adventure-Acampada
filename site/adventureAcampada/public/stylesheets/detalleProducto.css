@@ -1,12 +1,16 @@
 
 /* Cuerpo */
 .cuerpo{
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(220, 220, 220, 0.7);
     border-radius: 5px;
+    box-shadow: 0px 12px 16px rgba(0, 0, 0, 0.30);
     margin-top: 150px;
 }
 body{
-    background-color: #659999;
+    background-image: url('../img/hero-bg.jpg');
+    background-position-y: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 /* Vista desktop */
@@ -24,9 +28,8 @@ div.vista-desktop{
     height: 300px;
 } 
 .img-product{
-
     margin-top: 13.5px;
-    height: 365px;
+    height: 200px;
 }
 .carousel-control-next-icon, .carousel-control-prev-icon{
   background-color: #659999;
@@ -59,15 +62,13 @@ ul.dropdown-menu{
 ul.dropdown-menu:hover{
     border-color: #ff5715;
 }
-.targeta .dropdown-menu.show{
-  background-color: rebeccapurple!important;
-}
+
 /* Descripcion del producto */
 .descripcion div p{
     padding:7%;
-    background-color:#659999;
+    background-color:#3d3d3d9a;
     margin-bottom: 25px;
-    border-radius: 15px;
+    border-radius: 5px;
    text-align: center;
 }
 .descripcion{
@@ -162,9 +163,44 @@ main .cuerpo.container{
   button.comentario{
       width: 35%;
   }
+  .img-product{
+    margin-top: 13.5px;
+    height: 365px;
+}
 }
 
 /* Elimino baner */
 .headerFondo{
     display: none;
+}
+
+
+
+/* Footer */
+footer .container-fluid div ul li a{
+    color: white;
+}
+footer .container-fluid div ul li p{
+    color: white;
+}
+
+
+/* Descripcion de detalle del producto */
+.nombre-del-producto{
+   
+    padding: 15px;
+    font-size: 35px;
+    text-align: center;
+}
+.descuento-precio{
+    text-align: right;
+    color: #659999;
+    font-size: 25px;
+    padding-left: 150px;
+    margin-bottom: -4px;
+}
+.precio-final{
+background-color: transparent;
+text-shadow: 8px 7px 6px rgba(0, 0, 0, 0.30);
+font-size: 50px;
 }
