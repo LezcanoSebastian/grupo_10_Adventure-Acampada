@@ -60,3 +60,10 @@ h1{
 .editar, .eliminar{
     margin: 20px;
 }
+/*Perfil Botones de Menu*/
+.list-group{
+    flex-direction: unset;
+  }
+.div#myList.list-group{
+    width: 700px;
+  }
