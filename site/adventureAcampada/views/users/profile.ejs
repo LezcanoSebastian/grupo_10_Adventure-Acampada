@@ -5,6 +5,7 @@
 <!-- /HEAD -->
 <!-- CSS -->
 <link rel="stylesheet" href="../stylesheets/profile.css">
+
 <!-- /CSS -->
 <body>
 <!-- HEADER -->
@@ -54,7 +55,7 @@
       </article>
       <form action="/users/delete/<%= user.id %>?_method=DELETE" method="POST">
         <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-          <button class="btn btn-primary me-md-2" type="submit">Eliminar cuenta</button>
+          <button class="btn btn-danger me-md-2" type="submit">Eliminar cuenta</button>
         </div>
       </form>
     </section>

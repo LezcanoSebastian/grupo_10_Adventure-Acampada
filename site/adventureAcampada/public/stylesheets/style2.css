@@ -212,3 +212,14 @@ main .container .product:hover {
 }
 
 
+.general{
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 12px 16px rgba(0, 0, 0, 0.30);
+}
+body{
+  background-image: url('../img/backgroundfinal.jpg');
+  background-repeat: none;
+  background-size: cover;
+}

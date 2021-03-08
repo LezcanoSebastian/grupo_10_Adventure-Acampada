@@ -39,7 +39,7 @@ h3{
      padding: 10px;
      box-shadow: 0px 12px 16px rgba(0, 0, 0, 0.30);
      height: 250px;
-  
+     
  }
  .selfie{
     
@@ -58,7 +58,8 @@ h3{
     border-radius: 5px;
     padding: 10px;
     height: 250px;
-    object-fit: contain;
+    object-fit: cover;
+    
  }
 
  /* Botones */
@@ -81,7 +82,7 @@ h3{
     background-color: rgba(0, 0, 0, 0.30);
     border-color:rgba(0, 0, 0, 0.30) ;
 }
-.btn-primary{
+.btn-danger{
     background-color: rgba(0, 0, 0, 0.30);
     border-color:rgba(0, 0, 0, 0.30) ;
 }

@@ -2,5 +2,6 @@
     display: none;
   }
   body{
-      margin-top: 150px;
+   background-image: url('../img/backgroundfinal.jpg');
+    margin-top: 150px;
   }

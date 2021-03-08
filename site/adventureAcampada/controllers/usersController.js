@@ -38,7 +38,7 @@ module.exports = {
                 email,
                 password : hashPass,
                 category,
-                image : req.files[0].filename || 'sin imagen'
+                image : (req.files[0])?req.files[0].filename:"default.png"
             };
     
             users_db.push(newUser);
@@ -63,7 +63,7 @@ module.exports = {
                 errores : errores.errors
             })
         }else{
-            const {email, password, recordar, category} = req.body;
+            const {email, password, recordar, category, id} = req.body;
 
             let result = users_db.find(user => user.email === email);
 
@@ -85,7 +85,7 @@ module.exports = {
                         })
                     }
 
-                    return res.redirect('/users/profile')
+                    return res.redirect(`/`)
                 }
             }
             return res.render('users/login',{
@@ -98,8 +98,10 @@ module.exports = {
         }
     },
     profile : (req,res) => {
+        let users = users_db.find(elemento=> elemento.id == req.params.id)
         res.render('users/profile',{
-            title: "Mi perfil"
+            title: "Mi perfil",
+            users
         })
     },
     logout : (req,res) => {

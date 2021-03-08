@@ -13,6 +13,7 @@
                         <form action="/search" class="input-search" method="GET">
                             <input type="text" name="keywords" placeholder="Buscar productos, marcas y más">
                             <button type="submit" class="btn btn-outline-light"><i class="fas fa-search"></i></button>
+                        </form>
                     </div>
 
                     <nav class="navbar navbar-expand-lg col-lg-12">
@@ -20,20 +21,40 @@
                             <button class="navbar-toggler navbar-light " type="button" data-bs-toggle="collapse"
                                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                                 aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="navbar-toggler-icon"></span>
+                                <span><i class="fas fa-bars"></i></span>
                             </button>
 
-                            <div class="collapse navbar-collapse navbar-light " id="navbarSupportedContent">
+                            <div class="collapse navbar-collapse navbar-light mobile" id="navbarSupportedContent">
                                 <ul class="navbar-nav mb-2 mb-lg-0">
-                                    <li class="nav-item menuLR">
+                                   
+                                        <!-- Aca  -->
+                                        <% if (typeof user != 'undefined') { %>
+                                            
+                                            
+                                            <ul class="mobile">
+                                                <li><a ><i class="fas fa-user-circle"></i> <%= user.firstName %>
+                                              </a> </li>
+                                              <li><a class="dropdown-item" href="/users/profile/<%=user.id %> ">Mi Perfil</a></li>
+                                              <% if (user.category==="admin") { %>
+                                                <li><a class="dropdown-item" href="/admin">Administrar</a></li>
+                                                <% } %>
+                                                <li><a class="dropdown-item" href="/users/logout">Cerrar sesion</a></li>
+                                            </ul>
+                                              <% }else{ %>
+                                               
+                                                
+                                                <ul class="mobile">
+                                                  <li><a class="dropdown-item" href="/users/login">Iniciar sesion</a></li>
+                                                  <li><a class="dropdown-item" href="/users/register">Registrarme</a></li>
+                                              </ul>
+                                                <% } %> 
                                         
-                                        <a class="nav-link" href="/users/login>Ingresar">Ingresar</a>
-                                    </li>
+                                    
                                     <li class="nav-item">
-                                        <a class="nav-link" href="7">Home</a>
+                                        <a class="nav-link" href="/">Home</a>
                                     </li>
                                     <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+                                        <a class="nav-link dropdown-toggle"  id="navbarDropdown"
                                             role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                             Categorias
                                         </a>
@@ -61,15 +82,36 @@
                                 </ul>
                                 
                             </div>
-                            <div class="collapse navbar-collapse navbar-light " id="navbarSupportedContent">
+                            <div class="collapse navbar-collapse navbar-light escritorio" id="navbarSupportedContent">
                                 <ul class="navbar-nav mb-2 mb-lg-0 Sesion">
                                     <li class="nav-item dropdown">
                                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
                                             role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                             <i class="fas fa-user-circle"></i>
                                         </a>
-                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown"> 
-                                            <li><a class="dropdown-item" href="/users/login">Ingresar</a></li>                                              
+                                        <ul class="dropdown-menu " aria-labelledby="navbarDropdown"> 
+                                            <!-- Aca 2 -->
+                                            <% if (typeof user != 'undefined') { %>
+                                               <ul> <li ><a href="/users/profile/<%=user.id %> "><i class="fas fa-user-circle"></i> <%= user.firstName %></a> <!-- nombre de usuario -->
+                                                </li>
+                                                
+                                                
+                                                  <li><a href="/users/profile/<%=user.id %> ">Mi Perfil</a></li>
+                                                  <% if (user.category==="admin") { %>
+                                                    <li><a  href="/admin">Administrar</a></li>
+                                                    <% } %>
+                                                    <li><a  href="/users/logout">Cerrar sesion</a></li>
+                                                  </ul>
+                                                  <% }else{ %>
+                                                  
+                                                    
+                                                    <ul escritorio>
+                                                      <li><a  href="/users/login">Iniciar sesion</a></li>
+                                                      <li><a  href="/users/register">Registrarme</a></li>
+                                                    </ul>
+                                                    <% } %> 
+                                           <!--  <li><a class="dropdown-item" href="/users/login">Ingresar</a></li>   
+                                            <li><a class="dropdown-item" href="/users/logout">Cerrar session</a></li>  -->                                          
                                             <li><a class="dropdown-item" href="#">Ayuda</a></li>
                                         </ul>
                                     </li>

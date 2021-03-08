@@ -17,7 +17,7 @@ router.post('/register',uploadImages.any(),processRegister);
 router.get('/login',login);
 router.post('/login', processLogin);
 
-router.get('/profile', checkUser, profile);
+router.get('/profile/:id', checkUser, profile);
 
 router.delete('/delete/:id',eliminar);
 

@@ -7,7 +7,7 @@
     margin-top: 150px;
 }
 body{
-    background-image: url('../img/hero-bg.jpg');
+    background-image: url('../img/backgroundfinal.jpg');
     background-position-y: 100%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -203,4 +203,5 @@ footer .container-fluid div ul li p{
 background-color: transparent;
 text-shadow: 8px 7px 6px rgba(0, 0, 0, 0.30);
 font-size: 50px;
+color: #659999;
 }

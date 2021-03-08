@@ -224,18 +224,6 @@
     "delivery": "si"
   },
   {
-    "id": 17,
-    "name": "",
-    "price": "",
-    "image": "img-product-1613791926395.png",
-    "colors": "",
-    "discount": "",
-    "mark": "",
-    "size": "",
-    "origin": "",
-    "material": ""
-  },
-  {
     "id": 22,
     "name": "mochila",
     "description": "",
@@ -247,5 +235,18 @@
     "size": "M",
     "origin": "Argentina",
     "material": "cuero"
+  },
+  {
+    "id": 23,
+    "name": "qewqwd",
+    "description": "",
+    "price": "12123",
+    "image": "image-products-1615057189191.png",
+    "colors": "xas",
+    "discount": "12",
+    "mark": "dssdqxss",
+    "size": "a",
+    "origin": "xssxs",
+    "material": "axss"
   }
 ]

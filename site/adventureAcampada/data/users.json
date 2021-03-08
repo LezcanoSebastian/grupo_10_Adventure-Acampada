@@ -1,14 +1,5 @@
 [
   {
-    "id": 1,
-    "first_name": "Margaretta",
-    "last_name": "Mulvihill",
-    "email": "mmulvihill0@google.com",
-    "password": "fRsF6ylnJ",
-    "category": "user,",
-    "image": "user_1.jpg"
-  },
-  {
     "id": 2,
     "first_name": "Lyn",
     "last_name": "Jeroch",
@@ -105,5 +96,31 @@
     "email": "ejemplo@gmail.com",
     "password": "$2b$12$cIvFlVeE.6l8KN/wfLIsdeOjptlgftGfKzJJ7xtJL82nmsrvUmLOS",
     "image": "image-1614787547089.png"
+  },
+  {
+    "id": 13,
+    "firstName": "ejemplo",
+    "lastName": "ejemplar",
+    "email": "ejemplo@ejemplar.com",
+    "password": "$2b$12$EH75aQOmVMRgWvOgQLmyHOgaY5ex8EAayKiITrQ2ALdjJdhUgyuva",
+    "category": "user",
+    "image": "image-1614953659921.png"
+  },
+  {
+    "id": 14,
+    "firstName": "ejemplo",
+    "lastName": "ejemolo",
+    "email": "ejemplo@gmail.com",
+    "password": "$2b$12$myhrVQMhG5lYLZQxxssJbufGIoTzc7B/q9vpwruVM8ugL8XEq5eSK",
+    "category": "user",
+    "image": "image-1614955372209.png"
+  },
+  {
+    "id": 15,
+    "firstName": "cosme",
+    "lastName": "fulanito",
+    "email": "cosme@fulanito2.com",
+    "password": "$2b$12$rIv/fca2y3H9AiuvXyeTQudyAnxem/AUxUloL7u91U2BawuQwy1PK",
+    "image": "default.png"
   }
 ]

@@ -100,8 +100,11 @@
             <!-- Boton agregar a carrito -->
             <article>
                 <div class="form-floating d-flex flex-column">
-                    <button class="carrito btn btn-success " ><a href="/products/carrito" style="color: white;">Agregar a carrito</a>   <i class="fas fa-shopping-cart"></i></button>
+                    <form action="/products/carrito" class="input-submit" method="GET"></form>
+                    <button class="carrito btn btn-success" action="/products/carrito" ><a href="/products/carrito" style="color: white;">Agregar a carrito</a>   <i class="fas fa-shopping-cart"></i></button>
                 </div>
+                    
+                     <!--    <button type="submit" class="btn btn-outline-light"><i class="fas fa-search"></i></button> -->
             </article>
         </div>
 
