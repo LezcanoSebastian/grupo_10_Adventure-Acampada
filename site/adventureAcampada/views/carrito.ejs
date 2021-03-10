@@ -21,13 +21,17 @@
         </div>
         <section class="row">       
 
-            <div class="producto-carrito col-sm-12 col-md-12 col-lg-3"><div class="card">
-                <img src="/img/productos/lampara-de-camping.jpg" class="card-img-top" alt="...">
+            <div class="producto-carrito col-sm-12 col-md-12 col-lg-3">
+              <div class="card">
+                
+                <img src="/img/products/<%- product.image%>" class="card-img-top" alt="...">
                 <div class="card-body">
-                  <h5 class="card-title">titulo del producto</h5>
-                  <p class="card-text">Descripcion del producto</p>
+                  <h5 class="card-title"><%- product.name %></h5>
+                  <p class="card-text"><%- product.description %></p>
                 </div>
-              </div></div>
+        
+              </div>
+            </div>
             <div class="precio col-sm-12 col-md-6 col-lg-3"><p class="price">$150 precio unitario</p> </div>
             <div class="cantidad col-sm-12 col-md-6 col-lg-3">
                 <div class="dropdown form-floating d-flex flex-column">

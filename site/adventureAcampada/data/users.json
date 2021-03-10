@@ -81,15 +81,6 @@
     "image": "user_10.jpg"
   },
   {
-    "id": 11,
-    "firstName": "sebastian",
-    "lastName": "lezcano",
-    "email": "sebastian.e.lezcano@gmail.com",
-    "password": "$2b$12$t4AYaqHtCgTToQ/iH2Mfte6ZVvZe7sR9vV6Ur9Gbuu0XMSB7u2uzO",
-    "category": "admin",
-    "image": "image-1614613254649.png"
-  },
-  {
     "id": 12,
     "firstName": "sebastian",
     "lastName": "lezcano",

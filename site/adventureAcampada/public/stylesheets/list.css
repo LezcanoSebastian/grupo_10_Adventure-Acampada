@@ -5,3 +5,15 @@
    background-image: url('../img/backgroundfinal.jpg');
     margin-top: 150px;
   }
+ 
+  /* alineacion de tarjetas en la vercion mobile */
+  .targeta-product-admin{
+    align-items: center;
+  }
+  /* separacion de botones */
+ .botones-admin{
+    background-color: red!important;
+  }
+  .general{
+    background-color: red;
+  }

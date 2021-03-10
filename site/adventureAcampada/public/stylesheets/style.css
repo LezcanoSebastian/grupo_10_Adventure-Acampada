@@ -268,6 +268,10 @@ header .navbar-collapse{
 header .navbar-collapse li a{
   color: white;
 }
+
+header .navbar-collapse::before{
+  color: white;
+}
 header .dropdown-menu{
   border: none;   
 }
@@ -288,7 +292,7 @@ margin-right: 0;
 header div#navbarSupportedContent.navbar-collapse.navbar-light.collapse.show{
 z-index: 1000;
 width: 150px;
-height: 45%;
+height: 50%;
 padding: 11px;
 background-color: var(--fondoHeader3);
 color: white;
@@ -370,7 +374,7 @@ header .navbar-light .navbar-nav .nav-link{
       background-color: var(--fondoHeader3);
       /* Mensaje, cambie el color del menú desplegable, color sujeto a modificaciones */
       top:70px;
-      left: -50px;
+      left: -60px;
       box-shadow: 0px 12px 16px rgb(0 0 0 / 30%);
       border-radius: 5px;
       color: white;
@@ -525,4 +529,9 @@ ul{
 }
 .fa-bars::before{
   border: none;
+}
+
+/* Configuraciones para categoria */
+.categoria-mobile.show{
+  position: absolute;
 }

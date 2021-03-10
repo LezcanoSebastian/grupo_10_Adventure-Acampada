@@ -126,4 +126,7 @@ module.exports = {
         fs.writeFileSync('./data/users.json',JSON.stringify(users_db,null,2));
         res.redirect('/');
     },
+    edit : (req, res) =>{
+        res.render('user/edit')
+        }
 }

@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
-<!-- HEAD -->
-<%- include('./partials/head')  %>   
-<!-- /HEAD -->
-<!-- CSS -->
-<link rel="stylesheet" href="../stylesheets/profile.css">
 
-<!-- /CSS -->
+<%- include('./partials/head')  %>   
+
+<link rel="stylesheet" href="../../stylesheets/profile.css">
+
+
 <body>
 <!-- HEADER -->
 <%- include('../partials/header')  %> 
 <!-- /HEADER -->
+
 <!--Inicio Home-->
 
 <h1> Bienvenido <%= user.firstName%></h1>
@@ -45,8 +45,8 @@
                     </div>
                     
               </article> 
-              <button type="button" class="btn btn-warning editar"> <a href="/user/update "></a> Editar</button>
             </div>
+            <button type="button" class="btn btn-warning editar"> <a href="/user/profile/edit/<%=user.id %> "></a> Editar</button>
             <div class="tab-pane" id="profile" role="tabpanel">
               <h4>Mi carrito</h4>
             </div>   
@@ -59,31 +59,7 @@
         </div>
       </form>
     </section>
-    <!--<section class="row">
-      <div class="col-sm-12 col-md-5 col-lg-5 img-profile"><img src="/img/avatar/<%= user.image %> " alt="" class="selfie"></div>
-    
-      <div class="col-sm-12 col-md-5 col-lg-5 datos">
-        <ul>
-          <h1>Mis Datos</h1>
-          <li>Nombre: <%= user.firstName%></li>
-          <li>Apellido: <%= user.lastName%></li>
-          <li>Direccion:</li>
-          <li>Email: <%= user.email %> </li>
-          <li>Tel:</li>
-          </ul>
-       </div>
-      </section>
-      <main class="container">
-        
-        <button type="button" class="btn btn-warning editar"> <a href="/user/update "></a> Editar</button>
-    <form action="/users/delete/<%= user.id %>?_method=DELETE" method="POST">
-    <button type="submit" class="btn btn-danger eliminar">Eliminar cuenta</button>
-    </form> 
-        
-      </main>
-   
-
-   </section>-->
+  
 
 
    </main> 
@@ -94,7 +70,5 @@
  <%- include('./partials/scripts')  %> 
  <!-- /SCRIPTS -->
 </body>
-  <!--FOOTER-->
 
-  <!--/FOOTER-->
 </html>

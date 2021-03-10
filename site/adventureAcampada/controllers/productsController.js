@@ -23,14 +23,14 @@ const controllers = {
         })
     },
     carrito : (req, res) => {
+         let product = products.find(product =>{
+			return product.id === +req.params.productId
+            })
         res.render('carrito', {
-            title: 'Mi Carrito'
-        })
-    },
-    form : (req, res) => {
-        res.render('formProducto', {
-            title: 'Formulario de carga de producto'
+            title: 'Mi Carrito', 
+            product
         })
     }
+   
 }
 module.exports = controllers;

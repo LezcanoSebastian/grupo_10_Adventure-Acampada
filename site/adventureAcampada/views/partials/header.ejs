@@ -5,7 +5,7 @@
         <section class="menu container">
 
             <nav class="navbar navbar-expand-lg">
-                <div class="container-fluid">
+                <div class="container">
                     <div class="logoHeader col-sm-3 col-md-6 col-lg-4">
                         <a href="/"><img class="logoHeader" src="/img/logobis7.png" alt="logo"></a>
                     </div>
@@ -32,9 +32,8 @@
                                             
                                             
                                             <ul class="mobile">
-                                                <li><a ><i class="fas fa-user-circle"></i> <%= user.firstName %>
-                                              </a> </li>
-                                              <li><a class="dropdown-item" href="/users/profile/<%=user.id %> ">Mi Perfil</a></li>
+                                                
+                                              <li><a class="dropdown-item" href="/users/profile/<%=user.id %> "><i class="fas fa-user-circle"></i> <%= user.firstName %></a></li>
                                               <% if (user.category==="admin") { %>
                                                 <li><a class="dropdown-item" href="/admin">Administrar</a></li>
                                                 <% } %>
@@ -58,14 +57,14 @@
                                             role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                             Categorias
                                         </a>
-                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <ul class="dropdown-menu categoria-mobile" aria-labelledby="navbarDropdown">
                                             <li><a class="dropdown-item" href="#">Mochilas</a></li>
                                             <li><a class="dropdown-item" href="#">Bolsas de Dormir</a></li>
                                             <li><a class="dropdown-item" href="#">Iluminacion</a></li>
                                             <li><a class="dropdown-item" href="#">Repuestos</a></li>
                                             <li><a class="dropdown-item" href="#">todos los productos</a></li>
                                             <li>
-                                                <hr class="dropdown-divider">
+                                               
                                             </li>
                                             <li><a class="dropdown-item" href="#">Ayuda</a></li>
                                         </ul>
@@ -112,7 +111,7 @@
                                                     <% } %> 
                                            <!--  <li><a class="dropdown-item" href="/users/login">Ingresar</a></li>   
                                             <li><a class="dropdown-item" href="/users/logout">Cerrar session</a></li>  -->                                          
-                                            <li><a class="dropdown-item" href="#">Ayuda</a></li>
+                                           <!--  <li><a class="dropdown-item" href="#">Ayuda</a></li> -->
                                         </ul>
                                     </li>
                                     <li class="nav-item">

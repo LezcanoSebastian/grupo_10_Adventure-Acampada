@@ -9,11 +9,12 @@ const {index,productsList,productsCreate,productsStore,productsEdit,productsUpda
 
 const upload = require('../middlewares/subidaImagenes');
 const checkAdmin = require('../middlewares/checkAdmin');
+const checkUser = require('../middlewares/checkUser');
 
 
-router.get('/', checkAdmin, index);
+router.get('/', checkUser, checkAdmin, index);
 
-router.get('/products/list', checkAdmin,  productsList);
+router.get('/products/list', checkAdmin, productsList);
 
 router.get('/products/create', checkAdmin,  productsCreate);//trae el formulario nada mas
 router.post('/products/store',upload.any(), checkAdmin,  productsStore);//crea el registro

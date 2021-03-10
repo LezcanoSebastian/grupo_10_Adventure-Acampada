@@ -2,7 +2,7 @@
 var express = require('express');
 var router = express.Router();
 
-const { register, processRegister, login, processLogin, profile, logout, eliminar } = require('../controllers/usersController');
+const { register, processRegister, login, processLogin, profile, logout, eliminar, edit } = require('../controllers/usersController');
 
 
 /* middlewares */
@@ -18,6 +18,7 @@ router.get('/login',login);
 router.post('/login', processLogin);
 
 router.get('/profile/:id', checkUser, profile);
+router.get('/profile/edit/:id', edit)
 
 router.delete('/delete/:id',eliminar);
 
