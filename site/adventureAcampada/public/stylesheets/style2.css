@@ -1,4 +1,6 @@
-
+main section.carousel{
+  display: none;
+}
 section .carousel .carousel-inner {
   height: 100px;
   width: 100%;
@@ -27,7 +29,7 @@ main .container {
   flex-wrap: wrap;
 }
 
-.container a {
+main .container a {
   text-decoration: none;
   color: #666;
 }
@@ -73,6 +75,26 @@ section .product p {
 /* MEDIA QUERIES */
 /* VERSION TABLET */
 @media(min-width:426px) {
+  main section .product {
+    padding-top: 15px;
+    margin-bottom: 15px;
+    border: 1px solid var(--colorGrisOscuro);
+    border-radius: 15px;
+    height: 300px;
+    width: 220px;
+    margin-right: 10px;
+  }
+  div.navegacion-footer.col-sm-3.col-md-3.col-lg-3{
+    margin-left: 140px;
+    margin-right: 50px;
+  }
+  div.contactar.col-sm-3.col-md-3.col-lg-3{
+    margin-left: 50px;
+    margin-right: 140px;
+  }
+  main section.carousel{
+    display: flex;
+  }
   main .container {
       flex-direction: row;
   }
@@ -89,6 +111,15 @@ section .product p {
 
 /* VERSION ESCRITORIO */
 @media(min-width:769px) {
+  
+  div.navegacion-footer.col-sm-3.col-md-3.col-lg-3{
+    margin-left: 200px;
+    margin-right: 50px;
+  }
+  div.contactar.col-sm-3.col-md-3.col-lg-3{
+    margin-left: 50px;
+    margin-right: 200px;
+  }
   main .container {
       flex-direction: row;
 
@@ -145,7 +176,8 @@ section .product {
   border: 1px solid var(--colorGrisOscuro);
   border-radius: 15px;
   height: 300px;
-  width: 220px;
+  width: auto;
+  margin-right: 10px;
 }
 
 section .product img {
@@ -179,6 +211,10 @@ main .container .product:hover {
 /* MEDIA QUERIES */
 /* VERSION TABLET */
 @media(min-width:426px) {
+  main #services h4.title{
+    text-align: center;
+    width: 290px;
+  }  
   main .container {
       flex-direction: row;
   }
@@ -195,6 +231,10 @@ main .container .product:hover {
 
 /* VERSION ESCRITORIO */
 @media(min-width:769px) {
+  main #services h4.title{
+    text-align: center;
+    width: 250px;
+  }
   main .container {
       flex-direction: row;
 
@@ -210,6 +250,12 @@ main .container .product:hover {
       height: 300px;
   }
 }
+@media(min-width:1025px) {
+  main #services h4.title{
+    text-align: center;
+    width: 370px;
+  }
+}
 
 
 .general{
@@ -218,8 +264,321 @@ main .container .product:hover {
   border-radius: 5px;
   box-shadow: 0px 12px 16px rgba(0, 0, 0, 0.30);
 }
-body{
-  background-image: url('../img/backgroundfinal.jpg');
-  background-repeat: none;
+
+/* Call To Action Section
+--------------------------------*/
+#call-to-action {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/index/publicidad-8.jpeg) fixed center center;
   background-size: cover;
+  padding: 80px 0;
+}
+
+@media (max-width: 1024px) {
+  #call-to-action {
+    background-attachment: scroll;
+  }
+}
+
+#call-to-action .cta-title {
+  color: #fff;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+#call-to-action .cta-text {
+  color: #fff;
+}
+
+@media (min-width: 769px) {
+  #call-to-action .cta-btn-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+}
+
+#call-to-action .cta-btn {
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 8px 30px;
+  border-radius: 50px;
+  transition: 0.5s;
+  margin: 10px;
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+#call-to-action .cta-btn:hover {
+  background: #2dc997;
+  border: 2px solid #2dc997;
+}
+
+
+/* Contact Section
+--------------------------------*/
+main div.row.justify-content-center{
+  display: contents;
+  width: 216px;
+}
+
+main #contact {
+  padding: 80px 0 40px 0;
+}
+
+main #contact #google-map {
+  height: 300px;
+  margin-bottom: 20px;
+}
+
+main #contact .info {
+  color: #333333;
+}
+
+main #contact .info i {
+  font-size: 32px;
+  color: #2dc997;
+  float: left;
+  line-height: 0;
+}
+
+main #contact .info p {
+  padding: 0 0 10px 50px;
+  margin-bottom: 20px;
+  line-height: 22px;
+  font-size: 14px;
+}
+
+main #contact .info .email p {
+  padding-top: 5px;
+}
+
+main #contact .social-links {
+  padding: 20px 0;
+  width: 216px;
+}
+
+main #contact .social-links a {
+  font-size: 18px;
+  background: #333;
+  color: #fff;
+  line-height: 1;
+  border-radius: 50%;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main #contact .social-links a i {
+  line-height: 0;
+}
+
+main #contact .social-links a:hover {
+  background: #2dc997;
+  color: #fff;
+}
+
+main #contact .php-email-form .error-message {
+  display: none;
+  color: #fff;
+  background: #ed3c0d;
+  text-align: left;
+  padding: 15px;
+  font-weight: 600;
+}
+
+main #contact .php-email-form .error-message br + br {
+  margin-top: 25px;
+}
+
+main #contact .php-email-form .sent-message {
+  display: none;
+  color: #fff;
+  background: #18d26e;
+  text-align: center;
+  padding: 15px;
+  font-weight: 600;
+}
+
+main #contact .php-email-form .loading {
+  display: none;
+  background: #fff;
+  text-align: center;
+  padding: 15px;
+}
+
+main #contact .php-email-form .loading:before {
+  content: "";
+  display: inline-block;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  margin: 0 10px -6px 0;
+  border: 3px solid #18d26e;
+  border-top-color: #eee;
+  -webkit-animation: animate-loading 1s linear infinite;
+  animation: animate-loading 1s linear infinite;
+}
+
+main #contact .php-email-form input, #contact .php-email-form textarea {
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 14px;
+}
+
+main #contact .php-email-form input::focus, #contact .php-email-form textarea::focus {
+  background-color: #2dc997;
+}
+
+main #contact .php-email-form button[type="submit"] {
+  background: #2dc997;
+  border: 0;
+  padding: 10px 24px;
+  color: #fff;
+  transition: 0.4s;
+}
+
+main #contact .php-email-form button[type="submit"]:hover {
+  background: #51d8ad;
+}
+
+@-webkit-keyframes animate-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animate-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+#contact h3.section-title {
+  font-size: 32px;
+  color: #111;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+.section-header .section-description {
+  text-align: center;
+  padding-bottom: 40px;
+  color: #999;
+}
+footer div.contactar.col-sm-3.col-md-3.col-lg-3 ul li a.nav-link{
+  width: 192px;
+}
+
+#footer {
+  text-align: center;
+  background: #343b40;
+  padding: 30px 0;
+  color: #fff;
+  font-size: 14px;
+}
+
+#footer .copyright {
+  text-align: center;
+}
+
+#footer .credits {
+  padding-top: 10px;
+  text-align: center;
+  font-size: 13px;
+  color: #ccc;
+}
+
+/* Services Section
+--------------------------------*/
+#services h3.section-title{
+  text-align: center;
+}
+#services h4.title{
+  text-align: center;
+  width: 320px;
+}
+#services {
+  background: #fff;
+  background-size: cover;
+  padding: 80px 0 60px 0;
+}
+
+#services .box {
+  padding: 50px 20px;
+  margin-bottom: 50px;
+  text-align: center;
+  border: 1px solid #e6e6e6;
+  height: 200px;
+  position: relative;
+  background: #fafafa;
+}
+
+#services .icon {
+  position: absolute;
+  top: -36px;
+  left: calc(50% - 36px);
+  transition: 0.2s;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  width: 72px;
+  height: 72px;
+  background: #2dc997;
+}
+
+#services .icon a {
+  display: inline-block;
+}
+
+#services .icon i {
+  color: #fff;
+  font-size: 24px;
+  line-height: 0;
+}
+
+#services .box:hover .icon {
+  background: #fff;
+  border: 2px solid #2dc997;
+}
+
+#services .box:hover .icon i {
+  color: #2dc997;
+}
+
+#services .box:hover .icon a {
+  color: #2dc997;
+}
+
+#services .title {
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+#services .title a {
+  color: #111;
+}
+
+#services .description {
+  font-size: 14px;
+  line-height: 24px;
 }

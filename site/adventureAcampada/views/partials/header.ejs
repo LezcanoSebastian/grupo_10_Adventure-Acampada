@@ -1,4 +1,58 @@
-<header id="header" class="container-fluid fixed-top header-transparent">
+<header id="header" class="container-fluid fixed-top header">
+    <section class="row header">
+        <section class="menu container">
+            <input type="checkbox" id="check">
+            <nav>
+                 <div class="icon"><a href="/"><img class="logoHeader" src="/img/logo4.png" alt="logo"></a></div>
+                 <div class="search_box">
+                     <input type="search" placeholder="Search here">
+                     <span class="fa fa-search"></span>
+                 </div>
+                 <ol>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Contactos</a></li>
+                    <li><a href="#">Productos</a></li>
+                    <li><a href="#"><i class="bi bi-cart3"></i></a></li>
+                    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-user-circle"></i>Ingresar
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown"> 
+                            <!-- Aca 2 -->
+                            <% if (typeof user != 'undefined') { %>
+                               <ul> <li ><a href="/users/profile/<%=user.id %> "><i class="fas fa-user-circle"></i> <%= user.firstName %></a> <!-- nombre de usuario -->
+                                </li>                                    
+                                
+                                  <li><a href="/users/profile/<%=user.id %> ">Mi Perfil</a></li>
+                                  <% if (user.category==="admin") { %>
+                                    <li><a  href="/admin">Administrar</a></li>
+                                    <% } %>
+                                    <li><a  href="/users/logout">Cerrar sesion</a></li>
+                                  </ul>
+                                  <% }else{ %>   
+                                    <ul>
+                                      <li><a  href="/users/login">Iniciar sesion</a></li>
+                                      <li><a  href="/users/register">Registrarme</a></li>
+                                    </ul>
+                                    <% } %> 
+                        </ul>
+                    </li>
+                 </ol>
+                 <label for="check" class="bar">
+                 <span class="fa fa-bars" id="bars"></span>
+                 <span class="fa fa-times" id="times"></span>
+                 </label>
+            </nav>
+        </section>
+    </section>
+
+</header>
+
+
+
+<!--<header id="header" class="container-fluid fixed-top header-transparent">
 
     <section class="row header">
         
@@ -7,7 +61,7 @@
             <nav class="navbar navbar-expand-lg">
                 <div class="container">
                     <div class="logoHeader col-sm-3 col-md-6 col-lg-4">
-                        <a href="/"><img class="logoHeader" src="/img/logobis7.png" alt="logo"></a>
+                        <a href="/"><img class="logoHeader" src="/img/logo4.png" alt="logo"></a>
                     </div>
                     <div class="col-sm-4 col-md-6 col-lg-8 search-container">
                         <form action="/search" class="input-search" method="GET">
@@ -27,7 +81,7 @@
                             <div class="collapse navbar-collapse navbar-light mobile" id="navbarSupportedContent">
                                 <ul class="navbar-nav mb-2 mb-lg-0">
                                    
-                                        <!-- Aca  -->
+                                        
                                         <% if (typeof user != 'undefined') { %>
                                             
                                             
@@ -72,9 +126,9 @@
                                     <li class="nav-item">
                                         <a class="nav-link" href="#">Ofertas</a>
                                     </li>
-                                   <!--  <li class="nav-item">
+                                    <li class="nav-item">
                                         <a class="nav-link" href="#">Vender</a>
-                                    </li> -->
+                                    </li> 
                                     <li class="nav-item">
                                         <a class="nav-link" href="#">Ayuda</a>
                                     </li>
@@ -89,9 +143,9 @@
                                             <i class="fas fa-user-circle"></i>
                                         </a>
                                         <ul class="dropdown-menu " aria-labelledby="navbarDropdown"> 
-                                            <!-- Aca 2 -->
+                                            
                                             <% if (typeof user != 'undefined') { %>
-                                               <ul> <li ><a href="/users/profile/<%=user.id %> "><i class="fas fa-user-circle"></i> <%= user.firstName %></a> <!-- nombre de usuario -->
+                                               <ul> <li ><a href="/users/profile/<%=user.id %> "><i class="fas fa-user-circle"></i> <%= user.firstName %></a> nombre de usuario
                                                 </li>
                                                 
                                                 
@@ -109,9 +163,9 @@
                                                       <li><a  href="/users/register">Registrarme</a></li>
                                                     </ul>
                                                     <% } %> 
-                                           <!--  <li><a class="dropdown-item" href="/users/login">Ingresar</a></li>   
-                                            <li><a class="dropdown-item" href="/users/logout">Cerrar session</a></li>  -->                                          
-                                           <!--  <li><a class="dropdown-item" href="#">Ayuda</a></li> -->
+                                             <li><a class="dropdown-item" href="/users/login">Ingresar</a></li>   
+                                            <li><a class="dropdown-item" href="/users/logout">Cerrar session</a></li>                                         
+                                            <li><a class="dropdown-item" href="#">Ayuda</a></li> 
                                         </ul>
                                     </li>
                                     <li class="nav-item">
@@ -126,21 +180,12 @@
                     </div>
                     
                                         
-                </div>
+                </div>-->
                 <!--FIN del div class="container-fluid"-->
-            </nav>
+            <!--</nav>-->
             <!--FIN del nav class="navbar navbar-expand-lg"-->
-        </section>
+        <!--</section>-->
         <!--FIN del section class="menu"-->
-    </section>
+    <!--</section>-->
     <!--FIN del section class="row"-->
-</header>
-<div class="container-fluid headerFondo">
-    <div class="row headerFondo">
-     <section class="frase">
-         <h1>Listo para la aventura?</h1>
-         <h4>Aqui disponemos de todo lo que necesita</h4>
-     </section>
-     <img class="Header" src="/img/hero-bg.jpg" alt="">
-    </div>
-</div>
+<!--</header>-->
