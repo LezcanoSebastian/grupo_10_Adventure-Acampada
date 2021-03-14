@@ -1,0 +1,61 @@
+create table clientes (
+	IDadmin INT,
+	IDcliente INT,
+	IDcarrito INT,
+	firstname VARCHAR(50),
+	lastname VARCHAR(50),
+	IDrol INT,
+	email VARCHAR(50),
+	password VARCHAR(50),
+	image VARCHAR(50)
+);
+insert into clientes (IDadmin, IDcliente, IDcarrito, firstname, lastname, IDrol, email, password, image) values (1, 1, 1, 'Rafaela', 'Gayne', 1, 'rgayne0@wufoo.com', '7gqG4fE2zlh1', 'http://dummyimage.com/243x180.png/5fa2dd/ffffff');
+insert into clientes (IDadmin, IDcliente, IDcarrito, firstname, lastname, IDrol, email, password, image) values (2, 2, 2, 'Blane', 'Povall', 2, 'bpovall1@washingtonpost.com', 'C5mm0oThrE', 'http://dummyimage.com/120x150.png/cc0000/ffffff');
+insert into clientes (IDadmin, IDcliente, IDcarrito, firstname, lastname, IDrol, email, password, image) values (3, 3, 3, 'Dina', 'Meade', 3, 'dmeade2@hostgator.com', 'VEgyssEDN1bD', 'http://dummyimage.com/106x137.png/dddddd/000000');
+insert into clientes (IDadmin, IDcliente, IDcarrito, firstname, lastname, IDrol, email, password, image) values (4, 4, 4, 'Korry', 'Wallbridge', 4, 'kwallbridge3@columbia.edu', 'KB8BVY', 'http://dummyimage.com/188x199.png/ff4444/ffffff');
+insert into clientes (IDadmin, IDcliente, IDcarrito, firstname, lastname, IDrol, email, password, image) values (5, 5, 5, 'Pace', 'Glassopp', 5, 'pglassopp4@123-reg.co.uk', 'XlxUBqmv9y', 'http://dummyimage.com/166x222.png/cc0000/ffffff');
+insert into clientes (IDadmin, IDcliente, IDcarrito, firstname, lastname, IDrol, email, password, image) values (6, 6, 6, 'Fernandina', 'Morteo', 6, 'fmorteo5@earthlink.net', 'EWV2HVN9', 'http://dummyimage.com/164x243.bmp/dddddd/000000');
+insert into clientes (IDadmin, IDcliente, IDcarrito, firstname, lastname, IDrol, email, password, image) values (7, 7, 7, 'Cammie', 'Caley', 7, 'ccaley6@cbsnews.com', 'O1lkBHeqj2a', 'http://dummyimage.com/159x150.png/ff4444/ffffff');
+insert into clientes (IDadmin, IDcliente, IDcarrito, firstname, lastname, IDrol, email, password, image) values (8, 8, 8, 'Barnett', 'Eyton', 8, 'beyton7@furl.net', 'Uplv5VKfuxDm', 'http://dummyimage.com/161x193.bmp/ff4444/ffffff');
+insert into clientes (IDadmin, IDcliente, IDcarrito, firstname, lastname, IDrol, email, password, image) values (9, 9, 9, 'Giraldo', 'Niesing', 9, 'gniesing8@sun.com', 'CN7ozRW2', 'http://dummyimage.com/194x180.jpg/5fa2dd/ffffff');
+insert into clientes (IDadmin, IDcliente, IDcarrito, firstname, lastname, IDrol, email, password, image) values (10, 10, 10, 'Clemente', 'Strippling', 10, 'cstrippling9@constantcontact.com', 'GqTQvH7cI', 'http://dummyimage.com/175x146.jpg/5fa2dd/ffffff');
+insert into clientes (IDadmin, IDcliente, IDcarrito, firstname, lastname, IDrol, email, password, image) values (11, 11, 11, 'Dasie', 'Strond', 11, 'dstronda@archive.org', 'h7RnqcNOnOr', 'http://dummyimage.com/233x120.jpg/ff4444/ffffff');
+insert into clientes (IDadmin, IDcliente, IDcarrito, firstname, lastname, IDrol, email, password, image) values (12, 12, 12, 'Onida', 'Graben', 12, 'ograbenb@de.vu', 'GIeJqzR8yZV8', 'http://dummyimage.com/195x217.png/cc0000/ffffff');
+insert into clientes (IDadmin, IDcliente, IDcarrito, firstname, lastname, IDrol, email, password, image) values (13, 13, 13, 'Friedrich', 'Jeavon', 13, 'fjeavonc@marketwatch.com', '2z5H9bWGNr', 'http://dummyimage.com/222x179.jpg/5fa2dd/ffffff');
+insert into clientes (IDadmin, IDcliente, IDcarrito, firstname, lastname, IDrol, email, password, image) values (14, 14, 14, 'Bryna', 'Trumpeter', 14, 'btrumpeterd@dell.com', 'pCyxOx', 'http://dummyimage.com/207x128.bmp/5fa2dd/ffffff');
+insert into clientes (IDadmin, IDcliente, IDcarrito, firstname, lastname, IDrol, email, password, image) values (15, 15, 15, 'Arri', 'Balcers', 15, 'abalcerse@ovh.net', 'MPD9HN', 'http://dummyimage.com/113x138.jpg/5fa2dd/ffffff');
+insert into clientes (IDadmin, IDcliente, IDcarrito, firstname, lastname, IDrol, email, password, image) values (16, 16, 16, 'Laurice', 'Polle', 16, 'lpollef@cbsnews.com', 'HhZg8ZXq', 'http://dummyimage.com/175x231.bmp/dddddd/000000');
+insert into clientes (IDadmin, IDcliente, IDcarrito, firstname, lastname, IDrol, email, password, image) values (17, 17, 17, 'Caritta', 'Cristofanini', 17, 'ccristofaninig@sitemeter.com', '09DB3D', 'http://dummyimage.com/227x186.png/5fa2dd/ffffff');
+insert into clientes (IDadmin, IDcliente, IDcarrito, firstname, lastname, IDrol, email, password, image) values (18, 18, 18, 'Margarethe', 'Durrand', 18, 'mdurrandh@moonfruit.com', 'PL75jD', 'http://dummyimage.com/164x139.bmp/5fa2dd/ffffff');
+insert into clientes (IDadmin, IDcliente, IDcarrito, firstname, lastname, IDrol, email, password, image) values (19, 19, 19, 'Jerrie', 'Besque', 19, 'jbesquei@seattletimes.com', 'kU8OMRuYoq', 'http://dummyimage.com/226x133.png/dddddd/000000');
+insert into clientes (IDadmin, IDcliente, IDcarrito, firstname, lastname, IDrol, email, password, image) values (20, 20, 20, 'Harman', 'Kirkebye', 20, 'hkirkebyej@istockphoto.com', 'XdytZyzF6j', 'http://dummyimage.com/175x113.png/ff4444/ffffff');
+insert into clientes (IDadmin, IDcliente, IDcarrito, firstname, lastname, IDrol, email, password, image) values (21, 21, 21, 'Moe', 'Briance', 21, 'mbriancek@seesaa.net', 'w6y4M0n', 'http://dummyimage.com/205x234.bmp/cc0000/ffffff');
+insert into clientes (IDadmin, IDcliente, IDcarrito, firstname, lastname, IDrol, email, password, image) values (22, 22, 22, 'Wye', 'Kensett', 22, 'wkensettl@simplemachines.org', 'mMniznvV3d', 'http://dummyimage.com/162x101.bmp/dddddd/000000');
+insert into clientes (IDadmin, IDcliente, IDcarrito, firstname, lastname, IDrol, email, password, image) values (23, 23, 23, 'Fin', 'Yanukhin', 23, 'fyanukhinm@netscape.com', 'vcEGag', 'http://dummyimage.com/208x118.bmp/dddddd/000000');
+insert into clientes (IDadmin, IDcliente, IDcarrito, firstname, lastname, IDrol, email, password, image) values (24, 24, 24, 'Rawley', 'Comusso', 24, 'rcomusson@amazon.co.jp', 'v010rS8u', 'http://dummyimage.com/180x233.png/dddddd/000000');
+insert into clientes (IDadmin, IDcliente, IDcarrito, firstname, lastname, IDrol, email, password, image) values (25, 25, 25, 'Ferdinanda', 'Grzelczyk', 25, 'fgrzelczyko@ning.com', '3mSrDFdA', 'http://dummyimage.com/148x116.bmp/dddddd/000000');
+insert into clientes (IDadmin, IDcliente, IDcarrito, firstname, lastname, IDrol, email, password, image) values (26, 26, 26, 'Dawna', 'Ferronel', 26, 'dferronelp@blog.com', 'ea1ikxca6Uw', 'http://dummyimage.com/156x211.jpg/ff4444/ffffff');
+insert into clientes (IDadmin, IDcliente, IDcarrito, firstname, lastname, IDrol, email, password, image) values (27, 27, 27, 'Shandy', 'Flacke', 27, 'sflackeq@bbb.org', 'WZfVA2', 'http://dummyimage.com/231x144.png/ff4444/ffffff');
+insert into clientes (IDadmin, IDcliente, IDcarrito, firstname, lastname, IDrol, email, password, image) values (28, 28, 28, 'Johnna', 'Lahrs', 28, 'jlahrsr@bizjournals.com', 'gIwNgL', 'http://dummyimage.com/115x125.jpg/dddddd/000000');
+insert into clientes (IDadmin, IDcliente, IDcarrito, firstname, lastname, IDrol, email, password, image) values (29, 29, 29, 'Irwin', 'Dobrowlski', 29, 'idobrowlskis@skype.com', '8H0Q4GQw1a', 'http://dummyimage.com/138x125.jpg/dddddd/000000');
+insert into clientes (IDadmin, IDcliente, IDcarrito, firstname, lastname, IDrol, email, password, image) values (30, 30, 30, 'Gale', 'Hagerty', 30, 'ghagertyt@themeforest.net', '0ykFaMDfW4Q', 'http://dummyimage.com/164x242.jpg/ff4444/ffffff');
+insert into clientes (IDadmin, IDcliente, IDcarrito, firstname, lastname, IDrol, email, password, image) values (31, 31, 31, 'Elsi', 'Durber', 31, 'edurberu@ihg.com', 'etwIqg5vFYno', 'http://dummyimage.com/207x123.bmp/dddddd/000000');
+insert into clientes (IDadmin, IDcliente, IDcarrito, firstname, lastname, IDrol, email, password, image) values (32, 32, 32, 'Nancy', 'Colbourn', 32, 'ncolbournv@spiegel.de', 'JsBPjN4kTGZ', 'http://dummyimage.com/196x115.bmp/dddddd/000000');
+insert into clientes (IDadmin, IDcliente, IDcarrito, firstname, lastname, IDrol, email, password, image) values (33, 33, 33, 'Hernando', 'Krysztofiak', 33, 'hkrysztofiakw@free.fr', 'kx1KBiI', 'http://dummyimage.com/216x241.png/ff4444/ffffff');
+insert into clientes (IDadmin, IDcliente, IDcarrito, firstname, lastname, IDrol, email, password, image) values (34, 34, 34, 'Toddie', 'Pantone', 34, 'tpantonex@histats.com', '6rkxon', 'http://dummyimage.com/211x224.jpg/dddddd/000000');
+insert into clientes (IDadmin, IDcliente, IDcarrito, firstname, lastname, IDrol, email, password, image) values (35, 35, 35, 'Terza', 'Nicely', 35, 'tnicelyy@slideshare.net', 'DIf6l3OEvL', 'http://dummyimage.com/169x138.png/5fa2dd/ffffff');
+insert into clientes (IDadmin, IDcliente, IDcarrito, firstname, lastname, IDrol, email, password, image) values (36, 36, 36, 'Westbrooke', 'Headingham', 36, 'wheadinghamz@blogger.com', 'zfb8V22H', 'http://dummyimage.com/244x123.jpg/ff4444/ffffff');
+insert into clientes (IDadmin, IDcliente, IDcarrito, firstname, lastname, IDrol, email, password, image) values (37, 37, 37, 'Robinet', 'Vannuccini', 37, 'rvannuccini10@nationalgeographic.com', 'IyAIEtLLH', 'http://dummyimage.com/180x218.png/cc0000/ffffff');
+insert into clientes (IDadmin, IDcliente, IDcarrito, firstname, lastname, IDrol, email, password, image) values (38, 38, 38, 'Lisette', 'Shrimplin', 38, 'lshrimplin11@paypal.com', 'woqZxqij3', 'http://dummyimage.com/166x159.png/cc0000/ffffff');
+insert into clientes (IDadmin, IDcliente, IDcarrito, firstname, lastname, IDrol, email, password, image) values (39, 39, 39, 'Lauretta', 'Carolan', 39, 'lcarolan12@google.es', '1Ldk6W', 'http://dummyimage.com/199x130.jpg/ff4444/ffffff');
+insert into clientes (IDadmin, IDcliente, IDcarrito, firstname, lastname, IDrol, email, password, image) values (40, 40, 40, 'Quintin', 'Hildrew', 40, 'qhildrew13@msu.edu', 'GxSlH4H', 'http://dummyimage.com/121x195.jpg/5fa2dd/ffffff');
+insert into clientes (IDadmin, IDcliente, IDcarrito, firstname, lastname, IDrol, email, password, image) values (41, 41, 41, 'Keslie', 'Dome', 41, 'kdome14@webnode.com', 'xoGceZ2w6RZq', 'http://dummyimage.com/241x217.bmp/ff4444/ffffff');
+insert into clientes (IDadmin, IDcliente, IDcarrito, firstname, lastname, IDrol, email, password, image) values (42, 42, 42, 'Danya', 'La Vigne', 42, 'dlavigne15@sciencedirect.com', 'mIVQCpUoa', 'http://dummyimage.com/114x196.bmp/dddddd/000000');
+insert into clientes (IDadmin, IDcliente, IDcarrito, firstname, lastname, IDrol, email, password, image) values (43, 43, 43, 'Danielle', 'Perri', 43, 'dperri16@loc.gov', 'PEjg4pIJru', 'http://dummyimage.com/129x166.bmp/dddddd/000000');
+insert into clientes (IDadmin, IDcliente, IDcarrito, firstname, lastname, IDrol, email, password, image) values (44, 44, 44, 'Lock', 'Shortland', 44, 'lshortland17@europa.eu', 'AkqEWHyV3', 'http://dummyimage.com/125x195.png/cc0000/ffffff');
+insert into clientes (IDadmin, IDcliente, IDcarrito, firstname, lastname, IDrol, email, password, image) values (45, 45, 45, 'Tonya', 'Vanstone', 45, 'tvanstone18@jiathis.com', 'YmOSLE', 'http://dummyimage.com/103x169.jpg/5fa2dd/ffffff');
+insert into clientes (IDadmin, IDcliente, IDcarrito, firstname, lastname, IDrol, email, password, image) values (46, 46, 46, 'Babita', 'Rickardsson', 46, 'brickardsson19@opensource.org', 'AJoiil0RRdnw', 'http://dummyimage.com/227x224.png/dddddd/000000');
+insert into clientes (IDadmin, IDcliente, IDcarrito, firstname, lastname, IDrol, email, password, image) values (47, 47, 47, 'Granville', 'Veck', 47, 'gveck1a@netscape.com', 'KYCfCSiG4', 'http://dummyimage.com/129x185.bmp/5fa2dd/ffffff');
+insert into clientes (IDadmin, IDcliente, IDcarrito, firstname, lastname, IDrol, email, password, image) values (48, 48, 48, 'Davidde', 'Reavey', 48, 'dreavey1b@chicagotribune.com', 'SFDBoHJDUaOj', 'http://dummyimage.com/151x110.png/5fa2dd/ffffff');
+insert into clientes (IDadmin, IDcliente, IDcarrito, firstname, lastname, IDrol, email, password, image) values (49, 49, 49, 'Wilhelmine', 'Fison', 49, 'wfison1c@apache.org', 'Bonf6Pe8r', 'http://dummyimage.com/131x235.jpg/ff4444/ffffff');
+insert into clientes (IDadmin, IDcliente, IDcarrito, firstname, lastname, IDrol, email, password, image) values (50, 50, 50, 'Megen', 'Humphrys', 50, 'mhumphrys1d@joomla.org', 'CmhyALpnW', 'http://dummyimage.com/143x195.png/ff4444/ffffff');
