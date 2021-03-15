@@ -46,7 +46,9 @@
                     
               </article> 
             </div>
-            <button type="button" class="btn btn-warning editar"> <a href="/user/profile/edit/<%=user.id %> "></a> Editar</button>
+            <form action="/users/profile/edit/<%=user.id %>">
+            <button type="submit" class="btn btn-warning editar">Editar</button>
+              </form>
             <div class="tab-pane" id="profile" role="tabpanel">
               <h4>Mi carrito</h4>
             </div>   

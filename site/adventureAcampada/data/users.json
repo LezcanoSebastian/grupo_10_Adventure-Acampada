@@ -113,5 +113,12 @@
     "email": "cosme@fulanito2.com",
     "password": "$2b$12$rIv/fca2y3H9AiuvXyeTQudyAnxem/AUxUloL7u91U2BawuQwy1PK",
     "image": "default.png"
+  },
+  {
+    "id": 16,
+    "email": "sebastian.e.lezcano@gmail.com",
+    "password": "$2b$12$kEe/gJfH9iIQqPoGAGvHJudYvCi5BfXjDTvpJojdzuXFfgqy6Xl3q",
+    "category": "admin",
+    "image": "image-1615767827560.png"
   }
 ]
