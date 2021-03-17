@@ -2,18 +2,18 @@ module.exports = (sequelize, dataTypes) => {
     const alias = "product";
 
     const cols = {
-        ID_product: {
+        id: {
             type: dataTypes.INTEGER(10).UNSIGNED,
             autoIncrement: true,
             allowNull: false,
             primaryKey: true,
         },
         name: {
-            type: dataTypes.VARCHAR(60),
+            type: dataTypes.STRING(60),
             allowNull: false,
         },
         description: {
-            type: dataTypes.VARCHAR(200),
+            type: dataTypes.STRING(200),
             allowNull: false,
         },
         price: {
@@ -30,23 +30,23 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false,
         },
         color: {
-            type: dataTypes.VARCHAR(45),
+            type: dataTypes.STRING(45),
 
         },
         mark: {
-            type: dataTypes.VARCHAR(45),
+            type: dataTypes.STRING(45),
             
         },
         size: {
-            type: dataTypes.VARCHAR(45),
+            type: dataTypes.STRING(45),
             
         },
         stock: {
-            type: dataTypes.VARCHAR(45),
+            type: dataTypes.STRING(45),
             
         },
         delibery: {
-            type: dataTypes.VARCHAR(45),
+            type: dataTypes.STRING(45),
             
         },
 
@@ -54,22 +54,20 @@ module.exports = (sequelize, dataTypes) => {
 
     const config = {
         tableName: "product",
-        timestamps: true,
-        underscored: true,
+        timestamps: false,
     };
 
     const product = sequelize.define(alias, cols, config);
 
     product.associate = function(models){
-        product.belongsToMany(models.category_product,{
-            as : "category_product",
-            through : "category_product",
+        product.belongsTo(models.category_product,{
+            as : "categoria",
             foreignKey : "ID_category",
         })
 
-        product.belongsTo(models.image_user,{
-            as : "image_user",
-            foreignKey : "ID_imageP"
+        product.hasMany(models.image_product,{
+            as : 'imagenes',
+            foreignKey : 'productId'
         })
     }
 
