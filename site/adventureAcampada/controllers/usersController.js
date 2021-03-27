@@ -1,161 +1,92 @@
-const fs = require('fs');
-const path = require('path')
+const {validationResult} = require('express-validator');
+const { Sequelize } = require('sequelize')
+const db = require('../database/models');
 const bcrypt = require('bcrypt');
-/* const users_db = JSON.parse(fs.readFileSync('./data/users.json', 'utf-8')); */
-
-const { validationResult } = require('express-validator');
-const { getUsers, setUsers} = require(path.join('..','data','users'));
-const users_db = getUsers();
 
 
 module.exports = {
-    register: (req, res) => {
+    register : (req,res) => {
         res.render('users/register', {
             title: 'Registrate'
         })
     },
-    processRegister: (req, res) => {
-
+    processRegister : (req,res) => {
         let errores = validationResult(req);
 
-        if (!errores.isEmpty()) {
-            return res.render('users/register', {
-                errores: errores.errors
-            })
-        } else {
-            const { firstName, lastName, email, password, category, image } = req.body;
-
-            let lastID = 0;
-            users_db.forEach(user => {
-                if (user.id > lastID) {
-                    lastID = user.id
-                }
-            });
-
-            let hashPass = bcrypt.hashSync(password, 12);
-
-            let newUser = {
-                id: +lastID + 1,
-                firstName,
-                lastName,
+        if(errores.isEmpty()){
+            const {id,firstName,lastName, email, password,avatar, rol} = req.body;
+            db.users.create({
+                id: id,
+                firstName : firstName.trim(),
+                lastName : lastName.trim(),
                 email,
-                password: hashPass,
-                category,
-                image: (req.files[0]) ? req.files[0].filename : "default.png"
-            };
-
-            users_db.push(newUser);
-
-            fs.writeFileSync('./data/users.json', JSON.stringify(users_db, null, 2));
-
-            return res.redirect('/users/login')
+                password : bcrypt.hashSync(password,12),
+                rol,
+                avatar
+            })
+            .then(()=>res.redirect('users/login'))
+            .catch(error => res.send(error))
+        }else{
+            return res.render('users/register',{
+                errores : errores.mapped(),
+                old: req.body
+            })
         }
-
     },
-    login: (req, res) => {
+    login : (req,res) => {
         res.render('users/login', {
             title: 'Iniciar sesión'
         })
     },
-    processLogin: (req, res) => {
-
+    processLogin : (req,res) => {
         let errores = validationResult(req);
+        if(errores.isEmpty()){
+            const {email, password, recordar} = req.body;
 
-        if (!errores.isEmpty()) {
-            return res.render('users/login', {
-                errores: errores.errors
+            db.users.findOne({
+                where : {
+                    email : email
+                }
             })
-        } else {
-            const { email, password, recordar, category, id } = req.body;
-
-            let result = users_db.find(user => user.email === email);
-
-            if (result) {
-                if (bcrypt.compareSync(password.trim(), result.password)) {
-
-                    req.session.user = {
-                        id: result.id,
-                        firstName: result.firstName,
-                        image: result.image,
-                        category: result.category,
-                        email: result.email,
-                        lastName: result.lastName
+            .then(users => {
+                if(users && bcrypt.compareSync(password, users.password)){
+                    req.session.userLogin = {
+                        id : users.id,
+                        firstName : users.firstName,
+                        rol : users.rol,
+                        avatar : users.avatar
                     }
-
-                    if (recordar) {
-                        res.cookie('userAcampada', req.session.user, {
-                            maxAge: 1000 * 60
+                    if(recordar){
+                        res.cookie('userAcampada',req.session.userLogin, {
+                            maxAge : 1000 * 60
                         })
                     }
-
-                    return res.redirect(`/`)
+                    return res.redirect('/')
+                }else {
+                    return res.render('users/login',{
+                        errores :{
+                            invalid : {
+                                msg : "Credenciales inválidas"
+                            }
+                        }
+                    })
                 }
-            }
-            return res.render('users/login', {
-                errores: [
-                    {
-                        msg: "credenciales inválidas"
-                    }
-                ]
+            })
+        }else{
+            return res.render('users/login',{
+                errores : errores.mapped(),
+                old : req.body
             })
         }
     },
-    profile: (req, res) => {
-        let users = users_db.find(elemento => elemento.id == req.params.id)
-        res.render('users/profile', {
-            title: "Mi perfil",
-            users
-        })
-    },
-    logout: (req, res) => {
+    logout : (req,res) => {
         req.session.destroy();
-        if (req.cookies.userAcampada) {
-            res.cookie('userAcampada', '', {
-                maxAge: -1
-            })
+        if(req.cookies.userAcampada){
+            res.cookie('userAcampada','', {maxAge : -1})
         }
-        res.redirect('/')
+        return res.redirect('/')
     },
-    eliminar: (req, res) => {
-        users_db.forEach(user => {
-            if (user.id === Number(req.params.id)) {
-                if (fs.existsSync(path.join('public', 'images', user.image))) {
-                    fs.unlinkSync(path.join('public', 'images', user.image))
-                }
-                aEliminar = users_db.indexOf(user);
-                users_db.splice(aEliminar, 1)
-            }
-        });
-        fs.writeFileSync('./data/users.json', JSON.stringify(users_db, null, 2));
-        res.redirect('/');
-    },
-    edit: (req, res) => {
-        let users = users_db.find(elemento => elemento.id == req.params.id)
-        res.render('users/edit', {
-
-            title: 'Editar perfil',
-            users
-        })
-    },
-    update: (req, res, next) => {
-        const {firstName, lastName, image}=req.body;
-        users_db.forEach(users => {
-            if (users.id === +req.params.id) {
-                if (users.image) {
-                    if (fs.existsSync(path.join('public', 'img', 'avatar', users.image))) {
-                        fs.unlinkSync(path.join('public', 'img', 'avatar', users.image))
-                    }
-                }
-                users.id = Number(req.params.id);
-                users.firstName = firstName;
-                users.lastName = lastName;
-               /*  users.image = req.files[0].filename; */
-            }
-        });
-      setUsers(users_db)
-     res.redirect('/')
-
-
+    profile : (req,res) => {
+        res.render('users/profile')
     }
-
 }

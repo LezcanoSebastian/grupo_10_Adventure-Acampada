@@ -32,16 +32,14 @@ module.exports = (sequelize, dataTypes) => {
         },
         avatar: {
             type: dataTypes.STRING,
-
         },
        
     };
 
     const config = {
         tableName: "users",
-        timestamps: true,
-        underscored: true,
-    };
+        timestamps: false
+        };
 
     const users = sequelize.define(alias, cols, config);
 

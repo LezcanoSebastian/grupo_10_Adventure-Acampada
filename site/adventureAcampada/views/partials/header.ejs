@@ -5,13 +5,16 @@
             <nav>
                  <div class="icon"><a href="/"><img class="logoHeader" src="/img/logo4.png" alt="logo"></a></div>
                  <div class="search_box">
-                     <input type="search" placeholder="Search here">
-                     <span class="fa fa-search"></span>
+                     <form action="/search" class="input-search" method="GET">
+                        <input type="text" name="keywords" placeholder="Buscar productos, marcas y más">
+                       
+                    </form>
+                     <span type="submit" class="fa fa-search"></span>
                  </div>
                  <ol>
-                    <li><a href="#">Inicio</a></li>
+                    <li><a href="/">Inicio</a></li>
                     <li><a href="#">Contactos</a></li>
-                    <li><a href="#">Productos</a></li>
+                    <li><a href="/products/list">Productos</a></li>
                     <li><a href="#"><i class="bi bi-cart3"></i></a></li>
                     
                     <li class="nav-item dropdown">

@@ -1,9 +1,4 @@
-const path = require('path');
-const fs = require('fs');
-
-const {getProductos,setProductos} = require(path.join('..','data','product'));
-
-const products = getProductos();
+const db = require('../database/models')
 
 
 module.exports = {
@@ -12,95 +7,134 @@ module.exports = {
         res.render('admin/indexAdmin');
     },
     productsList : (req,res) => {
-        res.render('admin/productList',{
+        db.product.findAll({
+            include : [
+                { association : 'imagenes'}
+            ]
+            
+        })
+        .then(products => {
+            return res.render('admin/productList',{
             products
         });
+        })
+        
     },
     productsCreate : (req,res) => {
-        res.render('admin/productCreate');
+        db.category_product.findAll()
+        .then(categorias => {
+            return  res.render('admin/productCreate',{
+                categorias
+            })
+        })
+       
     },
     productsStore : (req,res) => {
-        //res.send(req.body);
-        let lastID = 1;
-        products.forEach( product => {
-            if( product.id > lastID){
-                lastID =  product.id
-            }
-        });
-        const {name,description,price,image,category,colors,discount,mark,size,origin,material,stock,delivery}=req.body;
-        const producto = {
-            id: Number(lastID +1),
+      
+        const {name,description,price,ID_category,color,discount,mark,size,origin,material,stock,delibery}=req.body;
+        db.product.create({
             name,
             description,
             price,
-            image: req.files[0].filename,
-            category,
-            colors,
+            ID_category ,
+            color,
             discount,
             mark,
             size,
             origin,
             material,
             stock,
-            delivery
-        }
-        products.push(producto);
-        setProductos(products);
-        res.redirect('/admin/products/list');
-
+            delibery
+        })
+        .then(product =>{
+            db.image_product.create({
+                image : req.files[0].filename,
+                productId : product.id
+            })
+            .then( ()=>{
+                res.redirect('/admin/products/list')
+            })
+          .catch(error => res.send(error))
+        })
+       
     },
     productsEdit : (req,res) => {
-        const product = products.find(product => product.id === +req.params.id);
+       let categoria =  db.category_product.findAll()
+       let product = db.product.findByPk(req.params.id,{ 
+        include :[
+        
+            {association : 'imagenes'}, {association : 'categoria'}
+        ]
+        }
+        );
+       
+      Promise.all([product, categoria])
+        .then(([product, categorias]) =>{
+            return res.render('admin/productEdit',{
+                product,
+                categorias
+                })
+           
+        })
+        .catch(error => res.send(error))
 
-        res.render('admin/productEdit',{
-            product
-        });
-
+        
     },
-    productsUpdate : (req,res,next) => {
-        //res.send(req.body);
-        const {name,description,price,image,category,colors,discount,mark,size,origin,material,stock,delivery}=req.body;
-
-        products.forEach(product => {
-            if(product.id === +req.params.id){
-                if(product.image){
-                    if(fs.existsSync(path.join('public','img','product',product.image))){
-                        fs.unlinkSync(path.join('public','img','product',product.image))
-                    }
+    productsUpdate : (req,res) => {
+        const {name,description,price,ID_category,color,discount,mark,size,origin,material,stock,delibery, image}=req.body;
+        db.product.update({
+            name : name, 
+            description: description, 
+            price: price,
+            ID_category : ID_category,
+            color : color,
+            discount: discount,
+            mark : mark,
+            size : size,
+            origin : origin,
+            material : material,
+            stock : stock,
+            delibery : delibery,
+            image : image
+        },
+        {
+            where : {
+                id : req.params.id
+            }
+            
+        })
+            .then(()=> {
+                const {image} = req.body
+                db.image_product.update({
+                    image : req.files[0].filename
+                },
+                {
+                    where : {
+                    id : req.params.id
                 }
-                product.id = Number(req.params.id);
-                product.name = name;
-                product.description = description;
-                product.price = price;
-                product.category = category;
-                product.colors = colors;
-                product.discount = discount;
-                product.mark = mark;
-                product.size = size;
-                product.origin = origin;
-                product.material = material;
-                product.stock = stock;
-                product.delivery = delivery;
-                product.image = req.files[0].filename;
-            }   
-        });
-
-        setProductos(products);
-        res.redirect('/admin/products/list');
+                })
+                return res.redirect('/admin/products/update/'+id)
+            })
+            .catch(error => res.send(error))
+        res.redirect('/admin/products/list')
+       
     },
     productsDelete : (req,res) => {
-        //res.send(req.params);
-        products.forEach(product => {
-            if(product.id === +req.params.id){
-                if(fs.existsSync(path.join('public','img','product',product.image))){
-                    fs.unlinkSync(path.join('public','img','product',product.image))
+        db.product.destroy({
+            where : {
+                id : req.params.id
+            }
+        })
+        
+        .then(()=>{
+            db.image_product.destroy({
+                
+                    where : {
+                    id : req.params.id
                 }
-                var aEliminar = products.indexOf(product);
-                products.splice(aEliminar,1)
-            }   
-        });
-        //fs.writeFileSync('./data/product.json',JSON.stringify(products),'utf-8');
-        setProductos(products);
-        res.redirect('/admin/products/list');
+                
+            })
+         return res.redirect('/admin/products/list')})
+        .catch(error => res.send(error))
     }
 }

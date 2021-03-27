@@ -25,12 +25,7 @@
                         <label for="floatingInput">Titulo del Anuncio *</label>
                     </div>
                 </article>
-                <article class="dato col-sm-12 col-md-6 col-lg-4">
-                    <div class="form-floating d-flex flex-column mb-3">
-                        <input type="text" class="form-control" id="floatingInput" placeholder="Codigo de Producto" name="id" value="<%= product.id %>">
-                        <label for="floatingInput">Codigo de Producto (ID) *</label>
-                    </div>
-                </article>
+
                 <article class="dato col-sm-12 col-md-6 col-lg-4">
                     <div class="form-floating d-flex flex-column mb-3">
                         <input type="number" class="form-control" id="floatingInput" placeholder="Precio" name="price" value="<%= product.price %>">
@@ -57,7 +52,7 @@
                 </article>
                 <article class="dato col-sm-12 col-md-6 col-lg-4">
                     <div class="form-floating d-flex flex-column mb-3">
-                        <input type="text" class="form-control" id="floatingInput" placeholder="Color" name="colors" value="<%= product.colors %>">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="Color" name="color" value="<%= product.color %>">
                         <label for="floatingInput">Color *</label>
                     </div>
                 </article>
@@ -69,39 +64,39 @@
                 </article>
                 <article class="dato col-sm-12 col-md-6 col-lg-4">
                     <div class="form-floating d-flex flex-column mb-3">
+                        <select class="form-select" aria-label="Default select example" name="ID_category">
+                            <option selected hidden>Categoria</option>
+                            <% categorias.forEach(categoria => { %>
+                                <option value="<%= categoria.id %>"><%= categoria.nombre %></option>
+                            <% }) %>
+
+                        </select>
+                    </div>
+                    <div class="form-floating d-flex flex-column mb-3">
                         <input type="text" class="form-control" id="floatingInput" placeholder="Material" name="material" value="<%= product.material %>">
                         <label for="floatingInput">Material</label>
                     </div>
                 </article>
+              
                 <article class="dato col-sm-12 col-md-6 col-lg-4">
                     <div class="form-floating d-flex flex-column mb-3">
-                        <select class="form-select" aria-label="Default select example">
-                            <option selected>Categorias</option>
-                            <option name="category" value="<%= product.category %>">Mochilas</option>
-                            <option name="category" value="<%= product.category %>">Bolsas de Dormir</option>
-                            <option name="category" value="<%= product.category %>">Herramientas</option>
-                            <option name="category" value="<%= product.category %>">Recomendados</option>
-                            <option name="category" value="<%= product.category %>">Mas Vendidos</option>
+                        <select class="form-select" name="stock" aria-label="Default select example" id="stock">
+                            <option selected disabled>Stock</option>
+                            <% for( let i = 1; i < 11; i++ ) { %>
+                            <option value="<%= i %>"><%= i %></option>
+                            <% } %>
+                            
+                            
                         </select>
                     </div>
                 </article>
                 <article class="dato col-sm-12 col-md-6 col-lg-4">
                     <div class="form-floating d-flex flex-column mb-3">
-                        <select class="form-select" aria-label="Default select example">
-                            <option selected>Stock</option>
-                            <option name="stock" value="<%= product.stock %>">1</option>
-                            <option name="stock" value="<%= product.stock %>">2</option>
-                            <option name="stock" value="<%= product.stock %>">3</option>
-                        </select>
-                    </div>
-                </article>
-                <article class="dato col-sm-12 col-md-6 col-lg-4">
-                    <div class="form-floating d-flex flex-column mb-3">
-                        <select class="form-select" aria-label="Default select example">
-                            <option selected>Envio</option>
-                            <option name="delivery" value="<%= product.delivery %>">Si</option>
-                            <option name="delivery" value="<%= product.delivery %>">No</option>
-                            <option name="delivery" value="<%= product.delivery %>">Consultar al vendedor</option>
+                        <select class="form-select delivery" name="delibery" aria-label="Default select example" id="delivery">
+                            <option selected disabled>Envio</option>
+                            <option value="1">Si</option>
+                            <option value="2">No</option>
+                            <option value="3">Consultar al vendedor</option>
                         </select>
                     </div>
                 </article>

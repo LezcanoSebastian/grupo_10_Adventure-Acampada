@@ -17,40 +17,45 @@
         <section class="datos row">
             <article class="dato col-sm-12 col-md-6 col-lg-6">
                 <div class="form-floating d-flex flex-column mb-3">
-                    <input type="text" class="form-control" id="floatingInput" placeholder="Nombre" name="firstName">
+                    <input type="text" class="form-control" id="floatingInput" placeholder="Nombre" name="firstName" value="<%= (typeof old != 'undefined' && old.firstName ? old.firstName : null) %>">
                     <label for="floatingInput">Nombre *</label>
+                    <span class="text-danger"><%= (typeof errores != 'undefined' && errores.firstName ? errores.firstName.msg : null) %> </span>
                 </div>
             </article>
             <article class="dato col-sm-12 col-md-6 col-lg-6">
                 <div class="form-floating d-flex flex-column mb-3">
-                    <input type="text" class="form-control" id="floatingInput" placeholder="Apellido" name="lastName">
+                    <input type="text" class="form-control" id="floatingInput" placeholder="Apellido" name="lastName" value="<%= (typeof old != 'undefined' && old.lastName ? old.lastName : null) %>">
                     <label for="floatingInput">Apellido *</label>
+                    <span class="text-danger"><%= (typeof errores != 'undefined' && errores.lastName ? errores.lastName.msg : null) %> </span>
                 </div>
             </article>
             <article class="dato col-sm-12 col-md-6 col-lg-6">
                 <div class="form-floating d-flex flex-column mb-3">
-                    <input type="email" class="form-control" id="floatingInputValue" placeholder="name@example.com" name="email">
+                    <input type="email" class="form-control" id="floatingInputValue" placeholder="name@example.com" name="email" value="<%= (typeof old != 'undefined' && old.email ? old.email : null) %>">
                     <label for="floatingInputValue">Email</label>
+                    <span class="text-danger"><%= (typeof errores != 'undefined' && errores.email ? errores.email.msg : null) %> </span>
                 </div>
             </article>
             <article class="dato col-sm-12 col-md-6 col-lg-6">
                 <div class="form-floating d-flex flex-column mb-3">
                     <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="password">
                       <label for="floatingPassword">Password</label>
+                      <span class="text-danger"><%= (typeof errores != 'undefined' && errores.password ? errores.password.msg : null) %> </span>
                 </div>
             </article>
             <article class="dato col-sm-12 col-md-6 col-lg-6">
                 <div class="form-floating d-flex flex-column mb-3">
                     <input type="password" class="form-control" id="floatingPassword" placeholder="Repetir Password" name="password2">
                       <label for="floatingPassword">Password</label>
+                      <span class="text-danger"><%= (typeof errores != 'undefined' && errores.password2 ? errores.password2.msg : null) %> </span>
                 </div>
             </article>
             <article class="dato col-sm-12 col-md-6 col-lg-6">
                 <div class="form-floating d-flex flex-column mb-3">
-                    <select class="form-select" aria-label="Default select example" name="category">
-                        <option selected disabled>Usuario Cliente</option>
-                        <option name="category" value="user">Si</option>
-                        <option name="category" value="admin">No</option>
+                    <select class="form-select" aria-label="Default select example" name="rol">
+                        <option selected hidden>Usuario Cliente</option>
+                        <option value="user">Si</option>
+                        <option value="admin">No</option>
                     </select>
                 </div>
             </article>
@@ -60,6 +65,15 @@
                     <label class="input-group-text" for="inputGroupFile02">Subir Imagen</label>
                   </div>                    
             </article>
+            <div class="col-12">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="gridCheck" name="bases" value="off">
+                  <label class="form-check-label" for="gridCheck">
+                    Acepto bases y condiciones
+                  </label>
+                </div>
+                <span class="text-danger"><%= (typeof errores != 'undefined' && errores.bases ? errores.bases.msg : null) %> </span>
+              </div>
             <article class="dato col-sm-12 col-md-6 col-lg-4">
                 <div class="form-floating d-flex flex-column text-center mb-3">
                         <button type="submit" class="btn btn-primary">Registrarme</button>
@@ -75,6 +89,7 @@
             <% }) %>
         </ul>
        <% } %>
+    
 </main>  
 <!--Fin Home-->
  <!-- SCRIPTS -->

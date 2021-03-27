@@ -140,36 +140,36 @@
 
   <h2 class="products-title" id="productos">recomendados</h1>
 
-  <section class="container">
-    <% recomendados.forEach(product => { %>
-    <div class="product">
-      <a href="/products/detail/<%- product.id %> ">
-        <img src="/img/products/<%- product.image%>" alt="imagen de producto">
-        <h5>$ <%- product.price %></h5>  
-        <p><%- product.name %></p>
-      </a>
-    </div>
-   
-    <% }) %>
-
-  </section>
-
-
-
-
-  <h2>más vendidos</h2>
-  <section class="container">
-    <% masVendidos.forEach(product => { %>
+    <section class="container">
+      <% recomendados.forEach(product => { %>
       <div class="product">
         <a href="/products/detail/<%- product.id %> ">
-          <img src="/img/products/<%- product.image%>" alt="imagen de producto">
+          <img src="/img/products/<%= product.imagenes[0].image %>" alt="imagen de producto">
           <h5>$ <%- product.price %></h5>  
           <p><%- product.name %></p>
         </a>
       </div>
      
       <% }) %>
-  </section>
+  
+    </section>
+
+
+
+
+    <h2>más vendidos</h2>
+    <section class="container">
+      <% masVendidos.forEach(product => { %>
+        <div class="product">
+          <a href="/products/detail/<%- product.id %> ">
+            <img src="/img/products/<%= product.imagenes[0].image %>" alt="imagen de producto">
+            <h5>$ <%- product.price %></h5>  
+            <p><%- product.name %></p>
+          </a>
+        </div>
+       
+        <% }) %>
+    </section>
 
   <!-- ======= Contact Section ======= -->
   <section id="contact">

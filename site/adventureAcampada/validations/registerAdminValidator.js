@@ -1,4 +1,4 @@
-  
+/*   
 const {check,validationResult,body} = require('express-validator');
 const {getAdmins} = require('../data/users');
 const admins = getAdmins();
@@ -36,6 +36,6 @@ module.exports = [
             return true
         }
     }).withMessage('El usuario ya esta registrado!')
-]
+] */
 
 //custom --> se puede personalizar una validacion

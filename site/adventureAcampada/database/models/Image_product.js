@@ -3,7 +3,7 @@ module.exports = (sequelize, dataTypes) => {
 
     const cols = {
         id: {
-            type: dataTypes.INTEGER(10).UNSIGNED,
+            type: dataTypes.INTEGER.UNSIGNED,
             autoIncrement: true,
             allowNull: false,
             primaryKey: true,
@@ -12,8 +12,8 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING(100),
             allowNull: false,
         },
-        product_id : {
-            type : dataTypes.INTEGER
+        productId : {
+            type : dataTypes.STRING(45)
         }
        
        
