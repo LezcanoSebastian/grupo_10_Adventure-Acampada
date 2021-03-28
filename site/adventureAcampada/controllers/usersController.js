@@ -12,21 +12,21 @@ module.exports = {
     },
     processRegister : (req,res) => {
         let errores = validationResult(req);
-
+        
         if(errores.isEmpty()){
-            const {id,firstName,lastName, email, password,avatar, rol} = req.body;
+            const {firstName,lastName, email, password,rol,avatar} = req.body;
             db.users.create({
-                id: id,
                 firstName : firstName.trim(),
                 lastName : lastName.trim(),
                 email,
                 password : bcrypt.hashSync(password,12),
-                rol,
+                rol ,
                 avatar
             })
-            .then(()=>res.redirect('users/login'))
+            .then(()=>res.redirect('/users/login'))
             .catch(error => res.send(error))
         }else{
+            
             return res.render('users/register',{
                 errores : errores.mapped(),
                 old: req.body
@@ -40,6 +40,7 @@ module.exports = {
     },
     processLogin : (req,res) => {
         let errores = validationResult(req);
+        res.send();
         if(errores.isEmpty()){
             const {email, password, recordar} = req.body;
 
@@ -86,7 +87,57 @@ module.exports = {
         }
         return res.redirect('/')
     },
-    profile : (req,res) => {
-        res.render('users/profile')
+    profile: (req, res) => {
+
+        db.users.findOne({
+            where : {
+                id :  req.params.id
+            }
+            
+        })
+        .then(user => {
+            return res.render('users/profile',{
+                title: "Mi perfil",
+                user
+            })
+        })
+        .catch(error => res.send(error))
+    },
+    eliminar: (req, res) => {
+        db.users.destroy({
+            where : {
+                id : req.params.id
+            }
+        })
+        .then(()=> res.redirect('/'))
+        .catch(error => res.send(error))    
+    },
+    edit: (req, res) => {
+        db.users.findByPk(req.params.id)
+        .then((user)=>{
+            return res.render('users/profile',{
+                title: 'Editar perfil',
+                user
+            })
+        })
+        .catch(error => res.send(error))
+    },
+    update: (req, res, next) => {
+        const {firstName,lastName,avatar} = req.body;
+        db.users.update({
+            firstName : firstName.trim(),
+            lastName : lastName.trim(),
+            avatar : image
+        },
+        {
+            where : {
+                id : req.params.id
+            }
+        })
+        .then(() => {
+            return res.redirect('users/profile'+req.params.id)
+        })
+        .catch(error => res.send(error))
     }
+
 }

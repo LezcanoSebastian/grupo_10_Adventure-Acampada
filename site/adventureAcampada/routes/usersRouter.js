@@ -1,28 +1,27 @@
-/* variables */
 var express = require('express');
 var router = express.Router();
 
-const { register, processRegister, login, processLogin, profile, logout, eliminar, edit, update } = require('../controllers/usersController');
+const {register,processRegister,login,processLogin,logout,profile, edit, update, eliminar} = require('../controllers/usersController');
 
-
-/* middlewares */
 const uploadImages = require('../middlewares/uploadImages');
-const checkUser = require('../middlewares/checkUser');
-/* const registerValidator = require('../validations/registerValidator'); */
+const registerValidator = require('../validations/registerValidator');
 const loginValidator = require('../validations/loginValidator');
 
+
 router.get('/register',register);
-router.post('/register',uploadImages.any(),processRegister);
+router.post('/register',uploadImages.any(),registerValidator, processRegister);
 
-/* router.get('/login',login);
-router.post('/login', processLogin);
+router.get('/login',login);
+router.post('/login',loginValidator,processLogin);
 
-router.get('/profile/:id', checkUser, profile);
+router.get('/profile/:id', profile);
 router.get('/profile/edit/:id', edit)
 router.put('/profile/update/:id', update)
 
 router.delete('/delete/:id',eliminar);
 
-router.get('/logout', logout); */
+router.get('/logout',logout);
+
+
 
 module.exports = router;
