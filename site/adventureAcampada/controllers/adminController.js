@@ -1,4 +1,6 @@
-const db = require('../database/models')
+const {validationResult} = require('express-validator');
+const { Sequelize } = require('sequelize');
+const db = require('../database/models');
 
 
 module.exports = {
@@ -30,33 +32,41 @@ module.exports = {
        
     },
     productsStore : (req,res) => {
-      
-        const {name,description,price,ID_category,color,discount,mark,size,origin,material,stock,delibery}=req.body;
-        db.product.create({
-            name,
-            description,
-            price,
-            ID_category ,
-            color,
-            discount,
-            mark,
-            size,
-            origin,
-            material,
-            stock,
-            delibery
-        })
-        .then(product =>{
-            db.image_product.create({
-                image : req.files[0].filename,
-                productId : product.id
+
+        let errores = validationResult(req);
+        
+        if(errores.isEmpty()){
+            const {name,description,price,ID_category,color,discount,mark,size,origin,material,stock,delibery}=req.body;
+            db.product.create({
+                name,
+                description,
+                price,
+                ID_category ,
+                color,
+                discount,
+                mark,
+                size,
+                origin,
+                material,
+                stock,
+                delibery
             })
-            .then( ()=>{
-                res.redirect('/admin/products/list')
+            .then(product =>{
+                db.image_product.create({
+                    image : req.files[0].filename,
+                    productId : product.id
+                })
+                .then( ()=>{
+                    res.redirect('/admin/products/list')
+                })
+              .catch(error => res.send(error))
             })
-          .catch(error => res.send(error))
-        })
-       
+        }else{            
+            return res.render('/admin/products/store',{
+                errores : errores.mapped(),
+                old: req.body
+            })
+        }   
     },
     productsEdit : (req,res) => {
        let categoria =  db.category_product.findAll()
