@@ -7,6 +7,7 @@
 
 <!-- CSS -->
     <link rel="stylesheet" href="/stylesheets/formProducto.css">
+    <script src="/javascript/productValidator.js"></script>
 <!-- /CSS -->
 <body>
 
@@ -20,8 +21,9 @@
             <section class="datos row">
                 <article class="dato col-sm-12 col-md-6 col-lg-4">
                     <div class="form-floating d-flex flex-column mb-3">
-                        <input type="text" class="form-control" id="floatingInput" placeholder="Titulo del Anuncio" name="name">
-                        <label for="floatingInput">Titulo del Anuncio *</label>
+                        <input type="text" class="name form-control" id="name" placeholder="Titulo del Anuncio" name="name">
+                        <label for="name" id="name">Titulo del Anuncio *</label>
+                        <span class="error" id="nameErrors"></span>
                     </div>
                 </article>
                 
@@ -102,15 +104,17 @@
                 </article>
                 <article class="dato col-sm-12 col-md-12 col-lg-12">
                     <div class="form-floating d-flex flex-column mb-3">
-                        <textarea class="form-control description" placeholder="Leave a comment here" id="floatingTextarea2 description"
+                        <textarea class="description form-control" placeholder="Leave a comment here" id="description"
                             style="height: 100px" name="description"></textarea>
-                        <label for="floatingTextarea2">Descripciòn</label>
+                        <label for="description" id="description">Descripciòn</label>
+                        <span class="error" id="descriptionErrors"></span>
                     </div>
                 </article>
                 <article class="dato col-sm-12 col-md-12 col-lg-12">
                     <div class="input-group mb-3">
-                        <input type="file" class="form-control" id="inputGroupFile02" name="image-product">
-                        <label class="input-group-text" for="inputGroupFile02">Subir Imagen</label>
+                        <input type="file" class="formFile form-control" id="formFile" name="image-product">
+                        <label class="input-group-text" for="formFile">Subir Imagen</label>
+                        <span class="error" id="fileErrors"></span>
                       </div>                    
                 </article>
                 <article class="dato col-sm-12 col-md-12 col-lg-12">

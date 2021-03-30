@@ -5,6 +5,7 @@
 <!-- /HEAD -->
 <!-- CSS -->
 <link rel="stylesheet" href="../stylesheets/loginYregister.css">
+ <script src="../javascript/registerValidator.js"></script>
 <!-- /CSS -->
 <body>
 <!-- HEADER -->
@@ -17,36 +18,43 @@
         <section class="datos row">
             <article class="dato col-sm-12 col-md-6 col-lg-6">
                 <div class="form-floating d-flex flex-column mb-3">
-                    <input type="text" class="form-control" id="floatingInput" placeholder="Nombre" name="firstName" value="<%= (typeof old != 'undefined' && old.firstName ? old.firstName : null) %>">
-                    <label for="floatingInput">Nombre *</label>
+                    <input type="text" class="firstName form-control" id="firstName" placeholder="Nombre" name="firstName" value="<%= (typeof old != 'undefined' && old.firstName ? old.firstName : null) %>">
+                    <label for="firstName" id="firstName">Nombre *</label>
+                    <span class="error" id="firstNameErrors"></span>
                     <span class="text-danger"><%= (typeof errores != 'undefined' && errores.firstName ? errores.firstName.msg : null) %> </span>
                 </div>
             </article>
             <article class="dato col-sm-12 col-md-6 col-lg-6">
                 <div class="form-floating d-flex flex-column mb-3">
-                    <input type="text" class="form-control" id="floatingInput" placeholder="Apellido" name="lastName" value="<%= (typeof old != 'undefined' && old.lastName ? old.lastName : null) %>">
-                    <label for="floatingInput">Apellido *</label>
+                    <input type="text" class="lastName form-control" id="lastName" placeholder="Apellido" name="lastName" value="<%= (typeof old != 'undefined' && old.lastName ? old.lastName : null) %>">
+                    <label for="lastName" id="lastName">Apellido *</label>
+                    <span class="error" id="lastNameErrors"></span>
                     <span class="text-danger"><%= (typeof errores != 'undefined' && errores.lastName ? errores.lastName.msg : null) %> </span>
                 </div>
             </article>
             <article class="dato col-sm-12 col-md-6 col-lg-6">
                 <div class="form-floating d-flex flex-column mb-3">
-                    <input type="email" class="form-control" id="floatingInputValue" placeholder="name@example.com" name="email" value="<%= (typeof old != 'undefined' && old.email ? old.email : null) %>">
-                    <label for="floatingInputValue">Email</label>
+                    <input type="email" class="email form-control" id="email" placeholder="name@example.com" name="email" value="<%= (typeof old != 'undefined' && old.email ? old.email : null) %>">
+
+                    <label for="email" id="email">Email</label>
+                    <span class="error" id="emailErrors"></span>
+
                     <span class="text-danger"><%= (typeof errores != 'undefined' && errores.email ? errores.email.msg : null) %> </span>
                 </div>
             </article>
             <article class="dato col-sm-12 col-md-6 col-lg-6">
                 <div class="form-floating d-flex flex-column mb-3">
-                    <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="password">
-                      <label for="floatingPassword">Password</label>
+                    <input type="password" class="password form-control" id="password" placeholder="Password" name="password">
+                      <label for="password" id="password">Password</label>
+                      <span class="error" id="passErrors"></span>
                       <span class="text-danger"><%= (typeof errores != 'undefined' && errores.password ? errores.password.msg : null) %> </span>
                 </div>
             </article>
             <article class="dato col-sm-12 col-md-6 col-lg-6">
                 <div class="form-floating d-flex flex-column mb-3">
-                    <input type="password" class="form-control" id="floatingPassword" placeholder="Repetir Password" name="password2">
-                      <label for="floatingPassword">Password</label>
+                    <input type="password" class="password2 form-control" id="password2" placeholder="Repetir Password" name="password2">
+                      <label for="password2" id="password2">Password</label>
+                      <span class="error" id="pass2Errors"></span>
                       <span class="text-danger"><%= (typeof errores != 'undefined' && errores.password2 ? errores.password2.msg : null) %> </span>
                 </div>
             </article>
@@ -61,8 +69,9 @@
             </article>
             <article class="dato col-sm-12 col-md-12 col-lg-12">
                 <div class="input-group mb-3">
-                    <input type="file" class="form-control" id="inputGroupFile02" name="image">
-                    <label class="input-group-text" for="inputGroupFile02">Subir Imagen</label>
+                    <input type="file" class="formFile form-control" id="formFile" name="image">
+                    <label class="input-group-text" for="formFile" id="formFile">Subir Imagen</label>
+                    <span class="error" id="fileErrors"></span>
                   </div>                    
             </article>
             <div class="col-12">
@@ -86,6 +95,7 @@
 <!--Fin Home-->
  <!-- SCRIPTS -->
  <%- include('./partials/scripts')  %> 
+
  <!-- /SCRIPTS -->
 </body>
   <!--FOOTER-->

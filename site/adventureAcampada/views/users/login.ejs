@@ -5,6 +5,7 @@
 <!-- /HEAD -->
 <!-- CSS -->
 <link rel="stylesheet" href="../stylesheets/loginYregister.css">
+<script src="../javascript/loginValidator.js"></script>
 <!-- /CSS -->
 <body>
 <!-- HEADER -->
@@ -18,15 +19,17 @@
         <section class="datos row">
             <article class="dato col-sm-12 col-md-6 col-lg-8">
                 <div class="form-floating d-flex flex-column mb-3">
-                    <input type="email" class="form-control" id="floatingInputValue" placeholder="name@example.com" name="email">
-                    <label for="floatingInputValue">Email</label>
+                    <input type="email" class="email form-control" id="email" placeholder="name@example.com" name="email">
+                    <label for="email" id="email">Email</label>
+                    <span class="error" id="emailErrors"></span>
                 </div>
             </article>
             <article class="dato col-sm-12 col-md-6 col-lg-8">
                 <div class="form-floating d-flex flex-column mb-3">
-                    <input type="password" class="form-control" id="floatingPassword"
+                    <input type="password" class="password form-control" id="password"
                           placeholder="Password" name="password">
-                      <label for="floatingPassword">Password</label>
+                      <label for="password" id="password">Password</label>
+                      <span class="error" id="passErrors"></span>
                 </div>
             </article>
             <article class="dato col-sm-12 col-md-6 col-lg-6">
