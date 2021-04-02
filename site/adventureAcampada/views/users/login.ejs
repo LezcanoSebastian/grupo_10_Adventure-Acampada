@@ -19,7 +19,8 @@
         <section class="datos row">
             <article class="dato col-sm-12 col-md-6 col-lg-8">
                 <div class="form-floating d-flex flex-column mb-3">
-                    <input type="email" class="email form-control" id="email" placeholder="name@example.com" name="email">
+                    <input type="email" class="email form-control" id="email" name="email"placeholder="name@example.com" value="<%= typeof old != 'undefined' && old.email ? old.email.msg : null %>">
+                    <span class="text-danger"><%= typeof errores != "undefined" && errores.email ? errores.email.msg : null %> </span>
                     <label for="email" id="email">Email</label>
                     <span class="error" id="emailErrors"></span>
                 </div>
@@ -29,8 +30,15 @@
                     <input type="password" class="password form-control" id="password"
                           placeholder="Password" name="password">
                       <label for="password" id="password">Password</label>
+                      <span class="text-danger"><%= typeof errores != "undefined" && errores.pass ? errores.pass.msg : null %> </span>
                       <span class="error" id="passErrors"></span>
                 </div>
+                
+        
+            <div class="col-12">
+              <span class="text-danger"><%= typeof errores != "undefined" && errores.invalid ? errores.invalid.msg : null %> </span>
+            </div>
+            
             </article>
             <article class="dato col-sm-12 col-md-6 col-lg-6">
                 <div class="form-floating d-flex flex-column mb-3">

@@ -20,7 +20,7 @@ module.exports = {
                 lastName : lastName.trim(),
                 email,
                 password : bcrypt.hashSync(password,12),
-                rol ,
+                rol: "cliente",
                 avatar
             })
             .then(()=>res.redirect('/users/login'))
@@ -40,7 +40,7 @@ module.exports = {
     },
     processLogin : (req,res) => {
         let errores = validationResult(req);
-        res.send();
+        //res.send();
         if(errores.isEmpty()){
             const {email, password, recordar} = req.body;
 
@@ -51,7 +51,7 @@ module.exports = {
             })
             .then(users => {
                 if(users && bcrypt.compareSync(password, users.password)){
-                    req.session.userLogin = {
+                    req.session.user = {
                         id : users.id,
                         firstName : users.firstName,
                         rol : users.rol,

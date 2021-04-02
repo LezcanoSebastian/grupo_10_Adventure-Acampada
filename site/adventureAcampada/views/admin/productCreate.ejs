@@ -91,7 +91,7 @@
                             <option selected disabled>Stock</option>
                             <% for(let i=0;i < 10;i++){%> 
                                 <option value=" <%= i %> "><%= i %></option>
-                            <% } >
+                            <% } %>
                         </select>
                         <span class="text-danger"><%= (typeof errores != 'undefined' && errores.stock? errores.stock.msg : null) %> </span>
                     </div>
