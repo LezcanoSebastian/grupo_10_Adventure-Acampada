@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
-
+<title><%- product.name %>  </title>
 <!-- HEAD -->
 <%- include('partials/head')  %> 
 <!-- /HEAD -->
-<title><%- product.name %>  </title>
+
 
 <!-- CSS -->
 <link rel="stylesheet" href="/stylesheets/detalleProducto.css">
@@ -23,7 +23,7 @@
         <section class="detalle row">
             <!-- Nombre del producto -->
             <article class="title text-center col-sm-12 col-md-12 col-lg-12">
-                <h1 class=".nombre-del-producto"><%= product.name %></h1>
+                <h1 class="nombre-del-producto"><%= product.name %></h1>
             </article>
             <!-- Imagen del producto -->
              <article class="img-product col-sm-12 col-md-12 col-lg-7">
@@ -162,11 +162,17 @@
 
              <!-- Descripcion del producto -->
              <article class="descripcion col-sm-12 col-md-12 col-lg-12 ">
-                <div class="form-floating d-flex flex-column">
-                    <p>
-                        <%= product.description %>
+                <div class="form-floating d-flex flex-column descripcion">
+                   <h3>Nombre: <%= product.name %></h3>
+                    <h6>Material: <%= product.material %></h6>
+                    <h6>Color: <%= product.color %></h6>
+                    <h6>Origen: <%= product.origen %></h6>
+                    <h6>Envios: <%= product.delibery %></h6>
+                    <h6>Cantidad disponible: <%= product.stock %></h6>
+                    
+                         <p>Descripcion:<br> <%= product.description %></p>
 
-                    </p>
+                    
                </div>
             </article>  
                 <!-- Carrusel con imagenes de productos -->

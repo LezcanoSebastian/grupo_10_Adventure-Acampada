@@ -46,6 +46,7 @@ const controllers = {
         
         
     },
+    
     carrito: (req, res) => {
         res.render('carrito', {
             title: 'Mi Carrito',
