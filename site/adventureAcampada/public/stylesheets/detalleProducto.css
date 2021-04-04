@@ -1,7 +1,7 @@
 
 /* Cuerpo */
 .cuerpo{
-    background-color: rgba(220, 220, 220, 0.7);
+    background-color: #fafafa;
     border-radius: 5px;
     box-shadow: 0px 12px 16px rgba(0, 0, 0, 0.30);
     margin-top: 150px;
@@ -55,13 +55,6 @@ div.vista-desktop{
     box-shadow: 0 0 0 0.25rem #659999;
 }
 /* boton con opciones desplegables */
-ul.dropdown-menu{
-    background-color: #f9efda;
-    border-radius: 5px;
-}
-ul.dropdown-menu:hover{
-    border-color: #ff5715;
-}
 
 /* Descripcion del producto */
 .descripcion div p{
@@ -75,21 +68,6 @@ ul.dropdown-menu:hover{
   padding: 5%;
 }
 /* Comentarios */
-.comentarios{
-  padding: 5%;
-}
-.comentarios div h4{
-    margin-top: 10px;
-    margin-left: 10px;
-}
-.comentarios div textarea{
-    width: 100%;
-    height: 150px;
-    border-radius: 15px;
-}
-.comentarios div button{
-    margin-bottom: 50px;
-}
 
 /* imagen-logo */
 .img-logo{
@@ -103,16 +81,8 @@ a{
 header{
     margin-bottom: 25px;
 }
-/* Barra sobre nav */
-.barra-oferta{
-    background-color: rgb(100, 132, 101);
-}
-/* intento de carrusel de ofertas/publicidad */
-/* section.banner{
-    background: #659999;  
-    background: -webkit-linear-gradient(to right, #f4791f, #659999); 
-    background: linear-gradient(to right, #f4791f, #659999); 
-} */
+
+
 
 img.logo{
     width: 25%;
@@ -129,7 +99,7 @@ a.nav-link.carrito{
 }
 section.detalle.row{
     padding: 15px;
-    background-color:white;
+    background-color:fafafa;
     align-items: center;
     border-radius: 10px;
 }
@@ -160,9 +130,7 @@ main .cuerpo.container{
   .title, .price, .shipping, .shopping, .pay, .shopping-cart{
       display: none;
   }
-  button.comentario{
-      width: 35%;
-  }
+ 
   .img-product{
     margin-top: 13.5px;
     height: 365px;
@@ -204,4 +172,12 @@ background-color: transparent;
 text-shadow: 8px 7px 6px rgba(0, 0, 0, 0.30);
 font-size: 50px;
 color: #659999;
+}
+
+
+/* Nuevos botones */
+
+.envio{
+    background-color: red;
+    height: 100px;
 }

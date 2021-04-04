@@ -9,15 +9,26 @@ module.exports = {
         res.render('admin/indexAdmin');
     },
     productsList : (req,res) => {
-        db.product.findAll({
+     let products =  db.product.findAll({
             include : [
                 { association : 'imagenes'}
             ]
             
         })
-        .then(products => {
+        let carrusel = db.product.findAll({
+            limit : 10,
+            order : Sequelize.literal('rand()'),
+            include : [
+                { association : 'imagenes'}
+            ]
+            
+        })
+        Promise.all([products,carrusel])
+        .then(([products,carrusel]) => {
             return res.render('admin/productList',{
-            products
+            products, 
+            carrusel,
+    
         });
         })
         

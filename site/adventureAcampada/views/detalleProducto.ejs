@@ -4,9 +4,13 @@
 <!-- HEAD -->
 <%- include('partials/head')  %> 
 <!-- /HEAD -->
+<title><%- product.name %>  </title>
 
 <!-- CSS -->
 <link rel="stylesheet" href="/stylesheets/detalleProducto.css">
+<link href="/stylesheets/custom.css" rel="stylesheet">
+	<link href="/stylesheets/owl.carousel.css" rel="stylesheet">
+    <link href="/stylesheets/owl.theme.css" rel="stylesheet">
 <!-- /CSS -->
 <body>
 
@@ -166,36 +170,56 @@
                </div>
             </article>  
                 <!-- Carrusel con imagenes de productos -->
-            <article class="img-ofertas col-sm-12 col-md-12 col-lg-12">
-                <div class="carrusel form-floating d-flex flex-column">
-                    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="/img/productos/carpa1.webp" class="d-block w-100" alt="...">
+
+<h3>Productos relacionados</h3>
+
+                <div id="screen" class="content-section-b">
+       
+                    <div class="row wow bounceInUp" >
+                    <div id="owl-demo" class="owl-carousel">
+                        
+                        
+                        
+                            <% recomendaciones.forEach(product => { %>
+                              <a href="/products/detail/<%- product.id %> "></a>  
+                            <div class="item">
+                              
+                                <img src="/img/products/<%= product.imagenes[0].image %>" alt="imagen de producto">
+                                <h5>$ <%- product.price %></h5>  
+                                <p><%- product.name %></p>
+                              </a>
                             </div>
-                            <div class="carousel-item">
-                                <img src="/img/productos/lampara-de-camping.webp" class="d-block w-100" alt="...">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="/img/productos/carpa2.webp" class="d-block w-100" alt="...">
-                            </div>
-                        </div>
-                    </div>
+                           
+                            <% }) %>
+                        
+                          
+                        
+                       
+                      
+                        
+                          
+                       
+                        
+                       
+                        
+        
+                      </div>       
+                  </div>
                 </div>
-            </article>
-            <!-- Seccion de comentarios -->
-            <article class="comentarios col-sm-12 col-md-12 col-lg-12">
-                <div class="form-floating d-flex flex-column">
-                    <h4>Comentarios</h4>
-                    <textarea name="comentario" id="comentario"></textarea>
-                    <button class="comentario btn btn-success col-4">enviar</button>
-                </div>
-            </article>
+
+            
+            
         </section>
+      
     </main>
 
     <!-- SCRIPTS -->
     <% include('partials/scripts')  %> 
+    <script src="/javascript/jquery-1.10.2.js"></script>
+	<script src="/javascript/owl.carousel.js"></script>
+	<script src="/javascript/script.js"></script>
+	<script src="/javascript/wow.min.js"></script>
+	<script src="/javascript/jquery.magnific-popup.js"></script> 
     <!-- /SCRIPTS -->
 </body>
 <!-- FOOTER -->

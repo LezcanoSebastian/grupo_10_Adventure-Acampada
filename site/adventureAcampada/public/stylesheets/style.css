@@ -71,8 +71,8 @@ main .container a {
 section .product {
   padding-top: 15px;
   margin-bottom: 15px;
-  border: 1px solid var(--colorSecundarioVariante2);
-  border-radius: 15px;
+
+  border-radius: 7px;
   height: 300px;
   width: 220px;
 }

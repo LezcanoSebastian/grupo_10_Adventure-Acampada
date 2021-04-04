@@ -21,7 +21,7 @@ const controllers = {
 	Promise.all([recomendados,masVendidos])
 	.then(([recomendados,masVendidos])=> {
 		return  res.render('index', {
-					title: 'Home',
+					title: 'Adventure Acampada',
 					recomendados,
 					masVendidos,
 				})

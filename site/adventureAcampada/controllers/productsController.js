@@ -1,5 +1,6 @@
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-const db = require('../database/models')
+const db = require('../database/models');
+const { Sequelize } = require('../database/models');
 
 const controllers = {
 
@@ -20,18 +21,29 @@ const controllers = {
 
     },
     detail: (req, res) => {
-        db.product.findByPk(req.params.productId, {
+       let product = db.product.findByPk(req.params.productId, {
             include : {
                 association : 'imagenes'
             }
         })
-        .then(product =>{
+        let recomendaciones = db.product.findAll({
+            include : {
+                association : 'imagenes'
+            },
+            limit : 10,
+		    order : Sequelize.literal('rand()'),
+            
+        })
+        Promise.all([product,recomendaciones])
+        .then(([product,recomendaciones]) =>{
             return res.render('detalleProducto', {
             title: 'Detalle',
             product,
+            recomendaciones,
             toThousand
         })
         })
+        
         
     },
     carrito: (req, res) => {
