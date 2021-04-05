@@ -1,0 +1,33 @@
+<aside class="left-sidebar" data-sidebarbg="skin6" style="margin-top: 68px;">
+    <div class="scroll-sidebar">
+        <nav class="sidebar-nav">
+            <ul id="sidebarnav">
+                <li>
+                    <div class="user-profile d-flex no-block dropdown m-t-20">
+                        <div class="user-pic"><img src="/img/avatar/<%= user.avatar %> "  alt="users"
+                                class="rounded-circle" width="40" /></div>
+                        <div class="user-content hide-menu m-l-10">
+                            <a href="#" class="" id="Userdd" role="button"
+                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <h5 class="m-b-0 user-name font-medium"><%= user.firstName%></h5>
+                                <span class="op-5 user-email"><%= user.email %></span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                </li>
+                
+                <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                        href="/users/indexUser/<%=user.id %>" aria-expanded="false"><i class="mdi mdi-view-dashboard"></i><span
+                            class="hide-menu">Home</span></a></li>
+                <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                        href="/users/profile/<%=user.id %>" aria-expanded="false"><i
+                            class="mdi mdi-account-network"></i><span class="hide-menu">Profile</span></a></li>
+                <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                        href="#" aria-expanded="false"><i class="mdi mdi-border-all"></i><span
+                            class="hide-menu">Mis compras</span></a></li>
+            </ul>
+        </nav>
+    </div>
+</aside>
+    

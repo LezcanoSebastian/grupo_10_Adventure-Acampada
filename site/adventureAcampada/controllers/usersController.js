@@ -2,6 +2,7 @@ const {validationResult} = require('express-validator');
 const { Sequelize } = require('sequelize')
 const db = require('../database/models');
 const bcrypt = require('bcrypt');
+const path = require('path');
 
 
 module.exports = {
@@ -21,7 +22,7 @@ module.exports = {
                 email,
                 password : bcrypt.hashSync(password,12),
                 rol: "cliente",
-                avatar
+                avatar : (req.files[0]) ? req.files[0].filename : "default.png"
             })
             .then(()=>res.redirect('/users/login'))
             .catch(error => res.send(error))
@@ -87,6 +88,22 @@ module.exports = {
         }
         return res.redirect('/')
     },
+    indexUser: (req, res) => {
+
+        db.users.findOne({
+            where : {
+                id :  req.params.id
+            }
+            
+        })
+        .then(user => {
+            return res.render('users/indexUser',{
+                title: "Principal",
+                user
+            })
+        })
+        .catch(error => res.send(error))
+    },
     profile: (req, res) => {
 
         db.users.findOne({
@@ -123,21 +140,30 @@ module.exports = {
         .catch(error => res.send(error))
     },
     update: (req, res, next) => {
-        const {firstName,lastName,avatar} = req.body;
-        db.users.update({
-            firstName : firstName.trim(),
-            lastName : lastName.trim(),
-            avatar : image
-        },
-        {
-            where : {
-                id : req.params.id
-            }
-        })
-        .then(() => {
-            return res.redirect('users/profile'+req.params.id)
-        })
-        .catch(error => res.send(error))
+        let errores = validationResult(req);
+        
+        if(errores.isEmpty()){
+            const {firstName,lastName,avatar} = req.body;
+            db.users.update({
+                firstName : firstName,
+                lastName : lastName,
+                avatar : req.files[0].filename
+            },
+            {
+                where : {
+                    id : req.params.id
+                }
+            })
+            .then(() => {
+                return res.redirect('/users/indexUser/'+req.params.id)
+            })
+            .catch(error => res.send(error))
+        }else{
+            return res.render('users/profile/'+req.params.id,{
+                errores : errores.mapped(),
+                old: req.body
+            })
+        }        
     }
-
+    
 }

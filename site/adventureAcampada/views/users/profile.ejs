@@ -1,76 +1,112 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<%- include('./partials/head')  %>   
-
-<link rel="stylesheet" href="../../stylesheets/profile.css">
-
-
+<!-- HEAD -->
+<%- include('partials/head')  %>   
+<!-- /HEAD -->
+<!-- CSS -->
+ <link rel="stylesheet" href="../stylesheets/style2.css">
+<!-- /CSS -->
 <body>
-<!-- HEADER -->
-<%- include('../partials/header')  %> 
-<!-- /HEADER -->
+<%- include('partials/header')  %> 
+<main class="container-fluid" style="margin-top: 106px;">
+    
+    <div class="preloader">
+      <div class="lds-ripple">
+          <div class="lds-pos"></div>
+          <div class="lds-pos"></div>
+      </div>
+  </div>
+  <div id="main-wrapper" data-layout="vertical" data-navbarbg="skin5" data-sidebartype="full"
+      data-sidebar-position="absolute" data-header-position="absolute" data-boxed-layout="full">
 
-<!--Inicio Home-->
-
-<h1> Bienvenido <%= user.firstName%></h1>
-  <main class="container">
-    <section class="row">
-      <h1>Profile</h1>      
-      <article class="dato col-sm-12 col-md-12 col-lg-12">
-          <div role="tabpanel">
-            <!-- List group -->
-            <div class="list-group" id="myList" role="tablist">
-              <a class="list-group-item list-group-item-action active" data-bs-toggle="list" href="#home" role="tab">Mi cuenta</a>
-              <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#profile" role="tab">Mi carrito</a> 
-            </div>
-          
-            <!-- Tab panes -->
-            <div class="tab-content">
-              <div class="tab-pane active" id="home" role="tabpanel">
-                <h3>Datos Personales</h3>
-                <article class="dato">
-                    <div class="col-sm-12 col-md-5 col-lg-5 img-profile">
-                      <img src="/img/avatar/<%= user.image %> " alt="" class="selfie">
-                    </div>                   
-                    <div class="col-sm-12 col-md-5 col-lg-5 datos">
-                      <ul>
-                        <h1>Mis Datos</h1>
-                        <li>Nombre: <%= user.firstName%></li>
-                        <li>Apellido: <%= user.lastName%></li>
-                        <li>Direccion:</li>
-                        <li>Email: <%= user.email %> </li>
-                        <li>Tel:</li>
-                      </ul>
-                    </div>
-                    
-              </article> 
-            </div>
-            <form action="/users/profile/edit/<%=user.id %>">
-            <button type="submit" class="btn btn-warning editar">Editar</button>
-              </form>
-            <div class="tab-pane" id="profile" role="tabpanel">
-              <h4>Mi carrito</h4>
-            </div>   
-         </div>
-         
-      </article>
-      <form action="/users/delete/<%= user.id %>?_method=DELETE" method="POST">
-        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-          <button class="btn btn-danger me-md-2" type="submit">Eliminar cuenta</button>
-        </div>
-      </form>
-    </section>
-  
-
-
-   </main> 
-  
-
-<!--Fin Home-->
+      <%- include('partials/sideboard') %> 
+      
+      <div class="page-wrapper">
+          <div class="page-breadcrumb">
+              <div class="row align-items-center">
+                  <div class="col-5">
+                      <h4 class="page-title">Mi Perfil</h4>
+                      <div class="d-flex align-items-center">
+                          <nav aria-label="breadcrumb">
+                              <ol class="breadcrumb">
+                                  <li class="breadcrumb-item"><a href="#">Home</a></li>
+                              </ol>
+                          </nav>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="container-fluid">
+              <div class="row">
+                  <div class="col-lg-4 col-xlg-3 col-md-5">
+                      <div class="card">
+                          <div class="card-body">
+                              <center class="m-t-30"> <img src="/img/avatar/<%= user.avatar %> "
+                                      class="rounded-circle" width="150" />
+                                  <h4 class="card-title m-t-10"><%= user.firstName%> <%= user.lastName%></h4>
+                              </center>
+                          </div>
+                          <div>
+                              <hr>
+                          </div>
+                          <div class="card-body"> <small class="text-muted">Email</small>
+                              <h6><%= user.email%></h6> <small class="text-muted p-t-30 db">Phone</small>
+                              <h6>+91 654 784 547</h6>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-lg-8 col-xlg-9 col-md-7">
+                      <div class="card">
+                          <div class="card-body">
+                              <form class="form-horizontal form-material mx-2" action="/users/profile/update/<%=user.id %>?_method=PUT" method="POST" enctype="multipart/form-data" >
+                                  <div class="form-group">
+                                      <label class="col-md-12">Nombre</label>
+                                      <div class="col-md-12">
+                                          <input type="text" placeholder="<%= user.firstName%>" name="firstName" value="<%= (typeof old != 'undefined' && old.firstName ? old.firstName : null) %>"
+                                              class="form-control form-control-line">
+                                              <span class="text-danger"><%= (typeof errores != 'undefined' && errores.firstName ? errores.firstName.msg : null) %> </span>
+                                      </div>
+                                  </div>
+                                  <div class="form-group">
+                                    <label class="col-md-12">Apellido</label>
+                                    <div class="col-md-12">
+                                        <input type="text" placeholder="<%= user.lastName%>" name="lastName" value="<%= (typeof old != 'undefined' && old.lastName ? old.lastName : null) %>"
+                                            class="form-control form-control-line">
+                                        <span class="text-danger"><%= (typeof errores != 'undefined' && errores.lastName ? errores.lastName.msg : null) %> </span>
+                                    </div>
+                                </div>
+                                  
+                                  <div class="form-group">
+                                      <label class="col-md-12">Imagen</label>
+                                      <div class="col-md-12">
+                                          <input type="file" class="form-control" name="avatar">                                        
+                                      </div>
+                                  </div>
+                                  <div class="form-group">
+                                      <div class="col-sm-12">
+                                          <button class="btn btn-success text-white" type="submit">Actualizar Perfil</button>
+                                      </div>
+                                  </div>
+                              </form>
+                              <form action="/users/delete/<%= user.id %>?_method=DELETE" method="POST">
+                                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                  <button class="btn btn-success text-white" type="submit">Eliminar cuenta</button>
+                                </div>
+                              </form>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</main>
  <!-- SCRIPTS -->
- <%- include('./partials/scripts')  %> 
+ <%- include('partials/scripts')  %> 
  <!-- /SCRIPTS -->
 </body>
-
+  <!--FOOTER-->
+  <%-include('partials/footer') %>  
+  <!--/FOOTER-->
 </html>

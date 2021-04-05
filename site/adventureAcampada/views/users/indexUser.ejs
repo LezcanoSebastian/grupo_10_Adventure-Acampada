@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!-- HEAD -->
+<%- include('partials/head')  %>   
+<!-- /HEAD -->
+<!-- CSS -->
+ <link rel="stylesheet" href="../stylesheets/style2.css">
+<!-- /CSS -->
+<body>
+<%- include('partials/header')  %> 
+<main class="container-fluid" style="margin-top: 106px;">
+    
+    <div class="preloader">
+      <div class="lds-ripple">
+          <div class="lds-pos"></div>
+          <div class="lds-pos"></div>
+      </div>
+  </div>
+  <div id="main-wrapper" data-layout="vertical" data-navbarbg="skin5" data-sidebartype="full"
+      data-sidebar-position="absolute" data-header-position="absolute" data-boxed-layout="full">
+
+      <%- include('partials/sideboard') %> 
+      
+      <div class="page-wrapper">
+        
+        <div class="page-breadcrumb">
+            <div class="row align-items-center">
+                <div class="col-5">
+                    <h4 class="page-title">Home</h4>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="d-md-flex align-items-center">
+                                <div>
+                                </div>
+                                <div class="ms-auto d-flex no-block align-items-center">
+                                    <ul class="list-inline font-12 dl m-r-15 m-b-0">
+                                        
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="row">
+                                
+                                <div class="col-lg-12">
+                                    
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>                
+        </div>
+    </div>
+  </div>
+</main>
+ <!-- SCRIPTS -->
+ <%- include('partials/scripts')  %> 
+ <!-- /SCRIPTS -->
+</body>
+  <!--FOOTER-->
+  <%-include('partials/footer') %>  
+  <!--/FOOTER-->
+</html>
