@@ -109,6 +109,7 @@ section .product p {
 /* MEDIA QUERIES */
 /* VERSION TABLET */
 @media(min-width:426px) {
+  
   body div.container-fluid.headerFondo{
     margin-top: 0;
   }
@@ -146,6 +147,7 @@ section .product p {
 }
 
 /*Header*/
+
 div.container-fluid.headerFondo{
   padding-left: 0;
   padding-right: 0;
@@ -219,6 +221,13 @@ header nav ol li{
 li{
   list-style: none;
   text-align: center;
+}
+li i.fas.fa-user-circle::before{
+  padding-right: 5px;
+}
+a#navbarDropdown.nav-link.dropdown-toggle{
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 header nav ol li a{
     color: #fff;
@@ -329,7 +338,7 @@ header input[type="checkbox"]{
         margin-bottom: 15px;
     }
     header nav .search_box input{
-        width: 90%;   
+        width: 100%;   
     }
     header nav ol{
         display: flex;
