@@ -7,6 +7,7 @@
 
 <!-- CSS -->
     <link rel="stylesheet" href="/stylesheets/formProducto.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
 <!-- /CSS -->
 <body>
 
@@ -55,9 +56,9 @@
                 </article>
                 <article class="dato col-sm-12 col-md-6 col-lg-4">
                     <div class="form-floating d-flex flex-column mb-3">
-                        <input type="text" class="form-control" id="floatingInput" placeholder="Color" name="colors" value="<%= (typeof old != 'undefined' && old.colors ? old.colors : null) %>">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="Color" name="color" value="<%= (typeof old != 'undefined' && old.color ? old.color : null) %>">
                         <label for="floatingInput">Color *</label>
-                        <span class="text-danger"><%= (typeof errores != 'undefined' && errores.colors? errores.colors.msg : null) %> </span>
+                        <span class="text-danger"><%= (typeof errores != 'undefined' && errores.color? errores.color.msg : null) %> </span>
                     </div>
                 </article>
                 <article class="dato col-sm-12 col-md-6 col-lg-4">
@@ -76,13 +77,13 @@
                 </article>
                 <article class="dato col-sm-12 col-md-6 col-lg-4">
                     <div class="form-floating d-flex flex-column mb-3">
-                        <select class="form-select" aria-label="Default select example" name="category" value="<%= (typeof old != 'undefined' && old.category ? old.category : null) %>">
+                        <select class="form-select" aria-label="Default select example" name="ID_category" value="<%= (typeof old != 'undefined' && old.ID_category ? old.ID_category : null) %>">
                             <option selected hidden>Categoria</option>
                             <% categorias.forEach(categoria => {%>
                                 <option value=" <%= categoria.id %> "><%= categoria.nombre %></option>
                             <% }) %>
                         </select>
-                        <span class="text-danger"><%= (typeof errores != 'undefined' && errores.category? errores.category.msg : null) %> </span>
+                        <span class="text-danger"><%= (typeof errores != 'undefined' && errores.ID_category? errores.ID_category.msg : null) %> </span>
                     </div>
                 </article>
                 <article class="dato col-sm-12 col-md-6 col-lg-4">
@@ -116,9 +117,9 @@
                 </article>
                 <article class="dato col-sm-12 col-md-12 col-lg-12">
                     <div class="input-group mb-3">
-                        <input type="file" class="form-control" id="inputGroupFile02" name="image-product" value="<%= (typeof old != 'undefined' && old.image-product ? old.image-product : null) %>">
+                        <input type="file" class="form-control" id="inputGroupFile02" name="image" value="<%= (typeof old != 'undefined' && old.image ? old.image : null) %>">
                         <label class="input-group-text" for="inputGroupFile02">Subir Imagen</label>
-                        <span class="text-danger"><%= (typeof errores != 'undefined' && errores.image-product? errores.image-product.msg : null) %> </span>
+                        <span class="text-danger"><%= (typeof errores != 'undefined' && errores.image? errores.image.msg : null) %> </span>
                       </div>                    
                 </article>
                 <article class="dato col-sm-12 col-md-12 col-lg-12">

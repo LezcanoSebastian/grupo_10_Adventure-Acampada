@@ -7,7 +7,7 @@
     margin-top: 150px;
 }
 body{
-    background-image: url('../img/backgroundfinal.jpg');
+    background-color:rgb(226, 227, 232);
     background-position-y: 100%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -32,38 +32,53 @@ div.vista-desktop{
     height: 200px;
 }
 .carousel-control-next-icon, .carousel-control-prev-icon{
-  background-color: #659999;
+  background-color: #170B3B;
 }
 
 /* Configuracion de los botones */
 .btn-success{
     width: 100%;
     margin: 15px 0 15px 0;
-    background-color: #f4791f;
-    border-color: #f4791f;
+    background-color: #2dc997;
+    border-color: #2dc997;
 }
 .btn-success:hover{
-    background-color: #659999;
-    border-color: #659999;
-    box-shadow: 0 0 0 0.25rem #659999;
+    background-color: #170B3B;
+    border-color: #170B3B;
+    box-shadow: 0 0 0 0.25rem #170B3B;
 }
 
 .btn-check:focus+.btn-success, .btn-success:focus {
     color: #fff;
-    background-color: #659999;
-    border-color: #659999;
-    box-shadow: 0 0 0 0.25rem #659999;
+    background-color: #170B3B;
+    border-color: #170B3B;
+    box-shadow: 0 0 0 0.25rem #170B3B;
 }
 /* boton con opciones desplegables */
 
 /* Descripcion del producto */
-.descripcion div p{
+.descripcion div {
     padding:7%;
-    background-color:#3d3d3d9a;
+    background-color:white;
+    border:2px solid #e6e6e6;
     margin-bottom: 25px;
     border-radius: 5px;
-   text-align: center;
+   text-align: left;
 }
+.descripcion div h3 {
+    font-weight: bold;
+    border-bottom: 2px solid #2dc997;
+    width: 100%;
+    margin-top: 10px;
+    text-align: left;
+    color: black;
+  }
+  .descripcion div h6{
+    border-bottom: 2px solid #e6e6e6;
+    width: 100%;
+    text-align: left;
+    color: black;
+  }
 .descripcion{
   padding: 5%;
 }
@@ -99,7 +114,7 @@ a.nav-link.carrito{
 }
 section.detalle.row{
     padding: 15px;
-    background-color:fafafa;
+    background-color:#fafafa;
     align-items: center;
     border-radius: 10px;
 }
@@ -155,14 +170,17 @@ footer .container-fluid div ul li p{
 
 /* Descripcion de detalle del producto */
 .nombre-del-producto{
-   
     padding: 15px;
     font-size: 35px;
     text-align: center;
+    font-weight: bold;
+  border-bottom: 2px solid #2dc997;
+  width: 100%;
+  color: black;
 }
 .descuento-precio{
     text-align: right;
-    color: #659999;
+    color: #170B3B;
     font-size: 25px;
     padding-left: 150px;
     margin-bottom: -4px;
@@ -171,13 +189,22 @@ footer .container-fluid div ul li p{
 background-color: transparent;
 text-shadow: 8px 7px 6px rgba(0, 0, 0, 0.30);
 font-size: 50px;
-color: #659999;
+color: #170B3B;
 }
 
 
-/* Nuevos botones */
-
-.envio{
-    background-color: red;
-    height: 100px;
+@media(max-width:769px){
+    .cuerpo{
+        margin-top: 250px;
+    }
+}
+/* nombre del producto */
+h1.nombre-del-producto{
+    padding: 15px;
+    font-size: 35px;
+    text-align: center;
+    font-weight: bold;
+  border-bottom: 2px solid #2dc997;
+  width: 100%;
+  color: black;
 }

@@ -83,7 +83,7 @@ section .product img {
   object-fit: contain;
 }
 
-section .product h5 {
+/* section .product h5 {
   font-weight: bold;
   font-family: 'Poppins', sans-serif;
   border-bottom: 1px solid var(--colorSecundarioVariante2);
@@ -91,13 +91,14 @@ section .product h5 {
   margin-top: 10px;
   text-align: center;
   color: black;
-}
+} */
 
 section .product p {
   font-family: 'Montserrat', sans-serif;
   text-transform: capitalize;
   text-align: center;
   width: 100%;
+  color: black;
 }
 
 .container .product:hover {
@@ -422,26 +423,13 @@ section.frase .btn-get-started:hover {
 
 
 /*FOOTER*/
+footer{
+  background-color: #170B3B;
+  padding: 15px;
+}
 
-footer .main-footer{
-  /* background-image: url('../img/hf.png'); */
- /*  background: rgb(0,0,0);
-background: linear-gradient(3deg, rgba(0,0,0,0.742734593837535) 32%, rgba(0,0,0,0.08727240896358546) 100%);
-   */
-  background-color: rgba(0, 0, 0, 0.5); 
-  margin-top: 25px;
-  padding-top: 35px;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-footer div.logo{
-  text-align: center;
-}
-footer img.logo-footer{
-  width: 25%;
-  object-fit: cover;
-  margin-bottom: 15px;
-}
+
+
 
 /* lista */
 footer ul{
@@ -449,57 +437,32 @@ footer ul{
   justify-content: center;
   padding-left: 0;
 }
-footer .container-fluid div ul li{
+div ul li{
   margin: 1px;
   border-radius: 5px;
-  
-}
-footer .container-fluid div ul li a{
+
   color: var(--colorBlanco);
   text-align: center;
   word-spacing: 10px;
 }
-footer .container-fluid div ul li p{
-  color: var(--colorBlanco);
-  text-align: center;
-  margin-bottom: 0;
+div ul li a{
+  text-decoration: none;
+  color: white;
 }
-footer .banner-footer{
-  background: #659999;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #f4791f, #659999);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #f4791f, #659999); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
-}
+
 
 /* Seccion de footer-enlaces */
 footer .fa-instagram, .fa-facebook, .fa-twitter, .fa-whatsapp, .fa-phone, .fa-map-marker-alt, .fa-home, .fa-tags, .fa-question-circle, .fa-user-friends, .fa-campground, .fa-envelope, .fa-life-ring{
   color: var(--colorBlanco);
   font-weight: bold;
 }
-footer .nav-link:hover{
-  color: #659999;
-}
-/* Seccion de acordion footer */
-footer h2.accordion-header{
-  background-color: var(--colorTraparente);
-}
-footer .accordion-button{
-  width: fit-content;
-  padding: 0%;
-  margin: 0%;
-}
-footer .accordion-button:not(.collapsed){
-  background-color: var(--colorTraparente);
-  border: none;
-}
 
-footer h2.accordion-header{
-  text-align: center;
-  width: fit-content;
-}
-footer ul{
-  text-align:-webkit-center;
-}
+/* Seccion de acordion footer */
+
+
+
+
 
 
 /* Solucion sobre el problema de responsive */
@@ -539,3 +502,8 @@ footer ul{
 section article.dato.col-md-6{
   width: 100%;
 }
+html{
+  width: 100%;
+}
+
+/* Buscador en vista admin */
