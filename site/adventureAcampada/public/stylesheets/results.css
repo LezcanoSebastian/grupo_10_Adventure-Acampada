@@ -5,3 +5,10 @@
 body{
     margin-top: 150px;
 }
+a{
+    text-decoration: none;
+}
+div.row{
+    align-content: center;
+    text-align: center;
+}

@@ -3,6 +3,7 @@ const { Sequelize } = require('sequelize');
 const db = require('../database/models');
 
 
+
 module.exports = {
     title: "Administracion",
     index: (req,res) => {
@@ -67,15 +68,20 @@ module.exports = {
                     image : req.files[0].filename,
                     productId : product.id
                 })
-                .then( ()=>{
+                .then(()=>{
                     res.redirect('/admin/products/list')
                 })
               .catch(error => res.send(error))
             })
-        }else{            
-            return res.render('/admin/products/store',{
+        }else{    
+            db.category_product.findAll()
+            .then(categorias =>{
+                  return res.render('admin/productCreate',{
                 errores : errores.mapped(),
-                old: req.body
+                old: req.body, 
+                categorias
+                })     
+                
             })
         }   
     },

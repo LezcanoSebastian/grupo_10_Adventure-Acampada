@@ -83,7 +83,7 @@ section .product img {
   object-fit: contain;
 }
 
-section .product h5 {
+/* section .product h5 {
   font-weight: bold;
   font-family: 'Poppins', sans-serif;
   border-bottom: 1px solid var(--colorSecundarioVariante2);
@@ -91,13 +91,14 @@ section .product h5 {
   margin-top: 10px;
   text-align: center;
   color: black;
-}
+} */
 
 section .product p {
   font-family: 'Montserrat', sans-serif;
   text-transform: capitalize;
   text-align: center;
   width: 100%;
+  color: black;
 }
 
 .container .product:hover {
@@ -504,3 +505,5 @@ section article.dato.col-md-6{
 html{
   width: 100%;
 }
+
+/* Buscador en vista admin */

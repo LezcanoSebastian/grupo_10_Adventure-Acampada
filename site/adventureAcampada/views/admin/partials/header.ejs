@@ -1,81 +1,56 @@
-<header id="header" class="container-fluid fixed-top header-transparent">
-
+<header id="header" class="container-fluid fixed-top header">
     <section class="row header">
-        
         <section class="menu container">
-
-            <nav class="navbar navbar-expand-lg">
-                <div class="container-fluid">
-                    <div class="logoHeader col-sm-3 col-md-6 col-lg-4">
-                        <a href="/"><img class="logoHeader" src="/img/logobis7.png" alt="logo"></a>
-                    </div>
-                    <div class="col-sm-4 col-md-6 col-lg-8 search-container">
-                        <form action="" class="input-search">
-                            <input type="text" placeholder="Buscar productos, marcas y más" aria-label="Search" name="busqueda">
-                            <button class="btn btn-outline-light"><i class="fas fa-search"></i></button>
-                        </form>
-                    </div>
-
-                    <nav class="navbar navbar-expand-lg col-lg-12">
-                        <div class="container-fluid">
-                            <button class="navbar-toggler navbar-light " type="button" data-bs-toggle="collapse"
-                                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                                aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="navbar-toggler-icon"></span>
-                            </button>
-
-                            <div class="collapse navbar-collapse navbar-light " id="navbarSupportedContent">
-                                <ul class="navbar-nav mb-2 mb-lg-0">
-                                    
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="/">Home</a>
-                                    </li>
-                                    <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
-                                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                            Mis Productos
-                                        </a>
-                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                            <li><a class="dropdown-item" href="/admin/products/list">Mostrar Todos</a></li>
-                                            <li><a class="dropdown-item" href="/admin/products/create">Agregar Nuevo</a></li>
-                                            <li>
-                                                <hr class="dropdown-divider">
-                                            </li>
-                                            <li><a class="dropdown-item" href="#">Ayuda</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>                                
-                            </div>
-                            <div class="collapse navbar-collapse navbar-light " id="navbarSupportedContent">
-                                <ul class="navbar-nav mb-2 mb-lg-0 Sesion">
-                                    <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
-                                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                            <i class="fas fa-user-circle"></i>
-                                        </a>
-                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                            <li><a class="dropdown-item" href="/users/profile">Perfil</a></li>
-                                            <li><a class="dropdown-item" href="#">Editar Perfil</a></li>                                              
-                                            <li><a class="dropdown-item" href="/users/logout">Salir</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="Carrito" href="#"><i class="fas fa-shopping-cart"></i></a>
-                                    </li>
-                                </ul>      
-                            </div>
-                        </div>
-                    </nav>             
-                    <div class="carrito col-sm-2 col-md-2 col-lg-6 d-flex">
-                        <a class="menuCarrito" href="#"><i class="fas fa-shopping-cart"></i></a>
-                    </div>
+            <input type="checkbox" id="check">
+            <nav>
+                 <div class="icon"><a href="/"><img class="logoHeader" src="/img/logo4.png" alt="logo"></a></div>
+                 <div class="search_box">
+                     <form action="/search" class="input-search" method="GET">
+                        <input class="buscador" type="text" name="keywords" placeholder="Buscar productos, marcas y más">
+                       
+                    </form>
+                     <span type="submit" class="fa fa-search"></span>
+                 </div>
+                 <ol>
+                    <li><a href="/">Inicio</a></li>
+                    <li><a href="#">Contactos</a></li>
+                    <li><a href="/products/list">Productos</a></li>
+                    <li><a href="#"><i class="bi bi-cart3"></i></a></li>
                     
-                </div>
-                <!--FIN del div class="container-fluid"-->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-user-circle"></i>Ingresar
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown"> 
+                            <!-- Aca 2 -->
+                            <% if (typeof user != 'undefined') { %>
+                               <ul> <li ><a href="/users/profile/<%=user.id %> "><i class="fas fa-user-circle"></i> <%= user.firstName %></a> <!-- nombre de usuario -->
+                                </li>                                    
+                                
+                                  <li><a href="/users/profile/<%=user.id %> ">Mi Perfil</a></li>
+                                  <% if (user.rol==="admin") { %>
+                                    <li><a  href="/admin">Administrar</a></li>
+                                    <li><a href="/admin/products/list">Lista de productos</a></li>
+                                    <li><a href="/admin/products/create">Cargar producto</a></li>
+                                    <% } %>
+                                    <li><a  href="/users/logout">Cerrar sesion</a></li>
+                                  </ul>
+                                  <% }else{ %>   
+                                    <ul>
+                                      <li><a  href="/users/login">Iniciar sesion</a></li>
+                                      <li><a  href="/users/register">Registrarme</a></li>
+                                    </ul>
+                                    <% } %> 
+                        </ul>
+                    </li>
+                 </ol>
+                 <label for="check" class="bar">
+                 <span class="fa fa-bars" id="bars"></span>
+                 <span class="fa fa-times" id="times"></span>
+                 </label>
             </nav>
-            <!--FIN del nav class="navbar navbar-expand-lg"-->
         </section>
-        <!--FIN del section class="menu"-->
     </section>
-    <!--FIN del section class="row"-->
+
 </header>

@@ -6,19 +6,6 @@ module.exports = [
     .notEmpty()
     .withMessage('El nombre es requerido'),
 
-    body('name').custom(value => {
-        return db.users.findOne({
-            where : {
-                name : value
-            }
-        })
-        .then(user => {
-            if(user){
-                return Promise.reject('El nombre ya está registrado')
-            }
-        })
-    }),
-
     check('name')
     .isLength({
         min : 5,
@@ -31,47 +18,39 @@ module.exports = [
     .withMessage('El precio es requerido'),
 
     check('discount')
-    .isEmail()
+    .notEmpty()
     .withMessage('El descuento es requerido'),
 
     check('mark')
-    .isEmail()
-    .withMessage('El descuento es requerido'),
+    .notEmpty()
+    .withMessage('El campo de marca es requerido'),
 
     check('origin')
-    .isEmail()
-    .withMessage('El descuento es requerido'),
+    .notEmpty()
+    .withMessage('El campo de origen es requerido'),
 
-    check('colors')
-    .isEmail()
-    .withMessage('El descuento es requerido'),
+    check('color')
+    .notEmpty()
+    .withMessage('El campo de color es requerido'),
 
     check('size')
-    .isEmail()
-    .withMessage('El descuento es requerido'),
+    .notEmpty()
+    .withMessage('El campo de talle es requerido'),
 
     check('material')
-    .isEmail()
-    .withMessage('El descuento es requerido'),
+    .notEmpty()
+    .withMessage('El campo de material es requerido'),
 
-    check('category')
-    .isEmail()
-    .withMessage('El descuento es requerido'),
+    check('ID_category')
+    .notEmpty()
+    .withMessage('El campo categoria es requerido'),
 
     check('stock')
-    .isEmail()
-    .withMessage('El descuento es requerido'),
+    .notEmpty()
+    .withMessage('El campo stock es requerido'),
 
-    check('delibery')
-    .isEmail()
-    .withMessage('El descuento es requerido'),
-
-    check('description')
-    .isEmail()
-    .withMessage('El descuento es requerido'),
-
-    check('image-product')
-    .isEmail()
-    .withMessage('El descuento es requerido')   
+    check('image')
+    .notEmpty()
+    .withMessage('El campo imagen es requerido')   
 
 ]
