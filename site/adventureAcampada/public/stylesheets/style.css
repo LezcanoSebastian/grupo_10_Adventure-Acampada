@@ -216,6 +216,10 @@ header nav ol{
 header nav ol li{
     margin: 0 2px;
 }
+li{
+  list-style: none;
+  text-align: center;
+}
 header nav ol li a{
     color: #fff;
     font-size: 12px;
@@ -226,6 +230,7 @@ header nav ol li a{
 }
 header nav ol li:hover a{
     color:  #2dc997;
+    text-decoration: none;
 }
 header nav ol li:hover a i{
     color:  #2dc997;
@@ -502,8 +507,10 @@ footer .fa-instagram, .fa-facebook, .fa-twitter, .fa-whatsapp, .fa-phone, .fa-ma
 section article.dato.col-md-6{
   width: 100%;
 }
-html{
-  width: 100%;
-}
 
-/* Buscador en vista admin */
+.dropdown-menu ul {
+  background-color: transparent;
+}
+ul.dropdown-menu.show{
+  background-color: #170B3B;
+}

@@ -25,7 +25,7 @@
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown"> 
                             <!-- Aca 2 -->
                             <% if (typeof user != 'undefined') { %>
-                               <ul> <li ><a href="/users/profile/<%=user.id %> "><i class="fas fa-user-circle"></i> <%= user.firstName %></a> <!-- nombre de usuario -->
+                              <li ><a href="/users/profile/<%=user.id %> "></i> <%= user.firstName %></a> <!-- nombre de usuario -->
                                 </li>                                    
                                 
                                   <li><a href="/users/profile/<%=user.id %> ">Mi Perfil</a></li>
@@ -35,12 +35,12 @@
                                     <li><a href="/admin/products/create">Cargar producto</a></li>
                                     <% } %>
                                     <li><a  href="/users/logout">Cerrar sesion</a></li>
-                                  </ul>
+                                  
                                   <% }else{ %>   
-                                    <ul>
+                                    
                                       <li><a  href="/users/login">Iniciar sesion</a></li>
                                       <li><a  href="/users/register">Registrarme</a></li>
-                                    </ul>
+                                    
                                     <% } %> 
                         </ul>
                     </li>

@@ -49,8 +49,5 @@ module.exports = [
     .notEmpty()
     .withMessage('El campo stock es requerido'),
 
-    check('image')
-    .notEmpty()
-    .withMessage('El campo imagen es requerido')   
 
 ]
