@@ -97,3 +97,31 @@ function fileValidation(){
     }
 })
 })
+
+/* Formulario */
+/* $form.addEventListener('submit',function(event){
+    let error = false;
+    event.preventDefault()
+    console.log($form.elements)
+    let elementosForm = this.elements
+    
+    for (let index = 0; index < elementosForm.length-1; index++) {
+        if(elementosForm[index].value == ""){
+            elementosForm[index].classList.add('is-invalid');
+            submitErrors.innerHTML = "Los campos señalados son obligatorios";
+            error = true;
+        }
+    }
+
+    if(!$terms.checked){
+        $terms.classList.add('is-invalid');
+        $termsErrors.innerHTML = "Debes aceptar las bases y condiciones"
+        error = true
+    }
+
+    if(!error){
+        console.log('Todo bien');
+        $form.submit()
+    }
+
+}) */

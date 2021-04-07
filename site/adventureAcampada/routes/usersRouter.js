@@ -19,7 +19,7 @@ router.get('/indexUser/:id',indexUser);
 
 router.get('/profile/:id', profile);
 router.get('/profile/edit/:id', edit);
-router.put('/profile/update/:id',uploadImages.any(), update);
+router.put('/profile/update/:id',uploadImages.any(), perfilValidator, update);
 
 router.delete('/delete/:id',eliminar);
 
