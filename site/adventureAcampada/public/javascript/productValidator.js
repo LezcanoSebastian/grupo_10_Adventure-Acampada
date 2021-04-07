@@ -99,7 +99,11 @@ function fileValidation(){
 })
 
 /* Formulario */
-/* $form.addEventListener('submit',function(event){
+window.addEventListener("load", () => {
+     $form = qs('#form'),
+      $terms = qs('#flexCheckDefault'),
+    $termsErrors = qs('#termsErrors')
+ $form.addEventListener('submit',function(event){
     let error = false;
     event.preventDefault()
     console.log($form.elements)
@@ -124,4 +128,5 @@ function fileValidation(){
         $form.submit()
     }
 
-}) */
+})
+})

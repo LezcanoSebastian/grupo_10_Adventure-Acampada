@@ -31,7 +31,10 @@ module.exports = (sequelize, dataTypes) => {
 
         },
         avatar: {
-            type: dataTypes.STRING,
+            type: dataTypes.STRING(100),
+        },
+        telefono: {
+            type: dataTypes.STRING(100),
         },
        
     };
