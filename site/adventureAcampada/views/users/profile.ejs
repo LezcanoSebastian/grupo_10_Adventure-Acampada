@@ -63,7 +63,8 @@
                                   <div class="form-group">
                                       <label class="col-md-12">Nombre</label>
                                       <div class="col-md-12">
-                                          <input type="text" placeholder="<%= user.firstName%>" name="firstName" value="<%= (typeof old != 'undefined' && old.firstName ? old.firstName : null) %>"
+                                          <input type="text" placeholder="<%= user.firstName%>" name="firstName"  value="<%= user.firstName%> 
+                                          <%= (typeof old != 'undefined' && old.firstName ? old.firstName : null) %>"
                                               class="form-control form-control-line">
                                               <span class="text-danger"><%= (typeof errores != 'undefined' && errores.firstName ? errores.firstName.msg : null) %> </span>
                                       </div>
@@ -71,11 +72,19 @@
                                   <div class="form-group">
                                     <label class="col-md-12">Apellido</label>
                                     <div class="col-md-12">
-                                        <input type="text" placeholder="<%= user.lastName%>" name="lastName" value="<%= (typeof old != 'undefined' && old.lastName ? old.lastName : null) %>"
+                                        <input type="text" placeholder="<%= user.lastName%>" name="lastName" value="<%= user.lastName%> <%= (typeof old != 'undefined' && old.lastName ? old.lastName : null) %>"
                                             class="form-control form-control-line">
                                         <span class="text-danger"><%= (typeof errores != 'undefined' && errores.lastName ? errores.lastName.msg : null) %> </span>
                                     </div>
-                                </div>
+                                 </div>
+                                 <div class="form-group">
+                                    <label class="col-md-12">Telefono</label>
+                                    <div class="col-md-12">
+                                        <input type="text" placeholder="<%= user.telefono%>" name="telefono" value="<%= user.telefono%> <%= (typeof old != 'undefined' && old.telefono ? old.telefono : null) %>"
+                                            class="form-control form-control-line">
+                                        <span class="text-danger"><%= (typeof errores != 'undefined' && errores.telefono ? errores.telefono : null) %> </span>
+                                    </div>
+                                 </div>
                                   
                                   <div class="form-group">
                                       <label class="col-md-12">Imagen</label>

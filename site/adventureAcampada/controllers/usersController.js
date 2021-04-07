@@ -25,14 +25,15 @@ module.exports = {
         }else{
             
             
-            const {firstName,lastName, email, password,rol,avatar} = req.body;
+            const {firstName,lastName, email, password,rol,avatar,telefono} = req.body;
             db.users.create({
                 firstName : firstName.trim(),
                 lastName : lastName.trim(),
                 email : email.trim(),
                 password : bcrypt.hashSync(password,12),
                 rol : "user",
-                avatar : (req.files[0]) ? req.files[0].filename : "default.png"
+                avatar : (req.files[0]) ? req.files[0].filename : "default.png",
+                telefono : "########"
             })
             .then(()=>{
                 res.redirect('/users/login');
@@ -165,11 +166,12 @@ module.exports = {
         let errores = validationResult(req);
         
         if(errores.isEmpty()){
-            const {firstName,lastName,avatar} = req.body;
+            const {firstName,lastName,avatar,telefono} = req.body;
             db.users.update({
                 firstName : firstName,
                 lastName : lastName,
-                avatar : req.files[0].filename
+                avatar : (req.files[0]) ? req.files[0].filename : `${avatar}`,
+                telefono : telefono
             },
             {
                 where : {
