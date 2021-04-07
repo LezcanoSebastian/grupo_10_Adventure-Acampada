@@ -22,7 +22,7 @@
                             role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="fas fa-user-circle"></i>Ingresar
                         </a>
-                        <ul id="a" class="dropdown-menu" aria-labelledby="navbarDropdown"> 
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown"> 
                             <!-- Aca 2 -->
                             <% if (typeof user != 'undefined') { %>
                               <li ><a href="/users/profile/<%=user.id %> "></i> <%= user.firstName %></a> <!-- nombre de usuario -->
@@ -37,10 +37,10 @@
                                     <li><a  href="/users/logout">Cerrar sesion</a></li>
                                   
                                   <% }else{ %>   
-                                    
+                                    <ul id="a">
                                       <li><a  href="/users/login"><i class="bi bi-person-fill"></i>Iniciar sesion</a></li>
                                       <li><a  href="/users/register"><i class="bi bi-person-lines-fill"></i>Registrarme</a></li>
-                                    
+                                    </ul>
                                     <% } %> 
                         </ul>
                     </li>
