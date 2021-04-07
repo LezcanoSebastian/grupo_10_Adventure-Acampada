@@ -208,3 +208,6 @@ h1.nombre-del-producto{
   width: 100%;
   color: black;
 }
+ul li:hover a{
+    color: #2dc997;
+}

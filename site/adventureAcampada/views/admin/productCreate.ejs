@@ -8,6 +8,7 @@
 <!-- CSS -->
     <link rel="stylesheet" href="/stylesheets/formProducto.css">
     <link rel="stylesheet" href="/stylesheets/style.css">
+    <script src="/javascript/productValidator.js"></script>
 <!-- /CSS -->
 <body>
 
@@ -21,56 +22,57 @@
             <section class="datos row">
                 <article class="dato col-sm-12 col-md-6 col-lg-4">
                     <div class="form-floating d-flex flex-column mb-3">
-                        <input type="text" class="form-control" id="floatingInput" placeholder="Titulo del Anuncio" name="name" value="<%= (typeof old != 'undefined' && old.name ? old.name : null) %>">
-                        <label for="floatingInput">Titulo del Anuncio *</label>
+                        <input type="text" class="form-control" id="name" placeholder="Titulo del Anuncio" name="name" value="<%= (typeof old != 'undefined' && old.name ? old.name : null) %>">
+                        <label for="name floatingInput"id="name">Titulo del Anuncio *</label>
+                        <span class="error" id="nameErrors"></span>
                         <span class="text-danger"><%= (typeof errores != 'undefined' && errores.name? errores.name.msg : null) %> </span>
                     </div>
                 </article>
                 <article class="dato col-sm-12 col-md-6 col-lg-4">
                     <div class="form-floating d-flex flex-column mb-3">
-                        <input type="number" class="form-control" id="floatingInput" placeholder="Precio" name="price" value="<%= (typeof old != 'undefined' && old.price ? old.price : null) %>">
+                        <input type="number" class="form-control" placeholder="Precio" name="price" value="<%= (typeof old != 'undefined' && old.price ? old.price : null) %>">
                         <label for="floatingInput">Precio *</label>
                         <span class="text-danger"><%= (typeof errores != 'undefined' && errores.price? errores.price.msg : null) %> </span>
                     </div>
                 </article>
                 <article class="dato col-sm-12 col-md-6 col-lg-4">
                     <div class="form-floating d-flex flex-column mb-3">
-                        <input type="number" class="form-control" id="floatingInput" placeholder="Descuento" name="discount" value="<%= (typeof old != 'undefined' && old.discount ? old.discount : null) %>">
+                        <input type="number" class="form-control" placeholder="Descuento" name="discount" value="<%= (typeof old != 'undefined' && old.discount ? old.discount : null) %>">
                         <label for="floatingInput">Descuento %</label>
                         <span class="text-danger"><%= (typeof errores != 'undefined' && errores.discount? errores.discount.msg : null) %> </span>
                     </div>
                 </article>
                 <article class="dato col-sm-12 col-md-6 col-lg-4">
                     <div class="form-floating d-flex flex-column mb-3">
-                        <input type="text" class="form-control" id="floatingInput" placeholder="Marca" name="mark" value="<%= (typeof old != 'undefined' && old.mark ? old.mark : null) %>">
+                        <input type="text" class="form-control" placeholder="Marca" name="mark" value="<%= (typeof old != 'undefined' && old.mark ? old.mark : null) %>">
                         <label for="floatingInput">Marca *</label>
                         <span class="text-danger"><%= (typeof errores != 'undefined' && errores.mark? errores.mark.msg : null) %> </span>
                     </div>
                 </article>
                 <article class="dato col-sm-12 col-md-6 col-lg-4">
                     <div class="form-floating d-flex flex-column mb-3">
-                        <input type="text" class="form-control" id="floatingInput" placeholder="Origen" name="origin" value="<%= (typeof old != 'undefined' && old.origin ? old.origin : null) %>"> 
+                        <input type="text" class="form-control" placeholder="Origen" name="origin" value="<%= (typeof old != 'undefined' && old.origin ? old.origin : null) %>"> 
                         <label for="floatingInput">Origen *</label>
                         <span class="text-danger"><%= (typeof errores != 'undefined' && errores.origin? errores.origin.msg : null) %> </span>
                     </div>
                 </article>
                 <article class="dato col-sm-12 col-md-6 col-lg-4">
                     <div class="form-floating d-flex flex-column mb-3">
-                        <input type="text" class="form-control" id="floatingInput" placeholder="Color" name="color" value="<%= (typeof old != 'undefined' && old.color ? old.color : null) %>">
+                        <input type="text" class="form-control" placeholder="Color" name="color" value="<%= (typeof old != 'undefined' && old.color ? old.color : null) %>">
                         <label for="floatingInput">Color *</label>
                         <span class="text-danger"><%= (typeof errores != 'undefined' && errores.color? errores.color.msg : null) %> </span>
                     </div>
                 </article>
                 <article class="dato col-sm-12 col-md-6 col-lg-4">
                     <div class="form-floating d-flex flex-column mb-3">
-                        <input type="text" class="form-control" id="floatingInput" placeholder="Talle" name="size" value="<%= (typeof old != 'undefined' && old.size ? old.size : null) %>">
+                        <input type="text" class="form-control" placeholder="Talle" name="size" value="<%= (typeof old != 'undefined' && old.size ? old.size : null) %>">
                         <label for="floatingInput">Talle</label>
                         <span class="text-danger"><%= (typeof errores != 'undefined' && errores.size? errores.size.msg : null) %> </span>
                     </div>
                 </article>
                 <article class="dato col-sm-12 col-md-6 col-lg-4">
                     <div class="form-floating d-flex flex-column mb-3">
-                        <input type="text" class="form-control" id="floatingInput" placeholder="Material" name="material" value="<%= (typeof old != 'undefined' && old.material ? old.material : null) %>">
+                        <input type="text" class="form-control" placeholder="Material" name="material" value="<%= (typeof old != 'undefined' && old.material ? old.material : null) %>">
                         <label for="floatingInput">Material</label>
                         <span class="text-danger"><%= (typeof errores != 'undefined' && errores.material? errores.material.msg : null) %> </span>
                     </div>
@@ -99,27 +101,31 @@
                 </article>
                 <article class="dato col-sm-12 col-md-6 col-lg-4">
                     <div class="form-floating d-flex flex-column mb-3">
-                        <select class="form-select delivery" name="delibery" aria-label="Default select example" id="delivery" value="<%= (typeof old != 'undefined' && old.delibery ? old.delibery : null) %>">
+                        <select class="form-select delibery" name="delibery" aria-label="Default select example" id="delibery" value="<%= (typeof old != 'undefined' && old.delibery ? old.delibery : null) %>">
                             <option selected hidden>Envio</option>                          
-                            <option value="si">Si</option>
-                            <option value="no">No</option>
-                            <option value="consular">Consultar al vendedor</option>
+                            <option value="Si">Si</option>
+                            <option value="No">No</option>
+                            <option value="Consultar al vendedor">Consultar al vendedor</option>
                         </select>
                         <span class="text-danger"><%= (typeof errores != 'undefined' && errores.delibery? errores.delibery.msg : null) %> </span>
                     </div>
                 </article>
                 <article class="dato col-sm-12 col-md-12 col-lg-12">
                     <div class="form-floating d-flex flex-column mb-3">
-                        <textarea class="form-control description" placeholder="Leave a comment here" id="floatingTextarea2 description"
+                        <textarea class="form-control description" id="description" placeholder="Leave a comment here" id="floatingTextarea2 description"
                             style="height: 100px" name="description"></textarea>
-                        <label for="floatingTextarea2">Descripciòn</label>
+                       
+                        <label for="description" id="description">Descripciòn</label>
+                        <span class="error" id="descriptionErrors"></span>
                     </div>
                 </article>
                 <article class="dato col-sm-12 col-md-12 col-lg-12">
                     <div class="input-group mb-3">
-                        <input type="file" class="form-control" id="inputGroupFile02" name="image" value="<%= (typeof old != 'undefined' && old.image ? old.image : null) %>">
-                        <label class="input-group-text" for="inputGroupFile02">Subir Imagen</label>
-                        <span class="text-danger"><%= (typeof errores != 'undefined' && errores.image? errores.image.msg : null) %> </span>
+                        <input type="file" class="formFile form-control" id="formFile" name="image" value="<%= (typeof old != 'undefined' && old.image-product ? old.image-product : null) %>">
+                       
+                        <label class="input-group-text"  for="formFile">Subir Imagen</label>
+                        <span class="error text-danger" id="fileErrors"></span>
+                        <span class="text-danger"><%= (typeof errores != 'undefined' && errores.image-product? errores.image-product.msg : null) %> </span>
                       </div>                    
                 </article>
                 <article class="dato col-sm-12 col-md-12 col-lg-12">
@@ -135,6 +141,8 @@
 
     <!-- SCRIPT -->
     <%- include('partials/scripts')  %> 
+    <!-- Validacion Front -->
+
     <!-- /SCRIPTS -->
 
 </body>

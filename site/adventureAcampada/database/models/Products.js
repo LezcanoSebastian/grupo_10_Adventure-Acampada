@@ -21,10 +21,6 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false,
         },
 
-        ID_imageP: {
-            type: dataTypes.INTEGER.UNSIGNED,
-
-        },
         ID_category: {
             type: dataTypes.INTEGER.UNSIGNED,
             allowNull: false,

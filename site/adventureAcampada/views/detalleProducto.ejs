@@ -71,15 +71,15 @@
             <!-- Boton desplegable de formas de envio -->
             <article>
                 <div class="dropdown form-floating d-flex flex-column">
-                    <button class="btn btn-success dropdown-toggle " type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                    Metodos de envios <i class="fas fa-truck"></i>
-                    
-                   <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                       <li><a class="dropdown-item" href="#">Retiro en sucursal</a></li>
-                       <li><a class="dropdown-item" href="#">Envio a domicilio</a></li>
-                       <li><a class="dropdown-item" href="#">Retirar en sucursal de correo</a></li>
-                   </ul></button>
-                </div>
+                        <button class="btn btn-success dropdown-toggle " type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                        Metodos de envios <i class="fas fa-truck"></i>
+                        </button>
+                       <ul class="dropdown-menu" id="a" aria-labelledby="dropdownMenuButton">
+                           <li><a href="#">Retiro en sucursal</a></li>
+                           <li><a href="#">Envio a domicilio</a></li>
+                           <li><a href="#">Retirar en sucursal de correo</a></li>
+                       </ul>
+                    </div>
             </article>
            <!-- Boton desplegable, medios de pago -->
             <article>
@@ -89,9 +89,9 @@
                             Medios de pago <i class="far fa-credit-card"></i> <i class="fas fa-credit-card"></i> 
                     </button>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <li><a class="dropdown-item" href="#">Efectivo, pagando en pagofacil o rapipago</a></li>
-                            <li><a class="dropdown-item" href="#">Debito automatico</a></li>
-                            <li><a class="dropdown-item" href="#">targeta de credito</a></li>
+                            <li><a href="#">Efectivo, pagando en pagofacil o rapipago</a></li>
+                            <li><a href="#">Debito automatico</a></li>
+                            <li><a href="#">targeta de credito</a></li>
                         </ul>
                  </div>
             </article>
@@ -122,28 +122,27 @@
     </article>
         <!-- Boton desplegable de formas de envio -->
         <article class="shipping col-sm-6 col-md-6 col-lg-4">
-            <div class="dropdown form-floating d-flex flex-column">
+            <div class="dropdown">
                 <button class="btn btn-success dropdown-toggle " type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
                 Metodos de envios <i class="fas fa-truck"></i>
                 </button>
                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                   <li><a class="dropdown-item" href="#">Retiro en sucursal</a></li>
-                   <li><a class="dropdown-item" href="#">Envio a domicilio</a></li>
-                   <li><a class="dropdown-item" href="#">Retirar en sucursal de correo</a></li>
+                   <li><a href="#">Retiro en sucursal</a></li>
+                   <li><a href="#">Envio a domicilio</a></li>
+                   <li><a href="#">Retirar en sucursal de correo</a></li>
                </ul>
             </div>
         </article>
        <!-- Boton desplegable, medios de pago -->
         <article class="pay col-sm-6 col-md-6 col-lg-4">
             <div class="dropdown">
-                <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton"
-                        data-bs-toggle="dropdown" aria-expanded="false">
+                <button class="btn btn-success dropdown-toggle " type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
                         Medios de pago <i class="far fa-credit-card"></i> <i class="fas fa-credit-card"></i> 
                 </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <li><a class="dropdown-item" href="#">Efectivo, pagando en pagofacil o rapipago</a></li>
-                        <li><a class="dropdown-item" href="#">Debito automatico</a></li>
-                        <li><a class="dropdown-item" href="#">targeta de credito</a></li>
+                        <li><a href="#">Efectivo, pagando en pagofacil o rapipago</a></li>
+                        <li><a href="#">Debito automatico</a></li>
+                        <li><a href="#">targeta de credito</a></li>
                     </ul>
              </div>
         </article>
@@ -220,7 +219,7 @@
     </main>
 
     <!-- SCRIPTS -->
-    <% include('partials/scripts')  %> 
+    <%- include('partials/scripts')  %> 
     <script src="/javascript/jquery-1.10.2.js"></script>
 	<script src="/javascript/owl.carousel.js"></script>
 	<script src="/javascript/script.js"></script>
