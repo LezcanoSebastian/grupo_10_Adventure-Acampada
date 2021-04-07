@@ -58,22 +58,6 @@
                       <span class="text-danger"><%= (typeof errores != 'undefined' && errores.password2 ? errores.password2.msg : null) %> </span>
                 </div>
             </article>
-            <article class="dato col-sm-12 col-md-6 col-lg-6">
-                <div class="form-floating d-flex flex-column mb-3">
-                    <select class="form-select" aria-label="Default select example" name="rol">
-                        <option selected hidden>Usuario Cliente</option>
-                        <option value="user">Si</option>
-                        <option value="admin">No</option>
-                    </select>
-                </div>
-            </article>
-            <article class="dato col-sm-12 col-md-12 col-lg-12">
-                <div class="input-group mb-3">
-                    <input type="file" class="formFile form-control" id="formFile" name="image">
-                    <label class="input-group-text" for="formFile" id="formFile">Subir Imagen</label>
-                    <span class="error" id="fileErrors"></span>
-                  </div>                    
-            </article>
             <div class="col-12">
                 <div class="form-check">
                   <input class="form-check-input" type="checkbox" id="gridCheck" name="bases" value="off">

@@ -312,6 +312,9 @@ header input[type="checkbox"]{
     -webkit-appearance: none;
     display: none;
 }
+header ul#a{
+  padding-left: 0;
+}
 
 @media(min-width:769px){
     header nav{
@@ -319,6 +322,29 @@ header input[type="checkbox"]{
     }
 }
 @media screen and (max-width:769px){
+  header li#escritorio.nav-item.dropdown{
+    position: relative;
+    order: -1;
+  }
+  header ul.dropdown-menu{
+    margin: 0;
+    display: contents;
+  }
+  header ul#a{
+    display: -webkit-inline-box;
+    padding-left: 0;
+  }
+  header .dropdown-menu.show{
+    display: contents;
+  }
+  header .dropdown-toggle::after{
+    display: none;
+  } 
+  header .dropdown-toggle{
+    display: block;
+  }
+
+
     header img.logoHeader{
         margin-top: 0px;
     }

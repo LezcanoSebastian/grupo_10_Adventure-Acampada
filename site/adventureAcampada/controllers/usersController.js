@@ -12,26 +12,32 @@ module.exports = {
         })
     },
     processRegister : (req,res) => {
-        let errores = validationResult(req);
+        const errores=validationResult(req);
         
-        if(errores.isEmpty()){
+        if(!errores.isEmpty()){
+            if(req.files[0]){
+                fs.unlinkSync('public/img/avatar/'+req.files[0].filename)
+            }
+            return res.render('users/login',{
+                errores : errores.mapped(),
+                old:req.body                
+            })
+        }else{
+            
+            
             const {firstName,lastName, email, password,rol,avatar} = req.body;
             db.users.create({
                 firstName : firstName.trim(),
                 lastName : lastName.trim(),
-                email,
+                email : email.trim(),
                 password : bcrypt.hashSync(password,12),
-                rol: "cliente",
+                rol : "user",
                 avatar : (req.files[0]) ? req.files[0].filename : "default.png"
             })
-            .then(()=>res.redirect('/users/login'))
-            .catch(error => res.send(error))
-        }else{
-            
-            return res.render('users/register',{
-                errores : errores.mapped(),
-                old: req.body
+            .then(()=>{
+                res.redirect('/users/login');
             })
+            .catch(error => console.log(error))
         }
     },
     login : (req,res) => {
@@ -121,10 +127,26 @@ module.exports = {
         .catch(error => res.send(error))
     },
     eliminar: (req, res) => {
-        db.users.destroy({
-            where : {
-                id : req.params.id
+        let user = db.users.findByPk(req.params.id);
+        let remove = db.users.destroy({
+            where: {
+                id: req.params.id
             }
+        });
+        
+        Promise.all([user,remove])
+        .then(([user,remove])=>{
+            
+            if(user.avatar != 'default.png') {
+                fs.unlinkSync('public/img/avatar/' + user.avatar)
+            }
+            
+            req.session.destroy();
+            if(req.cookies.recordar){
+                res.cookie('recordar','',{
+                    maxAge : -1
+                })
+            }            
         })
         .then(()=> res.redirect('/'))
         .catch(error => res.send(error))    
