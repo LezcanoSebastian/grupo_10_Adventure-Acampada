@@ -121,11 +121,11 @@
                 </article>
                 <article class="dato col-sm-12 col-md-12 col-lg-12">
                     <div class="input-group mb-3">
-                        <input type="file" class="formFile form-control" id="formFile" name="image" value="<%= (typeof old != 'undefined' && old.image-product ? old.image-product : null) %>">
+                        <input type="file" class="formFile form-control" id="formFile" name="image" value="<%= (typeof old != 'undefined' && old.image ? old.image : null) %>">
                        
                         <label class="input-group-text"  for="formFile">Subir Imagen</label>
                         <span class="error text-danger" id="fileErrors"></span>
-                        <span class="text-danger"><%= (typeof errores != 'undefined' && errores.image-product? errores.image-product.msg : null) %> </span>
+                        <span class="text-danger"><%= (typeof errores != 'undefined' && errores.image? errores.image.msg : null) %> </span>
                       </div>                    
                 </article>
                 <article class="dato col-sm-12 col-md-12 col-lg-12">

@@ -17,7 +17,7 @@ router.get('/',checkUser, checkAdmin, index);
 
 router.get('/products/list',checkUser, checkAdmin,  productsList);
 
-router.get('/products/create',checkUser, checkAdmin,   productsCreate);//trae el formulario nada mas
+router.get('/products/create',checkUser, checkAdmin, productValidator,   productsCreate);//trae el formulario nada mas
 router.post('/products/store',upload.any(), productValidator,checkUser, checkAdmin, productsStore);//crea el registro
 
 router.get('/products/edit/:id',checkUser, checkAdmin,   productsEdit);//trae el formulario nada mas

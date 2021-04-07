@@ -8,8 +8,8 @@ module.exports = [
 
     check('name')
     .isLength({
-        min : 5,
-        max : 20
+        min : 2,
+        max : 100
     })
     .withMessage('El nombre debe tener un min de 5 y max 20 caracteres'),
 
