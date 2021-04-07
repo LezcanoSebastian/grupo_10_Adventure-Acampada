@@ -30,7 +30,7 @@
                     <input type="password" class="password form-control" id="password"
                           placeholder="Password" name="password">
                       <label for="password" id="password">Password</label>
-                      <span class="text-danger"><%= typeof errores != "undefined" && errores.pass ? errores.pass.msg : null %> </span>
+                      <span class="text-danger"><%= typeof errores != "undefined" && errores.password ? errores.password.msg : null %> </span>
                       <span class="error" id="passErrors"></span>
                 </div>
                 
@@ -43,8 +43,8 @@
             <article class="dato col-sm-12 col-md-6 col-lg-6">
                 <div class="form-floating d-flex flex-column mb-3">
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="gridCheck">
-                        <label class="form-check-label" for="gridCheck" name="recordarme">
+                        <input class="form-check-input" type="checkbox" id="gridCheck" name="recordar">
+                        <label class="form-check-label" for="gridCheck">
                             Recordarme
                         </label>
                         <p class="registrate">¿No estas registrado? <a href="/users/register">Registrate</a></p>

@@ -65,7 +65,7 @@ module.exports = {
                         avatar : users.avatar
                     }
                     if(recordar){
-                        res.cookie('userAcampada',req.session.userLogin, {
+                        res.cookie('userAcampada',req.session.user, {
                             maxAge : 1000 * 60
                         })
                     }
