@@ -30,50 +30,57 @@
                 </article>
                 <article class="dato col-sm-12 col-md-6 col-lg-4">
                     <div class="form-floating d-flex flex-column mb-3">
-                        <input type="number" class="form-control" placeholder="Precio" name="price" value="<%= (typeof old != 'undefined' && old.price ? old.price : null) %>">
-                        <label for="floatingInput">Precio *</label>
+                        <input type="number" class="form-control" placeholder="Precio" id="price" name="price" value="<%= (typeof old != 'undefined' && old.price ? old.price : null) %>">
+                        <label for="price floatingInput">Precio *</label>
+                        <span class="error" id="priceErrors"></span>
                         <span class="text-danger"><%= (typeof errores != 'undefined' && errores.price? errores.price.msg : null) %> </span>
                     </div>
                 </article>
                 <article class="dato col-sm-12 col-md-6 col-lg-4">
                     <div class="form-floating d-flex flex-column mb-3">
-                        <input type="number" class="form-control" placeholder="Descuento" name="discount" value="<%= (typeof old != 'undefined' && old.discount ? old.discount : null) %>">
-                        <label for="floatingInput">Descuento %</label>
+                        <input type="number" class="form-control" placeholder="Descuento" id="discount" name="discount" value="<%= (typeof old != 'undefined' && old.discount ? old.discount : null) %>">
+                        <label for="discount floatingInput">Descuento %</label>
+                        <span class="error" id="discountErrors"></span>
                         <span class="text-danger"><%= (typeof errores != 'undefined' && errores.discount? errores.discount.msg : null) %> </span>
                     </div>
                 </article>
                 <article class="dato col-sm-12 col-md-6 col-lg-4">
                     <div class="form-floating d-flex flex-column mb-3">
-                        <input type="text" class="form-control" placeholder="Marca" name="mark" value="<%= (typeof old != 'undefined' && old.mark ? old.mark : null) %>">
-                        <label for="floatingInput">Marca *</label>
+                        <input type="text" class="form-control" placeholder="Marca" name="mark" id="mark" value="<%= (typeof old != 'undefined' && old.mark ? old.mark : null) %>">
+                        <label for="mark floatingInput">Marca *</label>
+                        <span class="error" id="markErrors"></span>
                         <span class="text-danger"><%= (typeof errores != 'undefined' && errores.mark? errores.mark.msg : null) %> </span>
                     </div>
                 </article>
                 <article class="dato col-sm-12 col-md-6 col-lg-4">
                     <div class="form-floating d-flex flex-column mb-3">
-                        <input type="text" class="form-control" placeholder="Origen" name="origin" value="<%= (typeof old != 'undefined' && old.origin ? old.origin : null) %>"> 
-                        <label for="floatingInput">Origen *</label>
+                        <input type="text" class="form-control" placeholder="Origen" name="origin" id="origin" value="<%= (typeof old != 'undefined' && old.origin ? old.origin : null) %>"> 
+                        <label for="origin floatingInput">Origen *</label>
+                        <span class="error" id="originErrors"></span>
                         <span class="text-danger"><%= (typeof errores != 'undefined' && errores.origin? errores.origin.msg : null) %> </span>
                     </div>
                 </article>
                 <article class="dato col-sm-12 col-md-6 col-lg-4">
                     <div class="form-floating d-flex flex-column mb-3">
-                        <input type="text" class="form-control" placeholder="Color" name="color" value="<%= (typeof old != 'undefined' && old.color ? old.color : null) %>">
-                        <label for="floatingInput">Color *</label>
+                        <input type="text" class="form-control" placeholder="Color" id="color" name="color" value="<%= (typeof old != 'undefined' && old.color ? old.color : null) %>">
+                        <label for="color floatingInput">Color *</label>
+                        <span class="error" id="colorErrors"></span>
                         <span class="text-danger"><%= (typeof errores != 'undefined' && errores.color? errores.color.msg : null) %> </span>
                     </div>
                 </article>
                 <article class="dato col-sm-12 col-md-6 col-lg-4">
                     <div class="form-floating d-flex flex-column mb-3">
-                        <input type="text" class="form-control" placeholder="Talle" name="size" value="<%= (typeof old != 'undefined' && old.size ? old.size : null) %>">
-                        <label for="floatingInput">Talle</label>
+                        <input type="text" class="form-control" placeholder="Talle" id="size" name="size" value="<%= (typeof old != 'undefined' && old.size ? old.size : null) %>">
+                        <label for="size floatingInput">Talle</label>
+                        <span class="error" id="sizeErrors"></span>
                         <span class="text-danger"><%= (typeof errores != 'undefined' && errores.size? errores.size.msg : null) %> </span>
                     </div>
                 </article>
                 <article class="dato col-sm-12 col-md-6 col-lg-4">
                     <div class="form-floating d-flex flex-column mb-3">
-                        <input type="text" class="form-control" placeholder="Material" name="material" value="<%= (typeof old != 'undefined' && old.material ? old.material : null) %>">
+                        <input type="text" class="form-control" placeholder="Material" id="material" name="material" value="<%= (typeof old != 'undefined' && old.material ? old.material : null) %>">
                         <label for="floatingInput">Material</label>
+                        <span class="error" id="materialErrors"></span>
                         <span class="text-danger"><%= (typeof errores != 'undefined' && errores.material? errores.material.msg : null) %> </span>
                     </div>
                 </article>
@@ -85,6 +92,7 @@
                                 <option value=" <%= categoria.id %> "><%= categoria.nombre %></option>
                             <% }) %>
                         </select>
+                        
                         <span class="text-danger"><%= (typeof errores != 'undefined' && errores.ID_category? errores.ID_category.msg : null) %> </span>
                     </div>
                 </article>
@@ -132,6 +140,7 @@
                     <div class="boton">
                         <button class="btn btn-primary" type="submit">Cancelar</button>
                         <button class="btn btn-primary" type="submit">Guardar</button>
+                        <span id="errorBoton" class="error text-danger"></span>
                     </div>
                 </article> 
                                
