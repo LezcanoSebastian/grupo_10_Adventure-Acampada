@@ -52,3 +52,26 @@ $pass.addEventListener('blur', function() {
     }
 })
 })
+window.addEventListener("load", () => {
+    let  $errorForm = qs("#errorBoton"),
+    $form = qs("#form")
+    $form.addEventListener("submit", function(event){
+        let error = false;
+        event.preventDefault()
+        console.log($form.elements)
+        let elementosForm = this.elements
+    
+        for (let index = 0; index < 2; index++) {
+          if (elementosForm[index].value == "") {
+            elementosForm[index].classList.add("invalido")
+            $errorForm.innerHTML = "Completa los campos para ingresar";
+            $errorForm.classList.add("errorFormulario")
+            error = true;
+          }
+        }
+    
+        if (!error) {
+          $form.submit()
+        }
+      })
+})

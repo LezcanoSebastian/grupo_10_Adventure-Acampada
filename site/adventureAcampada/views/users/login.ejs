@@ -14,7 +14,7 @@
 <!--Inicio Home-->
   <main class="container" id="loginRegister">
     <h1 class="text-center my-5">Login</h1>
-    <form action="/users/login" method="POST">
+    <form action="/users/login" method="POST" id="form">
         
         <section class="datos row">
             <article class="dato col-sm-12 col-md-6 col-lg-8">
@@ -51,6 +51,7 @@
                     </div>
                     <div class="modal-footer text-center">
                         <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+                        <span id="errorBoton" class="error text-danger"></span>
                     </div>
                 </div>
             </article>            
