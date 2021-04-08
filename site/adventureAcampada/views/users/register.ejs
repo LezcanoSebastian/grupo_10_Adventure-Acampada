@@ -14,7 +14,7 @@
 <!--Inicio Home-->
   <main class="container" id="loginRegister">
     <h1 class="text-center my-5">Registrarme</h1>
-    <form action="/users/register" method="POST" enctype="multipart/form-data">        
+    <form action="/users/register" method="POST" id="form" enctype="multipart/form-data">        
         <section class="datos row">
             <article class="dato col-sm-12 col-md-6 col-lg-6">
                 <div class="form-floating d-flex flex-column mb-3">
@@ -72,7 +72,7 @@
             <article class="dato col-sm-12 col-md-6 col-lg-4">
                 <div class="form-floating d-flex flex-column text-center mb-3">
                         <button type="submit"  class="btn btn-primary">Registrarme</button>
-                        <span id="errorBoton" class=""></span>
+                        <span id="errorBoton" class="error text-danger"></span>
                         <p class="mt-4">¿Estas registrado? <a href="/users/login">Inicia sesion</a> </p>
                 </div>
             </article>            

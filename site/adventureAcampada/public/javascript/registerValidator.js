@@ -32,8 +32,10 @@ window.addEventListener("load", () => {
                 break;
         }
     })
-    
+})
 
+/* Apellido */
+window.addEventListener("load", () => {
     let $inputLastName = qs('#lastName'),
     $lastNameErrors = qs('#lastNameErrors'),
     regExAlpha = /^[a-zA-Z\sñáéíóúü ]*$/
@@ -62,10 +64,10 @@ window.addEventListener("load", () => {
                 break;
         }
     })
-
+})
 
 /* email */
-
+window.addEventListener("load", () => {
     let $email = qs('#email'),
     $emailErrors = qs('#emailErrors'),
     regExEmail = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i
@@ -88,8 +90,11 @@ $email.addEventListener('blur', function() {
             break;
     }
 })
+})
 
-    $pass = qs('#password'),
+/* password */
+window.addEventListener("load", () => {
+  let  $pass = qs('#password'),
     $passErrors = qs('#passErrors'),
     regExPass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,12}$/;
     
@@ -110,9 +115,11 @@ $pass.addEventListener('blur', function() {
             break;
     }
 })
-
-$pass2 = qs('#password2'),
-$pass2Errors = qs('#pass2Errors'),
+})
+window.addEventListener("load", () => {
+let $pass2 = qs('#password2'),
+$pass = qs('#password'),
+ $pass2Errors = qs('#pass2Errors')
 $pass2.addEventListener('blur', function(){
     switch (true) {
         case !$pass2.value.trim():
@@ -130,79 +137,29 @@ $pass2.addEventListener('blur', function(){
             break;
     }
 })
-
-/* Imagenes */
-
-    $form = qs('#form'),
-    $terms = qs('#flexCheckDefault'),
-    $termsErrors = qs('#termErrors'),
-    submitErrors = qs('#submitErrors')
-$form.addEventListener('submit', function(event) {
-    let error = false;
-    event.preventDefault()
-    console.log($form.elements)
-    let elementosForm = this.elements
-
-    for (let index = 1; index < 6; index++){
-    if(elementosForm[index].value == ""){
-        elementosForm[index].classList.add('invalido');
-        submitErrors.innerHTML = "Los campos señalados son obligatorios.";
-        error = true;
-        }
-    }
-    
-    if(!$terms.checked){
-        $terms.classList.add('invalido');
-        $termsErrors.innerHTML = "Debes aceptar las bases y condiciones"
-        error = true
-    }
-
-    if(!error){
-        console.log('Todo bien');
-        $form.submit()
-    }
-
 })
 
-$form.addEventListener("submit", function(event){
-    let error = false;
-    event.preventDefault()
-    console.log($form.elements)
-    let elementosForm = this.elements
-
-    for (let index = 0; index < 12; index++) {
-      if (elementosForm[index].value == "") {
-        elementosForm[index].classList.add("invalido")
-        $errorForm.innerHTML = "Los campos señalados son obligatorios";
-        $errorForm.classList.add("errorFormulario")
-        error = true;
-      }
-    }
-
-    if (!error) {
-      $form.submit()
-    }
-  })
-
-  $form = qs("#form"),
-  $errorForm = qs("#errorBoton"),
-  $form.addEventListener("submit", function(event){
-    let error = false;
-    event.preventDefault()
-    console.log($form.elements)
-    let elementosForm = this.elements
-
-    for (let index = 0; index < 12; index++) {
-      if (elementosForm[index].value == "") {
-        elementosForm[index].classList.add("invalido")
-        $errorForm.innerHTML = "Los campos señalados son obligatorios";
-        $errorForm.classList.add("errorFormulario")
-        error = true;
-      }
-    }
-
-    if (!error) {
-      $form.submit()
-    }
-  })
+/* Imagenes */
+window.addEventListener("load", () => {
+    let  $errorForm = qs("#errorBoton"),
+    $form = qs("#form")
+    $form.addEventListener("submit", function(event){
+        let error = false;
+        event.preventDefault()
+        console.log($form.elements)
+        let elementosForm = this.elements
+    
+        for (let index = 0; index < 5; index++) {
+          if (elementosForm[index].value == "") {
+            elementosForm[index].classList.add("invalido")
+            $errorForm.innerHTML = "Los campos señalados son obligatorios";
+            $errorForm.classList.add("errorFormulario")
+            error = true;
+          }
+        }
+    
+        if (!error) {
+          $form.submit()
+        }
+      })
 })
