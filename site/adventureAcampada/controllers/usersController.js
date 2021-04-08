@@ -18,7 +18,7 @@ module.exports = {
             if(req.files[0]){
                 fs.unlinkSync('public/img/avatar/'+req.files[0].filename)
             }
-            return res.render('users/login',{
+            return res.render('users/register',{
                 errores : errores.mapped(),
                 old:req.body                
             })
