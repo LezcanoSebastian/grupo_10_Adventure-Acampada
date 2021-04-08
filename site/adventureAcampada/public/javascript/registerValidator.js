@@ -32,10 +32,8 @@ window.addEventListener("load", () => {
                 break;
         }
     })
-})
+    
 
-/* Apellido */
-window.addEventListener("load", () => {
     let $inputLastName = qs('#lastName'),
     $lastNameErrors = qs('#lastNameErrors'),
     regExAlpha = /^[a-zA-Z\sñáéíóúü ]*$/
@@ -64,10 +62,10 @@ window.addEventListener("load", () => {
                 break;
         }
     })
-})
+
 
 /* email */
-window.addEventListener("load", () => {
+
     let $email = qs('#email'),
     $emailErrors = qs('#emailErrors'),
     regExEmail = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i
@@ -90,10 +88,7 @@ $email.addEventListener('blur', function() {
             break;
     }
 })
-})
 
-/* password */
-window.addEventListener("load", () => {
     $pass = qs('#password'),
     $passErrors = qs('#passErrors'),
     regExPass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,12}$/;
@@ -115,8 +110,7 @@ $pass.addEventListener('blur', function() {
             break;
     }
 })
-})
-window.addEventListener("load", () => {
+
 $pass2 = qs('#password2'),
 $pass2Errors = qs('#pass2Errors'),
 $pass2.addEventListener('blur', function(){
@@ -136,10 +130,9 @@ $pass2.addEventListener('blur', function(){
             break;
     }
 })
-})
 
 /* Imagenes */
-window.addEventListener("load", () => {
+
     $form = qs('#form'),
     $terms = qs('#flexCheckDefault'),
     $termsErrors = qs('#termErrors'),
@@ -171,4 +164,45 @@ $form.addEventListener('submit', function(event) {
 
 })
 
+$form.addEventListener("submit", function(event){
+    let error = false;
+    event.preventDefault()
+    console.log($form.elements)
+    let elementosForm = this.elements
+
+    for (let index = 0; index < 12; index++) {
+      if (elementosForm[index].value == "") {
+        elementosForm[index].classList.add("invalido")
+        $errorForm.innerHTML = "Los campos señalados son obligatorios";
+        $errorForm.classList.add("errorFormulario")
+        error = true;
+      }
+    }
+
+    if (!error) {
+      $form.submit()
+    }
+  })
+
+  $form = qs("#form"),
+  $errorForm = qs("#errorBoton"),
+  $form.addEventListener("submit", function(event){
+    let error = false;
+    event.preventDefault()
+    console.log($form.elements)
+    let elementosForm = this.elements
+
+    for (let index = 0; index < 12; index++) {
+      if (elementosForm[index].value == "") {
+        elementosForm[index].classList.add("invalido")
+        $errorForm.innerHTML = "Los campos señalados son obligatorios";
+        $errorForm.classList.add("errorFormulario")
+        error = true;
+      }
+    }
+
+    if (!error) {
+      $form.submit()
+    }
+  })
 })
