@@ -18,10 +18,17 @@
                     <li><a href="#"><i class="bi bi-cart3"></i></a></li>
                     
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
-                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="fas fa-user-circle"></i>Ingresar
-                        </a>
+                        <a class="perfil-header nav-link dropdown-toggle" href="#" id="navbarDropdown"
+                        role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <% if (typeof user != 'undefined') { %> 
+                       <img src="/img/avatar/<%= user.avatar %> "  alt="users"
+                            class="rounded-circle" width="30" />
+                            <% }else{ %> 
+                                <img src="/img/avatar/default.png "  alt="users"
+                            class="rounded-circle" width="30" />
+                                <% } %> 
+
+                    </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown"> 
                             <!-- Aca 2 -->
                             <% if (typeof user != 'undefined') { %>

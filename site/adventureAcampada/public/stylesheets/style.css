@@ -549,3 +549,14 @@ section article.dato.col-md-6{
 ul.dropdown-menu.show{
   background-color: #170B3B;
 }
+
+a#navbarDropdown.perfil-header.nav-link.dropdown-toggle{
+ margin: 0!important;
+ padding: 0!important;
+}
+
+
+/* icono de buscar */
+.fa-search:hover{
+  background-color: white;
+}
