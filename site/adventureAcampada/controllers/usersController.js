@@ -15,6 +15,9 @@ module.exports = {
         const errores=validationResult(req);
         
         if(!errores.isEmpty()){
+            if(req.files[0]){
+                fs.unlinkSync('public/img/avatar/'+req.files[0].filename)
+            };
             return res.render('users/register',{
                 errores : errores.mapped(),
                 old:req.body                
@@ -167,7 +170,7 @@ module.exports = {
             db.users.update({
                 firstName : firstName,
                 lastName : lastName,
-                avatar : (req.files[0]) ? req.files[0].filename : `${avatar}`,
+                avatar : (req.files[0]) ? req.files[0].filename : avatar,
                 telefono : telefono
             },
             {
@@ -180,7 +183,7 @@ module.exports = {
             })
             .catch(error => res.send(error))
         }else{
-            return res.render('users/profile/'+req.params.id,{
+            return res.render('users/profile',{
                 errores : errores.mapped(),
                 old: req.body
             })

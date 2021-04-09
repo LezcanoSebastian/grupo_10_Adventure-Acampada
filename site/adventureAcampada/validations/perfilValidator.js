@@ -29,6 +29,9 @@ module.exports = [
         min : 7,
         max : 20
     })
-    .withMessage('El telefono debe tener un min de 7 y max 20 caracteres')
+    .withMessage('El telefono debe tener un min de 7 y max 20 caracteres'),
 
+    check('telefono')
+    .notEmpty()
+    .withMessage('El telefono debe tener un min de 7 y max 20 caracteres')
 ]
