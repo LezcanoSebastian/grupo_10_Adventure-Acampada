@@ -18,50 +18,57 @@
 
     <main class="container" style="margin-top: 150px;">
         <h1 class="text-center my-5">registro de producto</h1>
-        <form action="/admin/products/update/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+        <form action="/admin/products/update/<%= product.id %>?_method=PUT" id="form" method="POST" enctype="multipart/form-data">
             <h3>Editar</h3>
             <section class="datos row">
                 <article class="dato col-sm-12 col-md-6 col-lg-4">
                     <div class="form-floating d-flex flex-column mb-3">
-                        <input type="text" class="name form-control" id="name" placeholder="Titulo del Anuncio" name="name" value="<%= product.name %>">
+                        <input type="text" id="name" class="name form-control" id="name" placeholder="Titulo del Anuncio" name="name" value="<%= product.name %>">
                         <label for="name" id="name">Titulo del Anuncio *</label>
+                        <span class="error" id="nameErrors"></span>
                     </div>
                 </article>
 
                 <article class="dato col-sm-12 col-md-6 col-lg-4">
                     <div class="form-floating d-flex flex-column mb-3">
-                        <input type="number" class="form-control" id="floatingInput" placeholder="Precio" name="price" value="<%= product.price %>">
-                        <label for="floatingInput">Precio *</label>
+                        <input type="number" id="price" class="form-control" id="floatingInput" placeholder="Precio" name="price" value="<%= product.price %>">
+                        <label for="price floatingInput">Precio *</label>
+                        <span class="error" id="priceErrors"></span>
                     </div>
                 </article>
                 <article class="dato col-sm-12 col-md-6 col-lg-4">
                     <div class="form-floating d-flex flex-column mb-3">
-                        <input type="number" class="form-control" id="floatingInput" placeholder="Descuento" name="discount" value="<%= product.discount %>">
-                        <label for="floatingInput">Descuento %</label>
+                        <input type="number" id="discount" class="form-control" id="floatingInput" placeholder="Descuento" name="discount" value="<%= product.discount %>">
+                        <label for="discount floatingInput">Descuento %</label>
+                        <span class="error" id="discountErrors"></span>
                     </div>
                 </article>
                 <article class="dato col-sm-12 col-md-6 col-lg-4">
                     <div class="form-floating d-flex flex-column mb-3">
-                        <input type="text" class="form-control" id="floatingInput" placeholder="Marca" name="mark" value="<%= product.mark %>">
-                        <label for="floatingInput">Marca *</label>
+                        <input type="text" id="mark" class="form-control" id="floatingInput" placeholder="Marca" name="mark" value="<%= product.mark %>">
+                        <label for="mark floatingInput">Marca *</label>
+                        <span class="error" id="markErrors"></span>
                     </div>
                 </article>
                 <article class="dato col-sm-12 col-md-6 col-lg-4">
                     <div class="form-floating d-flex flex-column mb-3">
-                        <input type="text" class="form-control" id="floatingInput" placeholder="Origen" name="origin" value="<%= product.origin %>">
-                        <label for="floatingInput">Origen *</label>
+                        <input type="text" id="origin" class="form-control" id="floatingInput" placeholder="Origen" name="origin" value="<%= product.origin %>">
+                        <label for="origin floatingInput">Origen *</label>
+                        <span class="error" id="originErrors"></span>
                     </div>
                 </article>
                 <article class="dato col-sm-12 col-md-6 col-lg-4">
                     <div class="form-floating d-flex flex-column mb-3">
-                        <input type="text" class="form-control" id="floatingInput" placeholder="Color" name="color" value="<%= product.color %>">
-                        <label for="floatingInput">Color *</label>
+                        <input type="text" id="color" class="form-control" id="floatingInput" placeholder="Color" name="color" value="<%= product.color %>">
+                        <label for="color floatingInput">Color *</label>
+                        <span class="error" id="colorErrors"></span>
                     </div>
                 </article>
                 <article class="dato col-sm-12 col-md-6 col-lg-4">
                     <div class="form-floating d-flex flex-column mb-3">
-                        <input type="text" class="form-control" id="floatingInput" placeholder="Talle" name="size" value="<%= product.size %>">
-                        <label for="floatingInput">Talle</label>
+                        <input type="text" id="size" class="form-control" id="floatingInput" placeholder="Talle" name="size" value="<%= product.size %>">
+                        <label for="size floatingInput">Talle</label>
+                        <span class="error" id="sizeErrors"></span>
                     </div>
                 </article>
                 <article class="dato col-sm-12 col-md-6 col-lg-4">
@@ -75,8 +82,9 @@
                         </select>
                     </div>
                     <div class="form-floating d-flex flex-column mb-3">
-                        <input type="text" class="form-control" id="floatingInput" placeholder="Material" name="material" value="<%= product.material %>">
-                        <label for="floatingInput">Material</label>
+                        <input type="text" id="material" class="form-control" id="floatingInput" placeholder="Material" name="material" value="<%= product.material %>">
+                        <label for="material floatingInput">Material</label>
+                        <span class="error" id="materialErrors"></span>
                     </div>
                 </article>
               
@@ -120,6 +128,7 @@
                 <article class="dato col-sm-12 col-md-12 col-lg-12">
                     <div class="boton">
                         <button class="btn btn-primary" type="submit">Guardar los Cambios</button>
+                        <span id="errorBoton" class="error text-danger"></span>
                     </div>
                 </article> 
                                
