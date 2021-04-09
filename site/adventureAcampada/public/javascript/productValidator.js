@@ -227,7 +227,8 @@ function fileValidation(){
 /* Formulario */
 window.addEventListener("load", () => {
     let  $errorForm = qs("#errorBoton"),
-    $form = qs("#form")
+    $form = qs("#form"),
+    $cancelar= qs("#cancelar")
     $form.addEventListener("submit", function(event){
         let error = false;
         event.preventDefault()
@@ -243,8 +244,11 @@ window.addEventListener("load", () => {
           }
         }
     
-        if (!error) {
+        if (!error)  {
           $form.submit()
+        } else if($cancelar){
+            error = false;
+            
         }
       })
 })

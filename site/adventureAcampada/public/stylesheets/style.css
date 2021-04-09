@@ -560,3 +560,9 @@ a#navbarDropdown.perfil-header.nav-link.dropdown-toggle{
 .fa-search:hover{
   background-color: white;
 }
+
+/* Vista de lista centrado */
+div.row.cuerpo-lista{
+  padding: 10px;
+  justify-content: center;
+}
