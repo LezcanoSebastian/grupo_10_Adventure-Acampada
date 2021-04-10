@@ -22,10 +22,10 @@
                       role="button" data-bs-toggle="dropdown" aria-expanded="false">
                       <% if (typeof user != 'undefined') { %> 
                      <img src="/img/avatar/<%= user.avatar %> "  alt="users"
-                          class="rounded-circle" width="30" />
+                          class="rounded-circle"  />
                           <% }else{ %> 
                               <img src="/img/avatar/default.png "  alt="users"
-                          class="rounded-circle" width="30" />
+                          class="rounded-circle"  />
                               <% } %> 
 
                   </a>
@@ -37,7 +37,7 @@
                                 
                                   <li><a href="/users/profile/<%=user.id %> ">Mi Perfil</a></li>
                                   <% if (user.rol==="admin") { %>
-                                    <li><a  href="/admin">Administrar</a></li>
+                                   
                                     <li><a href="/admin/products/list">Lista de productos</a></li>
                                     <li><a href="/admin/products/create">Cargar producto</a></li>
                                     <% } %>

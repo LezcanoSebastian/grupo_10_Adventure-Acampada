@@ -49,6 +49,12 @@ module.exports = (sequelize, dataTypes) => {
         discount: {
             type: dataTypes.FLOAT
         },
+        material: {
+            type: dataTypes.STRING(45),  
+        },
+        origin: {
+            type: dataTypes.STRING(45),  
+        }
        
     };
 

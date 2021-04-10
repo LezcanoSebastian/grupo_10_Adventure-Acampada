@@ -4,7 +4,7 @@
 <!-- HEAD -->
 <%- include('partials/head')  %>  
 <link rel="stylesheet" href="../../stylesheets/style2.css"> 
-<link rel="stylesheet" href="../../../stylesheets/style.css">
+<link rel="stylesheet" href="../../../stylesheets/list.css">
 <!-- /HEAD -->
 
 <!-- CSS -->
@@ -27,7 +27,7 @@
     <div class="row">
     <% products.forEach(product => { %>
       <article class="col-sm-12 col-md-4 col-lg-3 ">
-        <div class="targeta-product-admin">
+        <div class="targeta-product-admin col-12">
           <div class="product">
             <a href="/products/detail/<%- product.id %> ">
               <img src="/img/products/<%= product.imagenes[0].image %>" alt="imagen de producto">
@@ -35,14 +35,17 @@
               <p><%- product.name %></p>
             </a>
           </div>
-          <div class="botones-admin">
+          
             <div class="m-4 d-flex">
-                <a href="/admin/products/edit/<%= product.id %> " class="btn btn-sm btn-success">Editar</a>
+              <form action="/admin/products/edit/<%= product.id %>">
+                 <button class="btn btn-sm btn-warning btn-lg botones-admin"  type="submit">editar</button>
+                </form>
+                
                 <form action="/admin/products/delete/<%= product.id %>?_method=DELETE " method="POST">
-                  <button class="btn btn-sm btn-danger" type="submit">Eliminar</button>
+                  <button class="btn btn-sm btn-danger btn-lg botones-admin"  type="submit">Eliminar</button>
                 </form>
             </div>
-          </div>
+          
 
         </div>
         

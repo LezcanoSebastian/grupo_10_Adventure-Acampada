@@ -44,7 +44,7 @@
                             <img src="/img/products/<%= product.imagenes[0].image %>" class="d-block w-100" alt="...">
                           </div>
                           <div class="carousel-item">
-                            <img src="/img/products/" class="d-block w-100" alt="...">
+                            <img src="/img/products/<%= product.imagenes[0].image %>" class="d-block w-100" alt="...">
                           </div>
                     </div>
                           <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
@@ -165,7 +165,7 @@
                    <h3>Nombre: <%= product.name %></h3>
                     <h6>Material: <%= product.material %></h6>
                     <h6>Color: <%= product.color %></h6>
-                    <h6>Origen: <%= product.origen %></h6>
+                    <h6>Origen: <%= product.origin %></h6>
                     <h6>Envios: <%= product.delibery %></h6>
                     <h6>Cantidad disponible: <%= product.stock %></h6>
                     

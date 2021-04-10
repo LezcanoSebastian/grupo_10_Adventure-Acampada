@@ -159,14 +159,6 @@ main .cuerpo.container{
 
 
 
-/* Footer */
-footer .container-fluid div ul li a{
-    color: white;
-}
-footer .container-fluid div ul li p{
-    color: white;
-}
-
 
 /* Descripcion de detalle del producto */
 .nombre-del-producto{
@@ -211,3 +203,27 @@ h1.nombre-del-producto{
 ul li:hover a{
     color: #2dc997;
 }
+
+/* Configuarcion de la imagen de producto en vista mibile */
+@media (min-width: 426px){
+section .carousel .carousel-inner img {
+    height: 250px;
+}
+.img-product {
+    margin-top: 13.5px;
+    height: 250px;
+}
+section .carousel .carousel-inner{
+    height: 250px;
+}
+}
+section .carousel .carousel-inner{
+    height: 250px;
+}
+section .carousel .carousel-inner img {
+    height: 250px;
+}
+
+
+
+/* Carrusel */

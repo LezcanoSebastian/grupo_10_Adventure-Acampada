@@ -566,3 +566,20 @@ div.row.cuerpo-lista{
   padding: 10px;
   justify-content: center;
 }
+
+
+/* header mobile/tablet */
+@media (max-width: 768px){
+#header{
+padding: 0!important;
+}}
+/* header image */
+img.rounded-circle{
+  width: 130px;
+}
+@media (min-width: 769px){
+  img.rounded-circle{
+    width: 35px;
+    margin-left: 5px;
+  }
+}
