@@ -1,3 +1,6 @@
+li#centro{
+  margin-top: 5px;
+}
 main section.carousel{
   display: none;
 }
@@ -248,7 +251,7 @@ main .container .product:hover {
 @media(min-width:1025px) {
   main #services h4.title{
     text-align: center;
-    width: 370px;
+    width: auto;
   }
 }
 
