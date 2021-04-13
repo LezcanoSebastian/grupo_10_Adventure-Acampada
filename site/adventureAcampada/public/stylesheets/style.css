@@ -567,6 +567,12 @@ div.row.cuerpo-lista{
   justify-content: center;
 }
 
+center img#cardAvatar.rounded-circle{
+  width: 150px;
+}
+li#centro{
+  margin-top: 5px;
+}
 
 /* header mobile/tablet */
 @media (max-width: 768px){
