@@ -86,35 +86,37 @@
                 </article>
                 <article class="dato col-sm-12 col-md-6 col-lg-4">
                     <div class="form-floating d-flex flex-column mb-3">
-                        <select class="form-select" aria-label="Default select example" name="ID_category" value="<%= (typeof old != 'undefined' && old.ID_category ? old.ID_category : null) %>">
+                        <select class="form-select" aria-label="Default select example" id="ID_category" name="ID_category" value="<%= (typeof old != 'undefined' && old.ID_category ? old.ID_category : null) %>">
                             <option selected hidden>Categoria</option>
                             <% categorias.forEach(categoria => {%>
                                 <option value=" <%= categoria.id %> "><%= categoria.nombre %></option>
                             <% }) %>
                         </select>
-                        
+                        <span class="error" id="categoryErrors"></span>
                         <span class="text-danger"><%= (typeof errores != 'undefined' && errores.ID_category? errores.ID_category.msg : null) %> </span>
                     </div>
                 </article>
                 <article class="dato col-sm-12 col-md-6 col-lg-4">
                     <div class="form-floating d-flex flex-column mb-3">
-                        <select class="form-select" name="stock" aria-label="Default select example" id="stock" value="<%= (typeof old != 'undefined' && old.stock ? old.stock : null) %>">
+                        <select class="form-select" name="stock" id="stock" aria-label="Default select example" id="stock" value="<%= (typeof old != 'undefined' && old.stock ? old.stock : null) %>">
                             <option selected disabled>Stock</option>
                             <% for(let i=0;i < 10;i++){%> 
                                 <option value=" <%= i %> "><%= i %></option>
                             <% } %>
                         </select>
+                        <span class="error" id="stockErrors"></span>
                         <span class="text-danger"><%= (typeof errores != 'undefined' && errores.stock? errores.stock.msg : null) %> </span>
                     </div>
                 </article>
                 <article class="dato col-sm-12 col-md-6 col-lg-4">
                     <div class="form-floating d-flex flex-column mb-3">
-                        <select class="form-select delibery" name="delibery" aria-label="Default select example" id="delibery" value="<%= (typeof old != 'undefined' && old.delibery ? old.delibery : null) %>">
+                        <select class="form-select delibery" name="delibery" id="delibery" aria-label="Default select example" id="delibery" value="<%= (typeof old != 'undefined' && old.delibery ? old.delibery : null) %>">
                             <option selected hidden>Envio</option>                          
                             <option value="Si">Si</option>
                             <option value="No">No</option>
                             <option value="Consultar al vendedor">Consultar al vendedor</option>
                         </select>
+                        <span class="error" id="deliberyErrors"></span>
                         <span class="text-danger"><%= (typeof errores != 'undefined' && errores.delibery? errores.delibery.msg : null) %> </span>
                     </div>
                 </article>

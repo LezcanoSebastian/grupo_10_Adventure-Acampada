@@ -73,13 +73,13 @@
                 </article>
                 <article class="dato col-sm-12 col-md-6 col-lg-4">
                     <div class="form-floating d-flex flex-column mb-3">
-                        <select class="form-select" aria-label="Default select example" name="ID_category">
+                        <select class="form-select" id="ID_category" aria-label="Default select example" name="ID_category">
                             <option selected hidden>Categoria</option>
                             <% categorias.forEach(categoria => { %>
                                 <option value="<%= categoria.id %>"><%= categoria.nombre %></option>
                             <% }) %>
-
                         </select>
+                        <span class="error" id="categoryErrors"></span>
                     </div>
                     <div class="form-floating d-flex flex-column mb-3">
                         <input type="text" id="material" class="form-control" id="floatingInput" placeholder="Material" name="material" value="<%= product.material %>">
@@ -90,25 +90,24 @@
               
                 <article class="dato col-sm-12 col-md-6 col-lg-4">
                     <div class="form-floating d-flex flex-column mb-3">
-                        <select class="form-select" name="stock" aria-label="Default select example" id="stock">
+                        <select class="form-select" id="stock" name="stock" aria-label="Default select example" id="stock">
                             <option selected disabled>Stock</option>
                             <% for( let i = 1; i < 11; i++ ) { %>
                             <option value="<%= i %>"><%= i %></option>
                             <% } %>
-                            
-                            
                         </select>
+                        <span class="error" id="stockErrors"></span>
                     </div>
                 </article>
                 <article class="dato col-sm-12 col-md-6 col-lg-4">
                     <div class="form-floating d-flex flex-column mb-3">
-                        <select class="form-select delibery" name="delibery" aria-label="Default select example" id="delibery">
+                        <select class="form-select delibery" name="delibery" id="delibery" aria-label="Default select example" id="delibery">
                             <option selected disabled>Envio</option>
                             <option value="Si">Si</option>
                             <option value="No">No</option>
                             <option value="Consultar al vendedor">Consultar al vendedor</option>
                         </select>
-                    </div>
+                        <span class="error" id="deliberyErrors"></span>
                 </article>
                 <article class="dato col-sm-12 col-md-12 col-lg-12">
                     <div class="form-floating d-flex flex-column mb-3">

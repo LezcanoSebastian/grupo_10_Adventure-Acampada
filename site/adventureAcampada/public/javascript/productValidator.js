@@ -178,7 +178,6 @@ window.addEventListener("load", () => {
 
 /* Descripcion */
 
-
 window.addEventListener("load", () => {
     let $inputDescription = qs('#description'),/* nombre del producto */
         $descriptionErrors = qs('#descriptionErrors'),
@@ -224,6 +223,70 @@ function fileValidation(){
 })
 })
 
+/* categoria */
+window.addEventListener("load", () => {
+    let $inputCategory = qs('#ID_category'),
+    $categoryErrors = qs('#categoryErrors')
+
+    $inputCategory.addEventListener('blur', function(){
+        console.log($inputCategory.value.trim())
+        switch (true) {
+            case !$inputCategory.value.trim():
+                $categoryErrors.innerHTML = 'El campo categoria es obligatorio'
+                $inputCategory.classList.add('is-invalid')
+                break;  
+    
+            default:
+                $inputCategory.classList.remove('is-invalid');
+                $inputCategory.classList.add('is-valid');
+                $categoryErrors.innerHTML = ''
+                break;
+        }
+    })
+})
+/* Stock */
+window.addEventListener("load", () => {
+    let $inputStock = qs('#stock'),
+    $stockErrors = qs('#stockErrors')
+
+    $inputStock.addEventListener('blur', function(){
+        console.log($inputStock.value.trim())
+        switch (true) {
+            case !$inputStock.value.trim():
+                $stockErrors.innerHTML = 'El campo stock es obligatorio'
+                $inputStock.classList.add('is-invalid')
+                break;  
+    
+            default:
+                $inputStock.classList.remove('is-invalid');
+                $inputStock.classList.add('is-valid');
+                $stockErrors.innerHTML = ''
+                break;
+        }
+    })
+})
+/* Envios */
+window.addEventListener("load", () => {
+    let $inputDelibery = qs('#delibery'),
+    $deliberyErrors = qs('#deliberyErrors')
+
+    $inputDelibery.addEventListener('blur', function(){
+        console.log($inputDelibery.value.trim())
+        switch (true) {
+            case !$inputDelibery.value.trim():
+                $deliberyErrors.innerHTML = 'El campo envio es obligatorio'
+                $inputDelibery.classList.add('is-invalid')
+                break;  
+    
+            default:
+                $inputDelibery.classList.remove('is-invalid');
+                $inputDelibery.classList.add('is-valid');
+                $deliberyErrors.innerHTML = ''
+                break;
+        }
+    })
+})
+
 /* Formulario */
 window.addEventListener("load", () => {
     let  $errorForm = qs("#errorBoton"),
@@ -236,7 +299,7 @@ window.addEventListener("load", () => {
         let elementosForm = this.elements
     
         for (let index = 0; index < 12; index++) {
-          if (elementosForm[index].value == "") {
+          if (elementosForm[index].value == "" || elementosForm[index].value == "Categoria" || elementosForm[index].value == "Stock" || elementosForm[index].value == "Envio") {
             elementosForm[index].classList.add("is-invalid")
             $errorForm.innerHTML = "Completa los campos para ingresar";
             $errorForm.classList.add("errorFormulario")
