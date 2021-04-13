@@ -66,11 +66,29 @@ window.addEventListener("load", () => {
     })
 })
 
+/* Telefono */
+window.addEventListener("load", () => {
+    let $inputtelefono = qs('#telefono'),
+    $telefonoErrors = qs('#telefonoErrors')
+
+    $inputtelefono.addEventListener('blur', function(){
+        console.log($inputtelefono.value.trim())
+        switch (true) {
+            case !$inputtelefono.value.trim():
+                $telefonoErrors.innerHTML = 'El campo apellido es obligatorio'
+                $inputtelefono.classList.add('is-invalid')
+                break;         
+            default:
+                $inputtelefono.classList.remove('is-invalid');
+                $inputtelefono.classList.add('is-valid');
+                $telefonoErrors.innerHTML = ''
+                break;
+        }
+    })
+})
 
 
-
-
-/* Imagenes */
+/* Form */
 window.addEventListener("load", () => {
     let  $errorForm = qs("#errorBoton"),
     $form = qs("#form")
@@ -82,8 +100,8 @@ window.addEventListener("load", () => {
     
         for (let index = 0; index < 3; index++) {
           if (elementosForm[index].value == "") {
-            elementosForm[index].classList.add("invalido")
-            $errorForm.innerHTML = "Los campos señalados son obligatorios";
+            elementosForm[index].classList.add("is-invalid")
+            $errorForm.innerHTML = "Los campos señalados deben ser completados";
             $errorForm.classList.add("errorFormulario")
             error = true;
           }

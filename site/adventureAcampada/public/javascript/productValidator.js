@@ -237,18 +237,16 @@ window.addEventListener("load", () => {
     
         for (let index = 0; index < 12; index++) {
           if (elementosForm[index].value == "") {
-            elementosForm[index].classList.add("invalido")
+            elementosForm[index].classList.add("is-invalid")
             $errorForm.innerHTML = "Completa los campos para ingresar";
             $errorForm.classList.add("errorFormulario")
             error = true;
           }
         }
-    
+       
         if (!error)  {
           $form.submit()
-        } else if($cancelar){
-            error = false;
-            
         }
+    
       })
 })

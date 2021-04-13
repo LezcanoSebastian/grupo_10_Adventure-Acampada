@@ -63,7 +63,7 @@ window.addEventListener("load", () => {
     
         for (let index = 0; index < 2; index++) {
           if (elementosForm[index].value == "") {
-            elementosForm[index].classList.add("invalido")
+            elementosForm[index].classList.add("is-invalid")
             $errorForm.innerHTML = "Completa los campos para ingresar";
             $errorForm.classList.add("errorFormulario")
             error = true;

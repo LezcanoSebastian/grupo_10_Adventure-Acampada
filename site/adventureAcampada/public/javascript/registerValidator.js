@@ -139,19 +139,31 @@ $pass2.addEventListener('blur', function(){
 })
 })
 
-/* Imagenes */
+window.addEventListener('load', ()=> {
+    let $terms = document.querySelector("#gridCheck"),
+    $termsErrors = qs("#termErrors")
+    $terms.addEventListener('click',function(){
+        $terms.value = 'on'
+        $terms.classList.toggle('is-valid');
+        $terms.classList.remove('is-invalid');
+        $termsErrors.innerHTML = ""
+    })
+})
+
+
+
+/* formulario */
 window.addEventListener("load", () => {
     let  $errorForm = qs("#errorBoton"),
     $form = qs("#form")
     $form.addEventListener("submit", function(event){
         let error = false;
         event.preventDefault()
-        console.log($form.elements)
-        let elementosForm = this.elements
-    
-        for (let index = 0; index < 5; index++) {
-          if (elementosForm[index].value == "") {
-            elementosForm[index].classList.add("invalido")
+        let elementosForm = this.elements  
+        for (let index = 0; index < 6; index++) {
+            console.log(elementosForm[index])
+          if (elementosForm[index].value == "" || elementosForm[index].value == "off") {
+            elementosForm[index].classList.add("is-invalid")
             $errorForm.innerHTML = "Los campos señalados son obligatorios";
             $errorForm.classList.add("errorFormulario")
             error = true;
@@ -162,4 +174,4 @@ window.addEventListener("load", () => {
           $form.submit()
         }
       })
-})
+      })
