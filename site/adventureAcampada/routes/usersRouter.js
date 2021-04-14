@@ -7,6 +7,8 @@ const uploadImages = require('../middlewares/uploadImages');
 const registerValidator = require('../validations/registerValidator');
 const loginValidator = require('../validations/loginValidator');
 const perfilValidator = require('../validations/perfilValidator');
+const checkUser = require('../middlewares/checkUser');
+
 
 
 router.get('/register',register);
@@ -15,15 +17,15 @@ router.post('/register',uploadImages.any(),registerValidator, processRegister);
 router.get('/login',login);
 router.post('/login',loginValidator,processLogin);
 
-router.get('/indexUser/:id',indexUser);
+router.get('/indexUser/:id',checkUser,indexUser);
 
-router.get('/profile/:id', profile);
-router.get('/profile/edit/:id', edit);
-router.put('/profile/update/:id',uploadImages.any(), perfilValidator, update);
+router.get('/profile/:id', checkUser,profile);
+router.get('/profile/edit/:id', checkUser,edit);
+router.put('/profile/update/:id',uploadImages.any(), perfilValidator, checkUser,update);
 
-router.delete('/delete/:id',eliminar);
+router.delete('/delete/:id',checkUser,eliminar);
 
-router.get('/logout',logout);
+router.get('/logout',checkUser,logout);
 
 
 
