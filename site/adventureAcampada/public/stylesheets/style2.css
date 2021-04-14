@@ -323,9 +323,6 @@ main div.row.justify-content-center{
   width: 216px;
 }
 
-main #contact {
-  padding: 80px 0 40px 0;
-}
 
 main #contact #google-map {
   height: 300px;
@@ -500,6 +497,103 @@ footer div.contactar.col-sm-3.col-md-3.col-lg-3 ul li a.nav-link{
   color: #ccc;
 }
 
+#fh5co-footer {
+  padding: 2em 0;
+}
+@media screen and (max-width: 768px) {
+  #fh5co-footer {
+    padding: 2em 1em;
+  }
+}
+#fh5co-footer {
+  background: #fff;
+}
+#fh5co-footer a {
+  color: #74889e;
+}
+#fh5co-footer a:hover {
+  color: #fff !important;
+  background: #2dc997;
+  text-decoration: underline;
+}
+
+#fh5co-footer .section-title-footer {
+  font-size: 22px;
+  color: black;
+  position: relative;
+  padding-bottom: 20px;
+}
+#fh5co-footer .section-title-footer:after {
+  position: absolute;
+  content: '';
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 35px;
+  height: 2px;
+  background:  #2dc997;
+}
+#fh5co-footer .copy-right {
+  position: relative;
+  padding-top: 20px;
+  margin-top: 40px;
+}
+#fh5co-footer .copy-right > a {
+  color:  #2dc997;
+}
+#fh5co-footer .copy-right:after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  display: block;
+  width: 35px;
+  height: 2px;
+  background:  #2dc997;
+}
+#fh5co-footer .contact-info {
+  margin: 0 0 60px 0;
+  padding: 0;
+}
+#fh5co-footer .contact-info li {
+  font-size: 14px;
+  list-style: none;
+  margin: 0 0 20px 0;
+  position: relative;
+  padding-left: 40px;
+  color: #111;
+}
+#fh5co-footer .contact-info li a {
+  color: #111;
+}
+#fh5co-footer .contact-info li i {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 20px;
+  color:  #2dc997;
+  color: #555863;
+}
+#fh5co-footer .social-media {
+  margin: 0 0 30px 0;
+  padding: 0;
+}
+#fh5co-footer .social-media li {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  font-size: 24px;
+  margin-right: 10px;
+}
+#fh5co-footer .social-media li a {
+  color:  #2dc997;
+}
+#fh5co-footer .social-media li a:hover, #fh5co-footer .social-media li a:focus, #fh5co-footer .social-media li a:active {
+  text-decoration: none;
+  background: #2dc997;
+  color: #fff;
+}
+
 /* Services Section
 --------------------------------*/
 #services h3.section-title{
@@ -580,5 +674,3 @@ footer div.contactar.col-sm-3.col-md-3.col-lg-3 ul li a.nav-link{
   font-size: 14px;
   line-height: 24px;
 }
-
-
