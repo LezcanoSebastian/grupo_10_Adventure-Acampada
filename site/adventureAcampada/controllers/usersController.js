@@ -150,7 +150,9 @@ module.exports = {
                 })
             }            
         })
-        .then(()=> res.redirect('/'))
+        .then(() => {
+            return res.redirect('/')
+        })
         .catch(error => res.send(error))    
     },
     edit: (req, res) => {
