@@ -674,3 +674,236 @@ footer div.contactar.col-sm-3.col-md-3.col-lg-3 ul li a.nav-link{
   font-size: 14px;
   line-height: 24px;
 }
+
+.gtco-container {
+  max-width: 1140px;
+  position: relative;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.gtco-container {
+  position: relative;
+  z-index: 10;
+}
+.btn-white.btn-outline {
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 8px 30px;
+  border-radius: 50px;
+  transition: 0.5s;
+  margin: 10px;
+  border: 2px solid #fff;
+  color: #fff;
+  background: #2dc997;
+}
+.btn.btn-lg {
+  padding: 18px 36px !important;
+}
+.btn-outline {
+  background: none;
+  border: 2px solid gray;
+  font-size: 16px;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.row#boton-Productos{
+  justify-content: space-evenly;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.gtco-section {
+  padding: 7em 0;
+  clear: both;
+  position: relative;
+}
+@media screen and (max-width: 768px) {
+  .gtco-section {
+    padding: 3em 0;
+  }
+}
+
+.gtco-section.border-bottom {
+  border-bottom: 1px solid #d9d9d9;
+}
+
+#gtco-portfolio {
+  padding: 1em 0;
+  margin-top: 0px;
+  background: #fafafa;
+  min-height: 500px;
+}
+@media screen and (max-width: 768px) {
+  #gtco-portfolio {
+    padding: 3em 0;
+  }
+}
+#gtco-portfolio .gtco-heading h2 {
+  color: black;
+}
+#gtco-portfolio .gtco-heading p {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+#gtco-portfolio-list {
+  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  position: relative;
+  float: left;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+#gtco-portfolio-list li {
+  display: block;
+  padding: 0;
+  margin: 0 0 10px 1%;
+  list-style: none;
+  min-height: 200px;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  float: left;
+  clear: left;
+  position: relative;
+}
+@media screen and (max-width: 480px) {
+  #gtco-portfolio-list li {
+    margin-left: 0;
+  }
+}
+#gtco-portfolio-list li a {
+  min-height: 200px;
+  padding: 2em;
+  position: relative;
+  width: 100%;
+  display: block;
+}
+#gtco-portfolio-list li a:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: "";
+  z-index: 80;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+#gtco-portfolio-list li a.color-1:before {
+  background: #845460;
+}
+#gtco-portfolio-list li a.color-1:hover:before {
+  background: #ca8a8b;  
+}
+#gtco-portfolio-list li a.color-2:before {
+  background: #2B4F60;
+}
+#gtco-portfolio-list li a.color-2:hover:before {
+  background: #126e82;
+}
+#gtco-portfolio-list li a.color-3:before {
+  background: #ead3cb;
+}
+#gtco-portfolio-list li a.color-3:hover:before {
+  background: #f5cebe;
+}
+#gtco-portfolio-list li a.color-4:before {
+  background: #bdc7c9;
+}
+#gtco-portfolio-list li a.color-4:hover:before {
+  background: #9dbeb9;
+}
+#gtco-portfolio-list li a.color-5:before {
+  background: #eca3f5;
+}
+#gtco-portfolio-list li a.color-5:hover:before {
+  background: #fdbaf8;
+}
+#gtco-portfolio-list li a.color-6:before {
+  background: #5aa897;
+}
+#gtco-portfolio-list li a.color-6:hover:before {
+  background: #8fd9a8;
+}
+#gtco-portfolio-list li a .case-studies-summary {
+  width: auto;
+  bottom: 2em;
+  left: 2em;
+  right: 2em;
+  position: absolute;
+  z-index: 100;
+}
+@media screen and (max-width: 768px) {
+  #gtco-portfolio-list li a .case-studies-summary {
+    bottom: 1em;
+    left: 1em;
+    right: 1em;
+  }
+}
+#gtco-portfolio-list li a .case-studies-summary span {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.7);
+}
+#gtco-portfolio-list li a .case-studies-summary h2 {
+  color: #fff;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 768px) {
+  #gtco-portfolio-list li a .case-studies-summary h2 {
+    font-size: 20px;
+  }
+}
+#gtco-portfolio-list li.two-third {
+  width: 65.6%;
+}
+@media screen and (max-width: 768px) {
+  #gtco-portfolio-list li.two-third {
+    width: 49%;
+  }
+}
+@media screen and (max-width: 480px) {
+  #gtco-portfolio-list li.two-third {
+    width: 100%;
+  }
+}
+#gtco-portfolio-list li.one-third {
+  width: 32.3%;
+}
+@media screen and (max-width: 768px) {
+  #gtco-portfolio-list li.one-third {
+    width: 49%;
+  }
+}
+@media screen and (max-width: 480px) {
+  #gtco-portfolio-list li.one-third {
+    width: 100%;
+  }
+}
+#gtco-portfolio-list li.one-half {
+  width: 49%;
+}
+@media screen and (max-width: 480px) {
+  #gtco-portfolio-list li.one-half {
+    width: 100%;
+  }
+}
+
+
+

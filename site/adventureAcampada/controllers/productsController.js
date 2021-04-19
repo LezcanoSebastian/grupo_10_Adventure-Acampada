@@ -46,6 +46,26 @@ const controllers = {
         
         
     },
+    category: (req, res) => {
+        db.category_product.findOne({
+            where: {
+                name: req.params.category
+            }
+        })
+        .then((categoria) => {
+            db.Productos.findAll({
+                include: [{ association: "imagenes" }],
+                where: {
+                    category_id: categoria.id,
+                    stock: {
+                        [Op.ne]: 0
+                    }
+                }
+            }).then((result) => {
+                res.render('category', { result,categoria: categoria.name, toThousand })
+            })
+        })
+    },
     
     carrito: (req, res) => {
         res.render('carrito', {
