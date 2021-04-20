@@ -469,7 +469,7 @@ main .frase{
     }
     header nav ol li a{
       color: black;
-      font-size: 28px;
+      font-size: 20px;
       padding: 5px;
       display: block;
     }
@@ -512,6 +512,8 @@ main .frase{
     header #check:checked ~ nav ol{
      visibility: visible;
      height: 465px;
+     padding-top: 10px;
+     padding-left: 0px;
     }    
     header #check:checked ~ nav ol li:nth-child(1),
     header #check:checked ~ nav ol li:nth-child(2),
