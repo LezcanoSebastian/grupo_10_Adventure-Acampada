@@ -354,6 +354,9 @@ div.container-fluid.headerFondo{
     padding-right: 0;
     margin-top: 120px;
   }
+main div.col-md-12{
+  padding-left: 4px;
+}
 main .frase{
     position: absolute;
     z-index: 1;

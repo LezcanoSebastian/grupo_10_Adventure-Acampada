@@ -49,20 +49,20 @@ const controllers = {
     category: (req, res) => {
         db.category_product.findOne({
             where: {
-                name: req.params.category
+                nombre: req.params.ID_category
             }
         })
         .then((categoria) => {
-            db.Productos.findAll({
+            db.product.findAll({
                 include: [{ association: "imagenes" }],
                 where: {
-                    category_id: categoria.id,
+                    ID_category: categoria.id,
                     stock: {
                         [Op.ne]: 0
                     }
                 }
             }).then((result) => {
-                res.render('category', { result,categoria: categoria.name, toThousand })
+                res.render('category', { result,categoria: categoria.nombre, toThousand })
             })
         })
     },
