@@ -15,8 +15,7 @@
                     <li id="centro"><a href="/">Inicio</a></li>
                     <li id="centro"><a href="#contact">Contactos</a></li>
                     <li id="centro"><a href="/products/list">Productos</a></li>
-                    <li id="centro"><a href="#"><i class="bi bi-cart3"></i></a></li>
-                    
+                    <li id="centro"><a href="#"><i class="bi bi-cart3"></i></a></li>                    
                     <li class="nav-item dropdown">
                         <a class="perfil-header nav-link dropdown-toggle" href="#" id="navbarDropdown"
                             role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -35,13 +34,13 @@
                               <li ><a href="/users/profile/<%=user.id %> "></i> <%= user.firstName %></a> <!-- nombre de usuario -->
                                 </li>                                    
                                 
-                                  <li><a href="/users/profile/<%=user.id %> ">Mi Perfil</a></li>
+                                  <li id="verDatosArriba"><a href="/users/profile/<%=user.id %> ">Mi Perfil</a></li>
                                   <% if (user.rol==="admin") { %>
                                     
                                     <li><a href="/admin/products/list">Lista de productos</a></li>
                                     <li><a href="/admin/products/create">Cargar producto</a></li>
                                     <% } %>
-                                    <li><a  href="/users/logout">Cerrar sesion</a></li>
+                                    <li id="verDatosArriba"><a  href="/users/logout">Cerrar sesion</a></li>
                                   
                                   <% }else{ %>   
                                     

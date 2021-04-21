@@ -90,7 +90,7 @@ header div.row.cuerpo-lista{
     justify-content: center;
   }
   
-header center img#cardAvatar.rounded-circle{
+center img#cardAvatar.rounded-circle{
     width: 150px;
   }
 header li#centro{
@@ -228,8 +228,9 @@ header ul#a{
 header .escritorio{
     display: none;
   }
+
 img.rounded-circle{
-    width: 130px;
+    width: 35px;  
   }
 .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl{
     padding-left: 0;
@@ -392,7 +393,6 @@ main .frase{
       }
       img.rounded-circle{
         width: 35px;
-        margin-left: 5px;
       }
       div.container-fluid.headerFondo{
         margin-top: 0;
@@ -413,8 +413,10 @@ main .frase{
     padding: 0!important;
     }}
 @media screen and (max-width:769px){
+    header li#centro.nav-item.dropdown{
+      order: 0;
+    }
     header li#escritorio.nav-item.dropdown{
-      position: relative;
       order: -1;
     }
     header ul.dropdown-menu{
