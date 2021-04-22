@@ -1,6 +1,7 @@
 const {validationResult} = require('express-validator');
 const { Sequelize } = require('sequelize');
 const db = require('../database/models');
+const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 
 
@@ -163,5 +164,34 @@ module.exports = {
             })
          return res.redirect('/admin/products/list')})
         .catch(error => res.send(error))
+    },
+    products : (req,res) => {
+        let products =  db.product.findAll({
+            include : [
+                { association : 'imagenes'},
+                {association: "categoria"}
+            ]
+            
+        })
+        Promise.all([products])
+        .then(([products]) => {
+            return res.render('admin/products',{
+            products,
+            toThousand
+        });
+        })
+    },
+    getProducts : (req,res) => {
+        db.product.findAll({
+            include : [
+                {association : 'categoria'}
+            ]
+        })
+        .then(productos => {
+            return res.status(200).json({
+                productos
+            })
+        })
+        .catch(error => console.log(error))
     }
 }

@@ -3,7 +3,7 @@ const router = express.Router();
 
 
 
-const {index,productsList,productsCreate,productsStore,productsEdit,productsUpdate,productsDelete}= require('../controllers/adminController');
+const {index,productsList,productsCreate,productsStore,productsEdit,productsUpdate,productsDelete, products,getProducts}= require('../controllers/adminController');
 
 //Middlewares
 
@@ -14,6 +14,9 @@ const checkUser = require('../middlewares/checkUser');
 
 
 router.get('/',checkUser, checkAdmin, index);
+
+router.get('/productos',products);
+router.get('/products/all',getProducts);
 
 router.get('/products/list',checkUser, checkAdmin,  productsList);
 

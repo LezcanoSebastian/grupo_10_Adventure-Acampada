@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!-- HEAD -->
+<%- include('partials/head')  %>   
+<!-- /HEAD -->
+<!-- CSS -->
+ <link rel="stylesheet" href="../stylesheets/style2.css">
+ <link href="dist/css/style.min.css" rel="stylesheet">
+<!-- /CSS -->
+<body>
+<%- include('partials/header')  %> 
+<!--<main class="container-fluid" style="margin-top: 106px;">
+    
+</main>-->
+
+<main class="container tabla-Productos">
+    <h2 class="products-title" id="categorias">Lista de Productos</h1>
+    
+
+    <article class="col-sm-12 col-md-6 col-lg-4">
+        <div class="container mt-5">
+            <form action="">
+                <div class="row my-3">
+                    <div class="form-group col-7">
+                        <input type="text" class="form-control" placeholder="Buscar...">
+                    </div>
+                    <div class="form-group col-3">
+                        <select name="" id="order" class="form-select">
+                            <option hidden selected>Ordenar por</option>
+                            <option value="nombre">Alfabéticamente</option>
+                            <option value="mayorPrecio">Mayor precio</option>
+                            <option value="menorPrecio">Menor precio</option>
+                            <option value="descuento">Descuento</option>
+                            <option value="categoria">Categoría</option>
+                            <option value="default">Default</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-2">
+                        <select name="" id="limit" class="form-select">
+                            <option hidden selected>Mostrar</option>
+                            <option value="5">5</option>
+                            <option value="10">10</option>
+                            <option value="25">25</option>
+                            <option value="50">50</option>
+                        </select>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </article>
+
+    <div class="nuevoProducto">
+        <a href="/admin/products/create"><button type="submit" class="btn btn-primary">Nuevo</button></a>   
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Producto</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Precio</th>
+                    <th scope="col">Precio/descuento</th>
+                    <th scope="col">Descuento</th>
+                    <th scope="col">Stock</th>
+                    <th scope="col">Descripcion</th>
+                    <th scope="col">Categoria</th>
+                    <th scope="col">#</th>
+                    <th scope="col">#</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% products.forEach(product=>{ %> 
+                    <tr>
+                        <th scope="row"><%= product.id %></th>
+                        <td class="imagenTabla">
+                            <img src="/img/products/<%= product.imagenes[0] %>" alt="imagen de producto">
+                        </td>
+                        <td><%= product.name %></td>
+                        <td>$<%= toThousand(product.price) %></td>
+                        <td>$<%= toThousand(product.price - parseInt(product.price * product.discount / 100)) %></td>
+                        <td><%= product.discount %></td>
+                        <td><%= product.stock %></td>
+                        <td><%= product.description != 'undefined' ? 'Si' : 'No' %></td>
+                        <td><%= product.categoria.nombre %></td>
+                        
+                        <td>
+                            <a href="/admin/products/edit/<%= product.id %>" class="btn btn-success"><i class="far fa-edit"></i></a>
+                        </td>
+                        <td>
+                            
+                            <form action="/admin/products/delete/<%= product.id %>?_method=DELETE " method="POST">
+                                <button type="submit" class="btn btn-danger"><i class="far fa-trash-alt"></i></button>
+                            </form>
+                        
+                        </td>
+                    </tr>
+                    <% }) %> 
+                </tbody>
+                <div class="my-2 d-flex justify-content-center">
+                    <ul class="pagination" id="paginationBox">
+    
+                    </ul>
+                </div>
+            </table>
+        </div>
+    </main>
+
+ <!-- SCRIPTS -->
+ 
+ <%- include('partials/scripts')  %> 
+ <script src="/javascripts/adminProducts.js"></script>
+ 
+ <!-- /SCRIPTS -->
+</body>
+  <!--FOOTER-->
+  <%-include('partials/footer') %>  
+  <!--/FOOTER-->
+</html>

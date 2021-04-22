@@ -1,27 +1,96 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <!-- HEAD -->
-<%- include('./partials/head')  %>   
+<%- include('partials/head')  %>   
 <!-- /HEAD -->
 <!-- CSS -->
-<link rel="stylesheet" href="../stylesheets/admin.css">
-<link rel="stylesheet" href="../../stylesheets/style.css">
+ <link rel="stylesheet" href="../stylesheets/style2.css">
+ <link href="stylesheets/app.css" rel="stylesheet">
+ <link href="dist/css/style.min.css" rel="stylesheet">
 <!-- /CSS -->
 <body>
-<!-- HEADER -->
-<%- include('./partials/header')  %> 
-<!-- /HEADER -->
-<!--Inicio Home-->
-<main class="productos" style="margin-top: 140px;">
-  <h1>Panel de Administracion</h1>
-  
-</main>  
-<!--Fin Home-->
+<%- include('partials/header')  %> 
+<main class="container-fluid" style="margin-top: 106px;">
+    
+    <div class="preloader">
+      <div class="lds-ripple">
+          <div class="lds-pos"></div>
+          <div class="lds-pos"></div>
+      </div>
+  </div>
+  <div id="main-wrapper" data-layout="vertical" data-navbarbg="skin5" data-sidebartype="full"
+      data-sidebar-position="absolute" data-header-position="absolute" data-boxed-layout="full">
+
+      <%- include('partials/sideboard') %> 
+      
+      <div class="page-wrapper">
+        
+        <div class="page-breadcrumb">
+            <div class="row align-items-center">
+                <div class="col-5">
+                    <h4 class="page-title">Home</h4>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            
+            <div class="row">
+              <div class="card-body">
+                <div class="d-md-flex align-items-center">
+                    <div class="ms-auto d-flex no-block align-items-center">
+                          <div class="col-lg-6 mb-4">						
+                            <div class="card shadow mb-4">
+                              <div class="card-header py-3">
+                                <h6 class="m-0 font-weight-bold text-primary">Administrar Productos</h6>
+                              </div>
+                              <div class="card-body">
+                                <div class="row">
+                                  <div class="col-lg-6 mb-4">
+                                    <div class="card bg-info text-white shadow">
+                                      <div class="card-body">
+                                        <a href="/admin/products/create" class="btn btn-primary"><span>Nuevo</span></a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-lg-6 mb-4">
+                                    <div class="card bg-info text-white shadow">
+                                      <div class="card-body">
+                                        <a href="/admin/products/list" class="btn btn-primary"><span>Editar</span></a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-lg-6 mb-4">
+                                    <div class="card bg-info text-white shadow">
+                                      <div class="card-body">
+                                        <a href="/admin/productos" class="btn btn-primary"><span>Lista</span></a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-lg-6 mb-4">
+                                    <div class="card bg-info text-white shadow">
+                                      <div class="card-body">
+                                        <a href="/products/list" class="btn btn-primary"><span>Producto</span></a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                    </div>
+                </div>
+            </div>
+            </div>                
+        </div>
+    </div>
+  </div>
+</main>
  <!-- SCRIPTS -->
- <%- include('./partials/scripts')  %> 
+ <%- include('partials/scripts')  %> 
  <!-- /SCRIPTS -->
 </body>
   <!--FOOTER-->
-  <%-include('./partials/footer') %>  
+  <%-include('partials/footer') %>  
   <!--/FOOTER-->
 </html>
