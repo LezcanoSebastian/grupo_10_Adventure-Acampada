@@ -76,7 +76,7 @@
                     <tr>
                         <th scope="row"><%= product.id %></th>
                         <td class="imagenTabla">
-                            <img src="/img/products/<%= product.imagenes[0] %>" alt="imagen de producto">
+                            <img src="/img/products/<%= product.imagenes[0].image %>" alt="imagen de producto">
                         </td>
                         <td><%= product.name %></td>
                         <td>$<%= toThousand(product.price) %></td>

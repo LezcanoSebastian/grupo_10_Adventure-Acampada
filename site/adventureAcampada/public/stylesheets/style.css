@@ -308,6 +308,24 @@ main section#services{
 main section#call-to-action{
   display: none;
 }
+main.container.tabla-Productos{
+  margin-top: 150px;
+} 
+td.imagenTabla img{
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  white-space: normal;
+}
+table.table.table-hover{
+  background-color: aliceblue;
+}
+div.nuevoProducto{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
 footer div.row{
   margin-left: 0px;
   margin-right: 0px;
