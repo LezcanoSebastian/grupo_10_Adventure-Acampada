@@ -66,7 +66,7 @@ module.exports = {
             })
             .then(product =>{
                 db.image_product.create({
-                    image : req.files[0].filename,
+                    image : (req.files[0]) ? req.files[0].filename : "default.jpg",
                     productId : product.id
                 })
                 .then(()=>{
