@@ -54,7 +54,8 @@ $pass.addEventListener('blur', function() {
 })
 window.addEventListener("load", () => {
     let  $errorForm = qs("#errorBoton"),
-    $form = qs("#form")
+    $form = qs("#form"), 
+    $credencialError = qs(".credencialError")
     $form.addEventListener("submit", function(event){
         let error = false;
         event.preventDefault()
@@ -66,6 +67,7 @@ window.addEventListener("load", () => {
             elementosForm[index].classList.add("is-invalid")
             $errorForm.innerHTML = "Completa los campos para ingresar";
             $errorForm.classList.add("errorFormulario")
+            
             error = true;
           }
         }

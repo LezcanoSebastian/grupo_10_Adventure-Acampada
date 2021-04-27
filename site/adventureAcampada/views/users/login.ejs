@@ -6,6 +6,7 @@
 <!-- CSS -->
 <link rel="stylesheet" href="../stylesheets/loginYregister.css">
 <script src="../javascript/loginValidator.js"></script>
+<script src="../javascript/credenciales.js"></script>
 <!-- /CSS -->
 <body>
 <!-- HEADER -->
@@ -36,7 +37,7 @@
                 
         
             <div class="col-12">
-              <span class="text-danger"><%= typeof errores != "undefined" && errores.invalid ? errores.invalid.msg : null %> </span>
+              <span class="credencialError text-danger"><%= typeof errores != "undefined" && errores.invalid ? errores.invalid.msg : null %> </span>
             </div>
             
             </article>

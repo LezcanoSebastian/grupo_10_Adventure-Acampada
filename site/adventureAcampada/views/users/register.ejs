@@ -6,6 +6,7 @@
 <!-- CSS -->
 <link rel="stylesheet" href="../stylesheets/loginYregister.css">
  <script src="../javascript/registerValidator.js"></script>
+ <script src="../javascript/credenciales.js"></script>
 <!-- /CSS -->
 <body>
 <!-- HEADER -->
@@ -29,7 +30,9 @@
                     <input type="text" class="lastName form-control" id="lastName" placeholder="Apellido" name="lastName" value="<%= (typeof old != 'undefined' && old.lastName ? old.lastName : null) %>">
                     <label for="lastName" id="lastName">Apellido *</label>
                     <span class="error" id="lastNameErrors"></span>
+                    <div class="col-12">
                     <span class="text-danger"><%= (typeof errores != 'undefined' && errores.lastName ? errores.lastName.msg : null) %> </span>
+                    </div>
                 </div>
             </article>
             <article class="dato col-sm-12 col-md-6 col-lg-6">
@@ -39,7 +42,7 @@
                     <label for="email" id="email">Email</label>
                     <span class="error" id="emailErrors"></span>
 
-                    <span class="text-danger"><%= (typeof errores != 'undefined' && errores.email ? errores.email.msg : null) %> </span>
+                    <span class="credencialError text-danger"><%= (typeof errores != 'undefined' && errores.email ? errores.email.msg : null) %> </span>
                 </div>
             </article>
             <article class="dato col-sm-12 col-md-6 col-lg-6">
