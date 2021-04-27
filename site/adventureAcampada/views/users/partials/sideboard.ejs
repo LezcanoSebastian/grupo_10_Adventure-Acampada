@@ -13,19 +13,45 @@
                                 <span class="op-5 user-email"><%= user.email %></span>
                             </a>
                         </div>
-                    </div>
-                    
+                    </div>  
                 </li>
                 
-                <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                        href="/users/indexUser/<%=user.id %>" aria-expanded="false"><i class="mdi mdi-view-dashboard"></i><span
-                            class="hide-menu">Home</span></a></li>
-                <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                        href="/users/profile/<%=user.id %>" aria-expanded="false"><i
-                            class="mdi mdi-account-network"></i><span class="hide-menu">Profile</span></a></li>
-                <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                        href="#" aria-expanded="false"><i class="mdi mdi-border-all"></i><span
-                            class="hide-menu">Mis compras</span></a></li>
+    <% if (typeof user != 'undefined') { %>                              
+        
+      <% if (user.rol==="admin") { %>
+          <li><a href="/admin">Administrar</a></li>
+          <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
+            href="/admin" aria-expanded="false"><i class="mdi mdi-home"></i><span
+                class="hide-menu">Home</span></a></li>
+          <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
+            href="/users/profile/<%=user.id %>" aria-expanded="false"><i
+                class="mdi mdi-account-star-variant"></i><span class="hide-menu">Profile</span></a></li>
+          <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
+            href="/admin/productos" aria-expanded="false"><i class="mdi mdi-table-large"></i><span
+                class="hide-menu">Productos</span></a></li>
+          <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
+            href="/admin/products/list" aria-expanded="false"><i class="mdi mdi-note-text"></i><span
+                class="hide-menu">Editar Productos</span></a></li>
+          <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
+            href="/admin/products/create" aria-expanded="false"><i class="mdi mdi-plus-box"></i><span
+                class="hide-menu">Nuevo Producto</span></a></li>
+        <% } %>  
+        <% if (user.rol==="user") { %>
+            <li><a href="/users/profile/<%=user.id %> ">Mi Perfil</a></li>
+            <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
+            href="/users/indexUser/<%=user.id %>" aria-expanded="false"><i class="mdi mdi-view-dashboard"></i><span
+                class="hide-menu">Home</span></a></li>
+            <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
+            href="/users/profile/<%=user.id %>" aria-expanded="false"><i
+                class="mdi mdi-account-network"></i><span class="hide-menu">Profile</span></a></li>
+            <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
+            href="#" aria-expanded="false"><i class="mdi mdi-border-all"></i><span
+                class="hide-menu">Mis compras</span></a></li>
+            
+          <% } %> 
+        
+    <% } %> 
+                
             </ul>
         </nav>
     </div>
