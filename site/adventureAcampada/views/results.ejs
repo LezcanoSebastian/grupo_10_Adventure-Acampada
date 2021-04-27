@@ -7,37 +7,38 @@
 	<%- include('partials/header') %>
 	<!-- /Header -->
 	<link rel="stylesheet" href="../stylesheets/style2.css">
-	<link rel="stylesheet" href="../stylesheets/results.css">
 	
-
-	<!-- todos los productos -->
-	<div class="container general">
-		<div class="row">
-			<div class="col-12">
-				<h2>Resultados de la búsqueda: <%= search %> </h2>
-			</div>
-			<% if (result[0] != undefined) { %>
+	
+    <main class="productos general">
+		
+			
+				<h2 class="products-title" id="productos">Resultados de la búsqueda: <%= search %> </h2>
+			
+				<% if (result[0] != undefined) { %>
+					
+						<section class="container">
 				
-                    <section class="container">
-                        <div class="row">
-                        <% result.forEach(product => { %>
-                          <div class="product">
-                            <a href="/products/detail/<%- product.id %> ">
-                              <img src="/img/products/<%= product.imagenes[0].image %>" alt="imagen de producto">
-                              <h5>$ <%- product.price %></h5>  
-                              <p><%- product.name %></p>
-                            </a>
-                          </div> 
-                        <% }) %>
-                      </div>
-                      </section>
-			<% } else { %>
-				<div class="col-12">
-					<h2 class="products-title" style="color: #38726C;">No hay productos que coincidan su búsqueda</h2>
-				</div>
-			<% } %>
-		</div>
-	</div>
+							<% result.forEach(product => { %>
+							  <div class="product">
+								<a href="/products/detail/<%- product.id %> ">
+								  <img src="/img/products/<%= product.imagenes[0].image %>" alt="imagen de producto">
+								  <h5>$ <%- product.price %></h5>  
+								  <p><%- product.name %></p>
+								</a>
+							  </div> 
+							<% }) %>
+						  
+						</section>
+				<% } else { %>
+					<div class="col-12">
+						<h2 class="products-title" style="color: #38726C;">No hay productos que coincidan su búsqueda</h2>
+					</div>
+				<% } %>
+			
+
+	</main>
+	<!-- todos los productos -->
+	
 	<!-- /todos los productos -->
 	<%- include('partials/scripts') %>
 	<!-- footer -->

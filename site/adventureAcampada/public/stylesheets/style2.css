@@ -318,7 +318,7 @@ main .container .product:hover {
      padding-right: 0px;
      margin-left: 0px;
      margin-right: 0px;
-     margin-top: 70px; 
+     margin-top: 150px; 
      margin-bottom: 30px;
      width: 100%;
    }
@@ -372,7 +372,7 @@ main #contact .info p {
   padding: 5px 5px 10px 50px;
   margin-bottom: 20px;
   line-height: 22px;
-  font-size: 14px;
+  font-size: 11px;
 }
 
 main #contact .info .email p {

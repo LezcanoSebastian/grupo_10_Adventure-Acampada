@@ -7,10 +7,10 @@
     <%- include('partials/header')  %> 
 
 
-<main class="container general">
-    <section class="container">
-      <h2 class="products-title" id="categorias">Productos</h1>
-        <div class="row cuerpo-lista">
+ <main class="productos general">
+
+  <h2 class="products-title" id="categorias">Productos</h1>
+    <section class="container">      
         <% products.forEach(product => { %>
         <div class="product">
           <a href="/products/detail/<%- product.id %> ">
@@ -21,7 +21,7 @@
         </div>
       
         <% }) %>
-     </div>
+     
       </section>
 
     <%- include('partials/scripts')  %> 
