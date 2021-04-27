@@ -148,11 +148,11 @@ module.exports = {
                 res.cookie('recordar','',{
                     maxAge : -1
                 })
-            }            
+            }  
+             return res.redirect('/')         
         })
-        .then(() => {
-            return res.redirect('/')
-        })
+       
+         
         .catch(error => res.send(error))    
     },
     edit: (req, res) => {
