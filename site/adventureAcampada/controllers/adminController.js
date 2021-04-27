@@ -184,12 +184,14 @@ module.exports = {
     getProducts : (req,res) => {
         db.product.findAll({
             include : [
+                { association : 'imagenes'},
                 {association : 'categoria'}
             ]
         })
         .then(productos => {
             return res.status(200).json({
-                productos
+                productos,
+                toThousand
             })
         })
         .catch(error => console.log(error))

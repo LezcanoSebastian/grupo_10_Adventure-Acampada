@@ -15,8 +15,8 @@ const checkUser = require('../middlewares/checkUser');
 
 router.get('/',checkUser, checkAdmin, index);
 
-router.get('/productos',products);
-router.get('/products/all',getProducts);
+router.get('/productos',checkUser, checkAdmin,products);
+router.get('/products/all',checkUser, checkAdmin,getProducts);
 
 router.get('/products/list',checkUser, checkAdmin,  productsList);
 

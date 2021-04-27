@@ -18,14 +18,18 @@
     <h2 class="products-title" id="categorias">Lista de Productos</h1>
     
 
-    <article class="col-sm-12 col-md-6 col-lg-4">
+    
         <div class="container mt-5">
-            <form action="">
+            
+             <form action="" class="cajas">
                 <div class="row my-3">
-                    <div class="form-group col-7">
-                        <input type="text" class="form-control" placeholder="Buscar...">
-                    </div>
-                    <div class="form-group col-3">
+                    <article class="col-sm-12 col-md-12 col-lg-4">
+                        <div class="form-group" id="cajasCentro">
+                            <input type="text" class="form-control" placeholder="Buscar...">
+                        </div>
+                    </article>
+                    <article class="col-sm-12 col-md-4 col-lg-4">
+                     <div class="form-group" id="cajasCentro">
                         <select name="" id="order" class="form-select">
                             <option hidden selected>Ordenar por</option>
                             <option value="nombre">Alfabéticamente</option>
@@ -35,8 +39,10 @@
                             <option value="categoria">Categoría</option>
                             <option value="default">Default</option>
                         </select>
-                    </div>
-                    <div class="form-group col-2">
+                     </div>
+                    </article>
+                    <article class="col-sm-12 col-md-4 col-lg-4">
+                      <div class="form-group" id="cajasCentro">
                         <select name="" id="limit" class="form-select">
                             <option hidden selected>Mostrar</option>
                             <option value="5">5</option>
@@ -44,11 +50,13 @@
                             <option value="25">25</option>
                             <option value="50">50</option>
                         </select>
-                    </div>
+                     </div>
+                    </article>
                 </div>
             </form>
+            
         </div>
-    </article>
+    
 
     <div class="nuevoProducto">
         <a href="/admin/products/create"><button type="submit" class="btn btn-primary">Nuevo</button></a>   
@@ -67,35 +75,14 @@
                     <th scope="col">Stock</th>
                     <th scope="col">Descripcion</th>
                     <th scope="col">Categoria</th>
-                    <th scope="col">#</th>
-                    <th scope="col">#</th>
+                    <th scope="col">Editar</th>
+                    <th scope="col">Borrar</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody id="productsBox">
                 <% products.forEach(product=>{ %> 
                     <tr>
-                        <th scope="row"><%= product.id %></th>
-                        <td class="imagenTabla">
-                            <img src="/img/products/<%= product.imagenes[0].image %>" alt="imagen de producto">
-                        </td>
-                        <td><%= product.name %></td>
-                        <td>$<%= toThousand(product.price) %></td>
-                        <td>$<%= toThousand(product.price - parseInt(product.price * product.discount / 100)) %></td>
-                        <td><%= product.discount %></td>
-                        <td><%= product.stock %></td>
-                        <td><%= product.description != 'undefined' ? 'Si' : 'No' %></td>
-                        <td><%= product.categoria.nombre %></td>
                         
-                        <td>
-                            <a href="/admin/products/edit/<%= product.id %>" class="btn btn-success"><i class="far fa-edit"></i></a>
-                        </td>
-                        <td>
-                            
-                            <form action="/admin/products/delete/<%= product.id %>?_method=DELETE " method="POST">
-                                <button type="submit" class="btn btn-danger"><i class="far fa-trash-alt"></i></button>
-                            </form>
-                        
-                        </td>
                     </tr>
                     <% }) %> 
                 </tbody>
@@ -109,9 +96,9 @@
     </main>
 
  <!-- SCRIPTS -->
- 
+ <script src="../javascript/adminProducts.js"></script>
  <%- include('partials/scripts')  %> 
- <script src="/javascripts/adminProducts.js"></script>
+ 
  
  <!-- /SCRIPTS -->
 </body>
