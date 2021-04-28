@@ -129,31 +129,26 @@ module.exports = {
         .catch(error => res.send(error))
     },
     eliminar: (req, res) => {
-        let user = db.users.findByPk(req.params.id);
-        let remove = db.users.destroy({
+        db.users.destroy({
             where: {
-                id: req.params.id
+                id: req.session.user.id
             }
-        });
-        
-        Promise.all([user,remove])
-        .then(([user,remove])=>{
-            
-            if(user.avatar != 'default.png') {
-                fs.unlinkSync('public/img/avatar/' + user.avatar)
-            }
-            
-            req.session.destroy();
-            if(req.cookies.recordar){
-                res.cookie('recordar','',{
-                    maxAge : -1
-                })
-            }  
-             return res.redirect('/')         
         })
-       
-         
+        .then(()=>{
+        if(req.session.user.avatar != 'default.png') {
+            fs.unlinkSync('public/img/avatar/'+/*  */ req.session.user.avatar)
+          } 
+          req.session.destroy();
+          if(req.cookies.recordar){
+              res.cookie('recordar','',{
+                  maxAge : -1
+              })
+          }
+          return res.redirect('/') 
+        })
+
         .catch(error => res.send(error))    
+    
     },
     edit: (req, res) => {
         db.users.findByPk(req.params.id)
