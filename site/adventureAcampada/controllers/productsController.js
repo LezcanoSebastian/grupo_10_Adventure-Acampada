@@ -1,6 +1,7 @@
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 const db = require('../database/models');
 const { Sequelize } = require('../database/models');
+const {Op} = require('sequelize');
 
 const controllers = {
 
@@ -49,20 +50,25 @@ const controllers = {
     category: (req, res) => {
         db.category_product.findOne({
             where: {
-                nombre: req.params.ID_category
+                nombre: req.params.category
             }
         })
         .then((categoria) => {
             db.product.findAll({
-                include: [{ association: "imagenes" }],
+                include: [{ association: "imagenes" },{association : 'categoria'}],
                 where: {
                     ID_category: categoria.id,
                     stock: {
                         [Op.ne]: 0
                     }
                 }
-            }).then((result) => {
-                res.render('category', { result,categoria: categoria.nombre, toThousand })
+            })
+            .then((products) => {
+                return res.render('category', {
+                     title: 'Producto',
+                     products,
+                     categoria: categoria.nombre, 
+                     toThousand })
             })
         })
     },

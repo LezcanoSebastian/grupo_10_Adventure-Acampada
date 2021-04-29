@@ -1,15 +1,22 @@
 <!DOCTYPE html>
 <html lang="es">
+  
 <%- include('partials/head')  %> 
-<link rel="stylesheet" href="../stylesheets/style2.css">
-<link rel="stylesheet" href="../stylesheets/list.css">
+
+<link rel="stylesheet" href="\stylesheets\style2.css">
+<link rel="stylesheet" href="\stylesheets\list.css">
+
 <body>
+  
+
     <%- include('partials/header')  %> 
 
 
-<main class="container general">
-    <section class="container">
-        <div class="row">
+ <main class="productos general">
+
+  <h2 class="products-title" id="categorias">Productos :  <%- categoria%></h1>
+  
+    <section class="container">      
         <% products.forEach(product => { %>
         <div class="product">
           <a href="/products/detail/<%- product.id %> ">
@@ -18,11 +25,8 @@
             <p><%- product.name %></p>
           </a>
         </div>
-      
         <% }) %>
-     </div>
       </section>
-
     <%- include('partials/scripts')  %> 
   </main>  
 </body>
