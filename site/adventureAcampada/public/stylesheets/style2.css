@@ -41,7 +41,7 @@ main .container a {
 section .product {
   padding-top: 15px;
   margin-bottom: 15px;
- 
+ position: relative;
  
   height: 300px;
   width: 220px;
@@ -910,4 +910,29 @@ footer div.contactar.col-sm-3.col-md-3.col-lg-3 ul li a.nav-link{
   #gtco-portfolio-list li.one-half {
     width: 100%;
   }
+}
+
+
+/* Precio de los productos */
+
+.descuento-precio{
+  color: #2dc997;
+  /* font-size: smaller;
+  font-style: normal; */
+  padding-left: 10px;
+  margin-bottom: -5px;
+  padding-bottom: -10px;
+  position: absolute;
+  bottom: 105px;
+  right: 10px;
+}
+.precio-base{
+  position: absolute;
+  bottom:100px;
+  left: 10px;
+  text-decoration: line-through;
+}
+.precio-con-descuento{
+  margin-top: 0!important;
+  margin-top: -10px;
 }

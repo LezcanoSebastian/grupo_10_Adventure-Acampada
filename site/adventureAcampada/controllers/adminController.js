@@ -30,6 +30,7 @@ module.exports = {
             return res.render('admin/productList',{
             products, 
             carrusel,
+            toThousand
     
         });
         })

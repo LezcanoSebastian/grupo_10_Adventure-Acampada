@@ -5,3 +5,40 @@ body{
 .botones-admin{
 margin: 5px;
 }
+
+
+/* Precio de los productos */
+
+.descuento-precio{
+  color: #2dc997;
+  /* font-size: smaller;
+  font-style: normal; */
+  padding-left: 10px;
+  margin-bottom: -5px;
+  padding-bottom: -10px;
+  position: absolute;
+  bottom: 105px;
+  right: 10px;
+}
+.precio-base{
+  position: absolute;
+  bottom:100px;
+  left: 10px;
+  text-decoration: line-through;
+}
+.precio-con-descuento{
+  margin-top: 0!important;
+  margin-top: -10px;
+}
+
+
+/* lista de productos admin */
+
+
+.btn.btn-lg{
+  padding: 4px 8px!important;
+}
+.general, .container{
+  padding: auto;
+  margin: auto;
+}
